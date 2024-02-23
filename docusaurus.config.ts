@@ -47,27 +47,47 @@ const config: Config = {
       items: [
         {
           type: 'doc',
-          position: 'right',
           docId: 'modus-operandi',
-          label: 'Modus Operandi',
+          label: 'Modus operandi',
         },
         {
           type: 'docSidebar',
-          position: 'right',
           sidebarId: 'deterrents',
           label: 'Deterrents',
         },
         {
           type: 'docSidebar',
+          sidebarId: 'systems',
+          label: 'Vulnerable systems',
+        },
+        {
+          type: 'doc',
           position: 'right',
-          sidebarId: 'services',
-          label: 'Services',
+          docId: 'about',
+          label: 'About',
         },
       ],
     },
     footer: {
       style: 'dark',
       links: [
+        {
+          title: 'DDoS',
+          items: [
+            {
+              label: 'Modus operandi',
+              to: 'modus-operandi',
+            },
+            {
+              label: 'Deterrents',
+              to: 'deterrents',
+            },
+            {
+              label: 'Vulnerable systems',
+              to: 'systems',
+            },
+          ],
+        },
         {
           title: 'Community',
           items: [
@@ -78,6 +98,10 @@ const config: Config = {
             {
               label: 'Discussions',
               href: 'https://github.com/relaycorp/ddos-report/discussions',
+            },
+            {
+              label: 'About',
+              to: 'about',
             },
           ],
         },
@@ -103,7 +127,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © 2024 by Relaycorp, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © 2024 by <a href="https://relaycorp.tech">Relaycorp</a>. You may use the contents of this website as specified in the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 licence</a>.`,
     },
     prism: {
       theme: prismThemes.github,
