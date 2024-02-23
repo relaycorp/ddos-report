@@ -1,0 +1,115 @@
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+
+const config: Config = {
+  title: 'The DDoS Report',
+  tagline: 'How DDoS work today and how to mitigate them',
+
+  // Set the production url of your site here
+  url: 'https://ddos.report',
+  baseUrl: '/',
+
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
+
+  i18n: {
+    defaultLocale: 'en-gb',
+    locales: ['en-gb'],
+  },
+
+  presets: [
+    [
+      'classic',
+      {
+        blog: false,
+        docs: {
+          sidebarPath: './sidebars.ts',
+          routeBasePath: '/',
+          editUrl:
+            'https://github.com/relaycorp/ddos-report/tree/main/',
+        },
+        theme: {
+          customCss: './src/css/custom.css',
+        },
+      } satisfies Preset.Options,
+    ],
+  ],
+
+  themeConfig: {
+    colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: true,
+    },
+    navbar: {
+      title: 'The DDoS Report',
+      items: [
+        {
+          type: 'doc',
+          position: 'right',
+          docId: 'modus-operandi',
+          label: 'Modus Operandi',
+        },
+        {
+          type: 'docSidebar',
+          position: 'right',
+          sidebarId: 'deterrents',
+          label: 'Deterrents',
+        },
+        {
+          type: 'docSidebar',
+          position: 'right',
+          sidebarId: 'services',
+          label: 'Services',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'GitHub project',
+              href: 'https://github.com/relaycorp/ddos-report',
+            },
+            {
+              label: 'Discussions',
+              href: 'https://github.com/relaycorp/ddos-report/discussions',
+            },
+          ],
+        },
+        {
+          title: 'Relaycorp',
+          items: [
+            {
+              label: 'Contact us',
+              href: 'https://relaycorp.tech',
+            },
+            {
+              label: 'Awala',
+              href: 'https://awala.network',
+            },
+            {
+              label: 'Letro',
+              href: 'https://letro.app/en',
+            },
+            {
+              label: 'VeraId',
+              href: 'https://veraid.net',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © 2024 by Relaycorp, Inc. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  } satisfies Preset.ThemeConfig,
+};
+
+export default config;
