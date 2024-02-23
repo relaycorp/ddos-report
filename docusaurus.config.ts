@@ -37,6 +37,10 @@ const config: Config = {
   ],
 
   themeConfig: {
+    announcementBar: {
+      content: `You're looking at a rough draft of the DDoS Report, in case it wasn't obvious! 🚧`,
+      isCloseable: false,
+    },
     colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
