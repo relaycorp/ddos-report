@@ -1,5 +1,6 @@
 ---
 title: Threat scoring
+sidebar_position: 20
 ---
 
 # Threat scoring
@@ -10,3 +11,4 @@ title: Threat scoring
     - Rate of requests from the same client, if authenticated.
     - Rate of requests from the same IP address, regardless of clients.
     - Rate of invalid requests from the same client and/or IP address.
+    - The type of ISP the client is using (e.g., residential, cloud provider).
