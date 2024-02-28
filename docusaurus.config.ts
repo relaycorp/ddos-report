@@ -110,11 +110,11 @@ const config: Config = {
           ],
         },
         {
-          title: 'Relaycorp',
+          title: 'Related projects by Relaycorp',
           items: [
             {
-              label: 'Contact us',
-              href: 'https://relaycorp.tech',
+              label: 'Despacito',
+              href: 'https://despacito.bot',
             },
             {
               label: 'Awala',
@@ -131,7 +131,8 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © 2024 by <a href="https://relaycorp.tech">Relaycorp</a>. You may use the contents of this website as specified in the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 licence</a>.`,
+      copyright: `Copyright © 2024 by <a href="https://relaycorp.tech">Relaycorp</a> and <a href="https://github.com/relaycorp/ddos-report/graphs/contributors">contributors</a>.
+        The content of this website is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 licence</a>.`,
     },
     prism: {
       theme: prismThemes.github,
