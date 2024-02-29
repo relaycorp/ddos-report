@@ -13,6 +13,7 @@ sidebar_position: 0
 - Unmetered inbound traffic.
 - DDoS protection.
 - Firewalls, including Web Application Firewalls (WAFs). Some support managed rulesets.
+  - Consider Google's BeyondCorp model.
 - Caching.
 - TSL termination.
 - Behaviour analysis.

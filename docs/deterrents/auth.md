@@ -1,14 +1,10 @@
 ---
-title: Authentication and authorisation
+title: Authentication
 sidebar_position: 3
 ---
 
-# Authentication and authorisation
+# Authentication
 
-## Extensions
-
-- App-aware behaviour analysis to control other deterrents (e.g., [rate limiting](./rate-limiting.md), [crypto challenges](./crypto-challenges.md)) per user and/or tenant.
-
-## Emerging solutions
+## Experimental solutions
 
 - [VeraId](https://veraid.net).
