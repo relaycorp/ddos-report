@@ -13,15 +13,16 @@ sidebar_position: 4
 ### Proof of Work
 
 - [Equi-X](https://github.com/tevador/equix).
-- Guided tour puzzle protocol
+
+## Experimental protocols
+
+### Verifiable Delay Functions (VDFs)
 
 ### Proof of Space (PoS)
 
 ### Proof of Spacetime (PoSt)
 
-## Emerging protocols
-
-### Verifiable Delay Functions (VDFs)
+### Guided tour puzzle protocol
 
 ## Inadvisable protocols
 

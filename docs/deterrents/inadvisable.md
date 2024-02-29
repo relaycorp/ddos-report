@@ -18,4 +18,6 @@ The field is promising, but plagued by dodgy Blockchain projects.
 - [Proof of Humanity](https://www.proofofhumanity.id/).
 - [World Id](https://worldcoin.org/world-id) (Worldcoin).
 
+No need for Blockchain, no need for token. Alternatives: PKI with certificate transparency, or at least solve the DDoS problem with low-tech solutions like better KYC from ISPs and cybersecurity regulations.
+
 See also: [CAPTCHAs](captchas.md).
