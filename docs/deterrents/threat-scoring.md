@@ -1,6 +1,6 @@
 ---
 title: Threat scoring
-sidebar_position: 20
+sidebar_position: 10
 ---
 
 # Threat scoring

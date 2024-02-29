@@ -117,16 +117,12 @@ const config: Config = {
               href: 'https://despacito.bot',
             },
             {
-              label: 'Awala',
-              href: 'https://awala.network',
-            },
-            {
-              label: 'Letro',
-              href: 'https://letro.app/en',
-            },
-            {
               label: 'VeraId',
               href: 'https://veraid.net',
+            },
+            {
+              label: 'Awala',
+              href: 'https://awala.network',
             },
           ],
         },

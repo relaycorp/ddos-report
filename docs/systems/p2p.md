@@ -4,3 +4,5 @@ sidebar_position: 4
 ---
 
 # Protect peer-to-peer systems from DDoS attacks
+
+https://docs.libp2p.io/concepts/nat/

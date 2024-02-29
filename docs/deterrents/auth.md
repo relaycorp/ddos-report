@@ -1,9 +1,9 @@
 ---
-title: Authentication
+title: User authentication
 sidebar_position: 3
 ---
 
-# Authentication
+# User authentication
 
 ## Experimental solutions
 

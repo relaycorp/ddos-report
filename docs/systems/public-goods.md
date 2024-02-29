@@ -19,7 +19,7 @@ We refer to _public goods_ as servers accessible to any device on the Internet w
 
 DDoS attacks not only affect availability but also threaten decentralisation. It's usually the companies with a vested interest in the ecosystem that have the financial and organisational capacity to prepare for and deal with these attacks, unlike volunteers.
 
-## Deterrents for operators
+## Deterrents available to operators
 
 As an operator of public goods, you should consider the following deterrents, which don't require changes to the protocol:
 
@@ -32,6 +32,9 @@ Unfortunately, these deterrents alone may not be enough to protect against well-
 
 As the designer of a protocol that powers public goods, you should consider the following deterrents:
 
-- [Cryptographic challenges](../deterrents/crypto-challenges.md). Undoubtedly a major and [potentially unpopular](https://github.com/mastodon/mastodon/issues/29273#issuecomment-1954202970) undertaking if the protocol is already widely used, but [not impossible as the Tor project proved](https://blog.torproject.org/introducing-proof-of-work-defense-for-onion-services/).
+- [Cryptographic challenges](../deterrents/crypto-challenges.md).
 - [Client-aware rate limiting](../deterrents/rate-limiting.md).
 - [Client integrity verification](../deterrents/client-integrity.md).
+- [CAPTCHAs](../deterrents/captchas.md), if the user is supposed to be human.
+- [Threat scoring](../deterrents/threat-scoring.md).
+- [Abuse reporting](../deterrents/abuse-reporting.md).

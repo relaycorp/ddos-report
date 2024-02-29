@@ -1,6 +1,6 @@
 ---
 title: Abuse reporting
-sidebar_position: 10
+sidebar_position: 20
 ---
 
 # Abuse reporting

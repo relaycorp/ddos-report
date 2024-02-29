@@ -8,6 +8,8 @@ sidebar_position: 4
 - PoW or PoS alone might not be enough if the adversary has devices that are more powerful than the average user's.
 - CPU-, memory-, and storage-bound protocols are more resistant to ASICs and FPGAs.
 
+Undoubtedly a major and [potentially unpopular](https://github.com/mastodon/mastodon/issues/29273#issuecomment-1954202970) undertaking if the protocol is already widely used, but [not impossible as the Tor project proved](https://blog.torproject.org/introducing-proof-of-work-defense-for-onion-services/).
+
 ## Recommended protocols
 
 ### Proof of Work
