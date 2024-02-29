@@ -34,7 +34,7 @@ As the designer of a protocol that powers public goods, you should consider the 
 
 - [Cryptographic challenges](../deterrents/crypto-challenges.md).
 - [Client-aware rate limiting](../deterrents/rate-limiting.md).
-- [Client integrity verification](../deterrents/client-integrity.md).
-- [CAPTCHAs](../deterrents/captchas.md), if the user is supposed to be human.
+- [Client integrity verification](../deterrents/client-integrity.md), if the client is a trusted app.
+- [CAPTCHAs](../deterrents/captchas.md), if the user must be human.
 - [Threat scoring](../deterrents/threat-scoring.md).
 - [Abuse reporting](../deterrents/abuse-reporting.md).
