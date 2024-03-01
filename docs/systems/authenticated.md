@@ -1,9 +1,9 @@
 ---
-title: Authenticated servers
+title: Authenticated systems
 sidebar_position: 2
 ---
 
-# Protect authenticated servers from DDoS attacks
+# Protect authenticated systems from DDoS attacks
 
 Includes HTTP APIs and non-HTTP protocols that require authentication (e.g., SMTP).
 
@@ -11,4 +11,4 @@ Includes HTTP APIs and non-HTTP protocols that require authentication (e.g., SMT
 
 ## See also
 
-For _unauthenticated_ servers, see [public goods](./public-goods.md).
+For _unauthenticated_ systems, see [public goods](./public-goods.md).

@@ -62,7 +62,13 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'systems',
-          label: 'Vulnerable systems',
+          label: 'Deterrents by system type',
+        },
+        {
+          type: 'doc',
+          position: 'right',
+          docId: 'open-questions',
+          label: 'Open questions',
         },
         {
           type: 'doc',
@@ -87,7 +93,7 @@ const config: Config = {
               to: 'deterrents',
             },
             {
-              label: 'Vulnerable systems',
+              label: 'Deterrents by system type',
               to: 'systems',
             },
           ],

@@ -5,7 +5,7 @@ sidebar_position: 0
 
 # Reverse proxies
 
-- L3/L4 at least. L7 preferred.
+- L3/L4 at least. Preferably a Layer 7 proxy if the protocol (e.g., HTTP) is supported.
 - AKA: Load balancers, CDNs.
 
 ## Features
@@ -22,6 +22,7 @@ sidebar_position: 0
 - Programmatic access control (e.g., Cloudflare Pages Functions).
 - Throttling. To avoid overloading the origin server.
 - Rate limiting. Per-IP address, for example.
+- API gateway.
 
 ## Advantages
 
