@@ -1,8 +1,19 @@
 ---
-title: Peer-to-peer systems
+title: Peer-to-peer networks
 sidebar_position: 4
 ---
 
-# Protect peer-to-peer systems from DDoS attacks
+# Protect peer-to-peer networks from DDoS attacks
 
-https://docs.libp2p.io/concepts/nat/
+A network is peer-to-peer (P2P) when nodes (or peers) directly share resources and communicate with each other, without central servers.
+In practice, however, they still depend on [public goods](./public-goods.md) (e.g. DNS resolvers, STUN servers), at least for bootstrapping and initial communication.
+Examples include BitTorrent and (P2P)SIP.
+
+## Protocol-level deterrents
+
+As the designer of a protocol that powers P2P networks, you should consider the following deterrents:
+
+- [User authentication](../deterrents/auth.md). Consider using long-term identity keys if pseudonymity is needed, or [VeraId](https://veraid.net) when the identity of the user is relevant.
+- [Cryptographic challenges](../deterrents/crypto-challenges.md). Proof of Space(time) in particular is worth considering, as IoT devices (a large source of DDoS attacks) tend to have limited storage capacity.
+- [Client-aware rate limiting](../deterrents/rate-limiting.md).
+- [Threat scoring](../deterrents/threat-scoring.md).
