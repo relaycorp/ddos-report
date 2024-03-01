@@ -1,10 +1,11 @@
 ---
-title: Client authentication
+title: Authentication
 sidebar_position: 3
 ---
 
-# Client authentication
+# Authentication
 
+- User vs client authentication.
 - Long-term identity keys.
 
 ## Experimental solutions

@@ -38,6 +38,7 @@ Unfortunately, these mitigations alone may not be enough to protect against well
 
 As the designer of a protocol that powers public goods, you should consider the following mitigations:
 
+- [Authentication](../mitigations/authentication). Use long-term identity keys to achieve pseudonymity and thus enforce other mitigations more effectively.
 - [Cryptographic challenges](../mitigations/crypto-challenges.md).
 - [Client-aware rate limiting](../mitigations/rate-limiting.md).
 - [Client integrity verification](../mitigations/client-integrity.md), when the client is a trusted app.
