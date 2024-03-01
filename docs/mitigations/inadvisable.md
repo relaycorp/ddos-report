@@ -1,9 +1,9 @@
 ---
-title: Inadvisable deterrents
+title: Inadvisable mitigations
 sidebar_position: 90
 ---
 
-# Inadvisable deterrents
+# Inadvisable mitigations
 
 ## DDoS scrubbing services
 

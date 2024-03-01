@@ -24,22 +24,22 @@ Examples include:
 Typically, it's only the well-resourced organisations with a vested interest in the ecosystem, such as Cloudflare and Google,
 that have the financial and organisational capacity to prepare for and deal with these attacks.
 
-## Deterrents available to operators
+## Mitigations available to operators
 
-As an operator of public goods, you should consider the following deterrents, which don't require changes to the protocol:
+As an operator of public goods, you should consider the following mitigations, which don't require changes to the protocol:
 
-- [Reverse proxy](../deterrents/reverse-proxies.md).
-- [Unmetered DNS lookups](../deterrents/unmetered-dns.md), if the protocol uses DNS.
-- [Abuse reporting](../deterrents/abuse-reporting.md).
+- [Reverse proxy](../mitigations/reverse-proxies.md).
+- [Unmetered DNS lookups](../mitigations/unmetered-dns.md), if the protocol uses DNS.
+- [Abuse reporting](../mitigations/abuse-reporting.md).
 
-Unfortunately, these deterrents alone may not be enough to protect against well-resourced attackers without further changes to the protocol itself.
+Unfortunately, these mitigations alone may not be enough to protect against well-resourced attackers without further changes to the protocol itself.
 
-## Protocol-level deterrents
+## Protocol-level mitigations
 
-As the designer of a protocol that powers public goods, you should consider the following deterrents:
+As the designer of a protocol that powers public goods, you should consider the following mitigations:
 
-- [Cryptographic challenges](../deterrents/crypto-challenges.md).
-- [Client-aware rate limiting](../deterrents/rate-limiting.md).
-- [Client integrity verification](../deterrents/client-integrity.md), when the client is a trusted app.
-- [CAPTCHAs](../deterrents/captchas.md), if the user must be human.
-- [Threat scoring](../deterrents/threat-scoring.md).
+- [Cryptographic challenges](../mitigations/crypto-challenges.md).
+- [Client-aware rate limiting](../mitigations/rate-limiting.md).
+- [Client integrity verification](../mitigations/client-integrity.md), when the client is a trusted app.
+- [CAPTCHAs](../mitigations/captchas.md), if the user must be human.
+- [Threat scoring](../mitigations/threat-scoring.md).

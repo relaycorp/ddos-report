@@ -56,13 +56,13 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'deterrents',
-          label: 'Deterrents',
+          sidebarId: 'mitigations',
+          label: 'Mitigations',
         },
         {
           type: 'docSidebar',
           sidebarId: 'systems',
-          label: 'Deterrents by system type',
+          label: 'Mitigations by system type',
         },
         {
           type: 'doc',
@@ -89,11 +89,11 @@ const config: Config = {
               to: 'modus-operandi',
             },
             {
-              label: 'Deterrents',
-              to: 'deterrents',
+              label: 'Mitigations',
+              to: 'mitigations',
             },
             {
-              label: 'Deterrents by system type',
+              label: 'Mitigations by system type',
               to: 'systems',
             },
           ],

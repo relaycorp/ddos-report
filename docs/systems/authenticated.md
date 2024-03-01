@@ -7,7 +7,7 @@ sidebar_position: 2
 
 Includes HTTP APIs and non-HTTP protocols that require authentication (e.g., SMTP).
 
-## Protocol-level deterrents
+## Protocol-level mitigations
 
 ## See also
 
