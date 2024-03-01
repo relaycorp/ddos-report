@@ -22,7 +22,6 @@ sidebar_position: 0
 - Programmatic access control (e.g., Cloudflare Pages Functions).
 - Throttling. To avoid overloading the origin server.
 - Rate limiting. Per-IP address, for example.
-- API gateway.
 
 ## Advantages
 
@@ -31,7 +30,7 @@ sidebar_position: 0
 ## Turnkey solutions
 
 - [Akamai](https://www.akamai.com/).
-- [AWS CloudFront](https://aws.amazon.com/cloudfront/).
+- [Amazon CloudFront](https://aws.amazon.com/cloudfront/).
 - [Cloudflare](https://www.cloudflare.com/).
 - [Fastly](https://www.fastly.com/).
 - [Google Cloud Load Balancing](https://cloud.google.com/load-balancing/).

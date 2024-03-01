@@ -1,9 +1,9 @@
 ---
-title: User authentication
+title: Client authentication
 sidebar_position: 3
 ---
 
-# User authentication
+# Client authentication
 
 - Long-term identity keys.
 
