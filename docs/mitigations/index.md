@@ -1,5 +1,4 @@
 ---
-title: Mitigations
 sidebar_position: 0
 ---
 

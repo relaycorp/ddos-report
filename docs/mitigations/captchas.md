@@ -1,5 +1,4 @@
 ---
-title: CAPTCHAs
 sidebar_position: 9
 ---
 

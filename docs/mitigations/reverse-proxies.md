@@ -1,5 +1,4 @@
 ---
-title: Reverse proxies
 sidebar_position: 0
 ---
 

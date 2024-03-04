@@ -1,5 +1,4 @@
 ---
-title: Client integrity verification
 sidebar_position: 7
 ---
 

@@ -1,5 +1,4 @@
 ---
-title: Unmetered DNS lookups
 sidebar_position: 1
 ---
 

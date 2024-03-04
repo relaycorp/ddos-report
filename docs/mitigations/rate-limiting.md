@@ -1,5 +1,4 @@
 ---
-title: Client-aware rate limiting
 sidebar_position: 5
 ---
 

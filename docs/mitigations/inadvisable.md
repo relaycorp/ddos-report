@@ -1,5 +1,4 @@
 ---
-title: Inadvisable mitigations
 sidebar_position: 90
 ---
 

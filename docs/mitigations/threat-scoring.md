@@ -1,5 +1,4 @@
 ---
-title: Threat scoring
 sidebar_position: 10
 ---
 

@@ -1,5 +1,4 @@
 ---
-title: Cryptographic challenges
 sidebar_position: 4
 ---
 
