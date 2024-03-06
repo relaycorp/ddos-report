@@ -30,6 +30,7 @@ As an operator of public goods, you should consider the following mitigations, w
 
 - [Reverse proxy](../mitigations/reverse-proxies.md).
 - [Unmetered DNS lookups](../mitigations/unmetered-dns.md), if the protocol uses DNS.
+- [Cloud resource limits](../mitigations/resource-limits.md).
 - [Abuse reporting](../mitigations/abuse-reporting.md).
 
 Unfortunately, these mitigations alone may not be enough to protect against well-resourced attackers without further changes to the protocol itself.
