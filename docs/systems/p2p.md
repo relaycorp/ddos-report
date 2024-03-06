@@ -18,4 +18,10 @@ As the designer of a protocol that powers P2P networks, you should consider the 
 - [Client-aware rate limiting](../mitigations/rate-limiting.md).
 - [Threat scoring](../mitigations/threat-scoring.md).
 
-You should also consider how the generic mitigations above can help address attack vectors specific to your P2P network. For example, in a network susceptible to Sybil attacks, both authentication and cryptographic challenges can play an important role in mitigating the issue.
+The mitigations above work on the application layer,
+but since you can't place [proxies](../mitigations/reverse-proxies.md) between peers,
+the P2P application itself should also be able to mitigate attacks on the [transport layer](https://en.wikipedia.org/wiki/Transport_layer) (e.g. TCP),
+such as [SYN floods](https://en.wikipedia.org/wiki/SYN_flood).
+In lieu of a reverse proxy, you should consider using a P2P library that offers some DDoS defence, like [libp2p](https://docs.libp2p.io/concepts/security/dos-mitigation/).
+
+Lastly, you should consider how the generic mitigations above can help address attack vectors specific to your P2P network. For example, in a network susceptible to Sybil attacks, both authentication and cryptographic challenges can play an important role in mitigating the issue.
