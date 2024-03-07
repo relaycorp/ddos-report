@@ -1,5 +1,4 @@
 ---
-title: DDoS mitigations by system type
 sidebar_position: 0
 ---
 

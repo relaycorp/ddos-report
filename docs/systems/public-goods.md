@@ -26,8 +26,6 @@ that have the financial and organisational capacity to prepare for and deal with
 
 ## Mitigations available to operators
 
-As an operator of public goods, you should consider the following mitigations, which don't require changes to the protocol:
-
 - [Reverse proxy](../mitigations/reverse-proxies.md).
 - [Unmetered DNS lookups](../mitigations/unmetered-dns.md), if the protocol uses DNS.
 - [Cloud resource limits](../mitigations/resource-limits.md).
@@ -36,8 +34,6 @@ As an operator of public goods, you should consider the following mitigations, w
 Unfortunately, these mitigations alone may not be enough to protect against well-resourced attackers without further changes to the protocol itself.
 
 ## Protocol-level mitigations
-
-As the designer of a protocol that powers public goods, you should consider the following mitigations:
 
 - [Authentication](../mitigations/authentication). Use long-term identity keys to achieve pseudonymity and thus enforce other mitigations more effectively.
 - [Cryptographic challenges](../mitigations/crypto-challenges.md).

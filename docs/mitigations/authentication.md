@@ -10,3 +10,4 @@ sidebar_position: 3
 ## Experimental solutions
 
 - [VeraId](https://veraid.net).
+  - Consider the reputation of the domain name: https://www.spamhaus.org/domain-reputation/
