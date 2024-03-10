@@ -1,7 +1,52 @@
 ---
 import Default from '@astrojs/starlight/components/Footer.astro';
+import { Icon } from '@astrojs/starlight/components';
+
+import ThemableImage from './ThemableImage.astro';
+import relaycorpLogoDark from '../assets/relaycorp-logo-dark.png';
+import relaycorpLogoLight from '../assets/relaycorp-logo-light.png';
 ---
 
 <Default {...Astro.props}><slot /></Default>
 
-<p>Brought to you by Relaycorp.</p>
+<footer class="daisy-footer pt-20 place-content-between">
+    <nav>
+        <h4 class="daisy-footer-title">Community</h4>
+        <a class="daisy-link daisy-link-hover" href="/open-questions">Open questions</a>
+        <a class="daisy-link daisy-link-hover" href="https://github.com/relaycorp/ddos-report/discussions">Forum</a>
+        <a class="daisy-link daisy-link-hover" href="https://github.com/relaycorp/ddos-report">Repository</a>
+        <a class="daisy-link daisy-link-hover" href="https://github.com/relaycorp/ddos-report/issues">Issues</a>
+    </nav>
+
+    <aside class="daisy-footer-center max-w-80">
+        <p>Brought to you by</p>
+        <a href="https://relaycorp.tech">
+            <ThemableImage
+                    darkBgSrc={relaycorpLogoDark}
+                    lightBgSrc={relaycorpLogoLight}
+                    alt="Relaycorp's logo"
+                    width={relaycorpLogoDark.width / 2}
+                    densities={[1.5, 2]}
+            />
+        </a>
+        <p>Tackling humanity's toughest and most overlooked communication challenges.</p>
+        <div class="grid grid-flow-col gap-4">
+            <a href="https://twitter.com/RelaycorpHQ"><Icon name="twitter" size="1.5rem" /></a>
+            <a href="https://www.facebook.com/Relaycorp/"><Icon name="facebook" size="1.5rem" /></a>
+            <a href="https://www.linkedin.com/company/relaycorp"><Icon name="linkedin" size="1.5rem" /></a>
+            <a href="https://github.com/relaycorp"><Icon name="github" size="1.5rem" /></a>
+            <a href="https://www.youtube.com/@relaycorp"><Icon name="youtube" size="1.5rem" /></a>
+        </div>
+    </aside>
+</footer>
+
+<footer class="daisy-footer daisy-footer-center pt-6">
+    <aside>
+        <p>
+            Copyright © 2024 by <a href="https://relaycorp.tech">Relaycorp</a> and
+            <a href="https://github.com/relaycorp/ddos-report/graphs/contributors">contributors</a>.
+
+            <a href="/about#licence">Some rights reserved</a>.
+        </p>
+    </aside>
+</footer>
