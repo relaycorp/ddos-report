@@ -2,14 +2,15 @@
 import { Image } from "astro:assets";
 
 interface Props {
-    darkBgSrc: string;
-    lightBgSrc: string;
+    darkBgSrc: any;
+    lightBgSrc: any;
     alt: string;
-    additionalProps?: any[];
+    width: number;
+    densities: number[];
 }
 
-const {darkBgSrc, lightBgSrc, ...additionalProps} = Astro.props;
+const {darkBgSrc, lightBgSrc, alt, width, densities} = Astro.props;
 ---
 
-<Image src={darkBgSrc} alt=alt class:list="light:sl-hidden" {...additionalProps} />
-<Image src={lightBgSrc} alt=alt class:list="dark:sl-hidden" {...additionalProps} />
+<Image src={darkBgSrc} alt={alt} class:list="light:sl-hidden" width={width} densities={densities} />
+<Image src={lightBgSrc} alt={alt} class:list="dark:sl-hidden" width={width} densities={densities} />
