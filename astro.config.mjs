@@ -9,9 +9,8 @@ export default defineConfig({
     description: 'Everything app developers and operators need to know about Distributed Denial of Service (DDoS) attacks.',
     favicon: '/favicon.png',
     logo: {
-      dark: './src/assets/logo-dark.png',
-      light: './src/assets/logo-light.png',
-      replacesTitle: true
+      dark: './src/assets/icon-dark.png',
+      light: './src/assets/icon-light.png',
     },
     social: {
       github: 'https://github.com/relaycorp/ddos-report'

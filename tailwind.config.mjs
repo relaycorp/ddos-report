@@ -1,4 +1,5 @@
 import starlightPlugin from '@astrojs/starlight-tailwind';
+import daisyui from 'daisyui';
 
 // Generated color palettes
 const accent = { 200: '#92d1fe', 600: '#0073aa', 900: '#003653', 950: '#00273d' };
@@ -12,5 +13,8 @@ export default {
 			colors: { accent, gray },
 		},
 	},
-	plugins: [starlightPlugin()],
+	plugins: [starlightPlugin(), daisyui],
+	daisyui: {
+		prefix: "daisy-",
+	},
 };
