@@ -3,6 +3,7 @@ title: Protect public goods from DDoS attacks
 sidebar:
   label: Public goods
   order: 5
+next: false
 ---
 
 We refer to _public goods_ as servers accessible to any device on the Internet without requiring users to log in.

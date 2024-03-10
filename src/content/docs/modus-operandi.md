@@ -1,6 +1,9 @@
 ---
 title: How DDoS Attacks Work in 2024
 description: "Overview of DDoS attacks and their impact on Internet-connected systems."
+next:
+  link: /systems
+  label: Mitigations by system
 ---
 
 _**Distributed Denial of Service (DDoS) attacks can disrupt the target systems and are notoriously difficult to mitigate**.
