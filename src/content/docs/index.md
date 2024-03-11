@@ -32,7 +32,7 @@ Until now, [CAPTCHAs](./mitigations/captchas.md) have been effective in deterrin
 but [proprietary AI systems can already solve them](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/),
 and it might only be a matter of time before open source AI models can do the same on a larger scale.
 
-These attacks not only infringe on our freedom but also have a significant economic impact.
+These attacks not only infringe on our freedom but also have a significant financial impact.
 In the United States alone,
 [companies suffer an average loss of $6,130 per minute](https://www.securitymagazine.com/articles/100123-downtime-cost-of-an-application-ddos-attack-averages-6130-per-minute)
 due to outages caused by these attacks.
