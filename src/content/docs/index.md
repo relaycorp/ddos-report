@@ -27,7 +27,7 @@ so there's no need to go to the _Dark Web_ to find them.
 
 Unsurprisingly,
 [**DDoS attacks are on the rise at an alarming rate**](https://www.cybersecuritydive.com/news/ddos-attacks-surge-cloudflare/704011/),
-a trend that is expected to worsen with the increase in online populations, global bandwidth, and the proliferation of vulnerable IoT devices.
+a trend that may worsen with the increase in Internet connectivity, global bandwidth, and the proliferation of vulnerable IoT devices.
 Soon we won't even be able to distinguish between humans and bots on the Internet,
 [thanks to advances in AI](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/).
 
@@ -36,7 +36,7 @@ In the United States alone,
 [companies suffer an average loss of $6,130 per minute](https://www.securitymagazine.com/articles/100123-downtime-cost-of-an-application-ddos-attack-averages-6130-per-minute)
 due to outages caused by these attacks.
 Furthermore, they pose a threat to the decentralisation of the Internet,
-as only well-resourced companies can afford to operate the [public goods](./systems/public-goods.md) on which we all depend.
+as only well-resourced companies can afford to operate and protect the [public goods](./systems/public-goods.md) on which we all depend.
 
 We launched The DDoS Report to raise awareness amongst app developers and operators that
 [reverse proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are not the panacea our industry makes them out to be.
