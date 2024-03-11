@@ -33,9 +33,9 @@ but [proprietary AI systems can already solve them](https://arstechnica.com/info
 and it might only be a matter of time before open source AI models can do the same on a larger scale.
 
 These attacks not only infringe on our freedom but also have a significant financial impact.
-In the United States alone,
-[companies suffer an average loss of $6,130 per minute](https://www.securitymagazine.com/articles/100123-downtime-cost-of-an-application-ddos-attack-averages-6130-per-minute)
-due to outages caused by these attacks.
+Anyone with an online presence,
+from [hobbyists](https://news.ycombinator.com/item?id=39520776) to [Fortune 500 companies](https://blog.cloudflare.com/ransom-ddos-attacks-target-a-fortune-global-500-company),
+can be a target.
 Furthermore, they pose a threat to the decentralisation of the Internet,
 as only well-resourced companies can afford to operate and protect the [public goods](./systems/public-goods.md) on which we all depend.
 
