@@ -76,4 +76,6 @@ Foo [^1].
 
 ## Further reading
 
+- [DDoS Threat Landscape Report 2023](https://www.imperva.com/resources/resource-library/reports/ddos-threat-landscape-report-2023/) by Imperva.
+
 [^1]: Microsoft Digital Defense Report 2023
