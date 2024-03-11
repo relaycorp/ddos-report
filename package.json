@@ -20,6 +20,7 @@
     "typescript": "^5.4.2"
   },
   "devDependencies": {
+    "astro-rehype-relative-markdown-links": "^0.6.1",
     "daisyui": "^4.7.3"
   }
 }

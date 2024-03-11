@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwind from "@astrojs/tailwind";
+import rehypeAstroRelativeMarkdownLinks from 'astro-rehype-relative-markdown-links';
 
 // https://astro.build/config
 export default defineConfig({
@@ -58,4 +59,8 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
+
+  markdown: {
+    rehypePlugins: [[rehypeAstroRelativeMarkdownLinks, {contentPath: "src/content/docs"}]],
+  }
 });
