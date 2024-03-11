@@ -17,19 +17,20 @@ hero:
       variant: secondary
 ---
 
-## We're overlooking a major threat
+## DDoS attacks deserve more attention
 
-**Anyone with a computer connected to the Internet can launch a DDoS attack today**.
-There are many services that allow clients to launch such attacks anonymously for a small fee,
+**Anyone with a web browser can launch a DDoS attack today**.
+Accessing the _Dark Web_ is not even necessary —
+a Google search will reveal services that allow clients to launch such attacks anonymously for a small fee,
 with some even offering free trials.
-A quick Google search will reveal a plethora of these services,
-so there's no need to go to the _Dark Web_ to find them.
 
 Unsurprisingly,
 [**DDoS attacks are on the rise at an alarming rate**](https://www.cybersecuritydive.com/news/ddos-attacks-surge-cloudflare/704011/),
-a trend that may worsen with the increase in Internet connectivity, global bandwidth, and the proliferation of vulnerable IoT devices.
-Soon we won't even be able to distinguish between humans and bots on the Internet,
-[thanks to advances in AI](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/).
+a trend that may worsen with the increase in Internet connectivity and bandwidth,
+and the proliferation of vulnerable IoT devices.
+Until now, CAPTCHAs have been effective in deterring malicious bots,
+but [proprietary AI systems can already solve them](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/),
+and it might only be a matter of time before open AI models can do the same on a larger scale.
 
 These attacks not only infringe on our freedom but also have a significant economic impact.
 In the United States alone,
@@ -38,13 +39,13 @@ due to outages caused by these attacks.
 Furthermore, they pose a threat to the decentralisation of the Internet,
 as only well-resourced companies can afford to operate and protect the [public goods](./systems/public-goods.md) on which we all depend.
 
-We launched The DDoS Report to raise awareness amongst app developers and operators that
-[reverse proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are not enough,
-and they should be complimented with other [mitigation techniques](./mitigations) depending on the [type of system](./systems).
+**We can't _avoid_ DDoS attacks, but we can _minimise_ their impact**.
+[Reverse proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are a good starting point,
+but they must be complimented with other [mitigation techniques](./mitigations) depending on the [type of system](./systems).
 
 ## Help wanted
 
-We're very keen to get feedback from companies with vantage points on DDoS attacks,
-as well as from security researchers and academics.
-If there's anything we misrepresented, or anything we missed that's relevant to app developers and operators,
-please let us know on our [forum](https://github.com/relaycorp/ddos-report/discussions).
+We're eager to get feedback from companies with vantage points on DDoS attacks and security researchers.
+If you believe we have misrepresented any information, overlooked details relevant to app developers or operators,
+or if you can answer some of our [open questions](./open-questions.md),
+please share your thoughts on our [forum](https://github.com/relaycorp/ddos-report/discussions).
