@@ -39,7 +39,7 @@ due to outages caused by these attacks.
 Furthermore, they pose a threat to the decentralisation of the Internet,
 as only well-resourced companies can afford to operate and protect the [public goods](./systems/public-goods.md) on which we all depend.
 
-**We can't _avoid_ DDoS attacks, but we can _minimise_ their impact**.
+**App developers and operators can't _avoid_ DDoS attacks, but they can _minimise_ their impact**.
 [Reverse proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are a good starting point,
 but they must be complimented with other [mitigation techniques](./mitigations) depending on the [type of system](./systems).
 
