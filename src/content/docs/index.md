@@ -39,6 +39,12 @@ Furthermore, they pose a threat to the decentralisation of the Internet,
 as only well-resourced companies can afford to operate and protect the [public goods](./systems/public-goods.md) on which we all depend.
 
 We launched The DDoS Report to raise awareness amongst app developers and operators that
-[reverse proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are not the panacea our industry makes them out to be.
-Whilst they should certainly be part of our defence strategy,
-they should be complimented with other [mitigation techniques](./mitigations) depending on the [type of system](./systems).
+[reverse proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are not enough,
+and they should be complimented with other [mitigation techniques](./mitigations) depending on the [type of system](./systems).
+
+## Help wanted
+
+We're very keen to get feedback from companies with vantage points on DDoS attacks,
+as well as from security researchers and academics.
+If there's anything we misrepresented, or anything we missed that's relevant to app developers and operators,
+please let us know on our [forum](https://github.com/relaycorp/ddos-report/discussions).
