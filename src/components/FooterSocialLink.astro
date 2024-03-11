@@ -1,0 +1,12 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+
+interface Props {
+    name: string;
+    url: string;
+}
+
+const {url, name} = Astro.props;
+---
+
+<a href={url}><Icon name={name} size="1.5rem" /></a>

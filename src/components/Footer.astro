@@ -1,7 +1,9 @@
 ---
 import Default from '@astrojs/starlight/components/Footer.astro';
-import { Icon } from '@astrojs/starlight/components';
 import type { Props } from '@astrojs/starlight/props';
+
+import FooterSocialLink from './FooterSocialLink.astro';
+import FooterNavLink from './FooterNavLink.astro';
 
 import ThemableImage from './ThemableImage.astro';
 import relaycorpLogoDark from '../assets/relaycorp-logo-dark.png';
@@ -10,13 +12,21 @@ import relaycorpLogoLight from '../assets/relaycorp-logo-light.png';
 
 <Default {...Astro.props}><slot /></Default>
 
-<footer class="daisy-footer pt-20 place-content-between">
+<footer class="daisy-footer pt-20 place-content-around">
     <nav>
         <h4 class="daisy-footer-title">Community</h4>
-        <a class="daisy-link daisy-link-hover" href="/open-questions">Open questions</a>
-        <a class="daisy-link daisy-link-hover" href="https://github.com/relaycorp/ddos-report/discussions">Forum</a>
-        <a class="daisy-link daisy-link-hover" href="https://github.com/relaycorp/ddos-report">Repository</a>
-        <a class="daisy-link daisy-link-hover" href="https://github.com/relaycorp/ddos-report/issues">Issues</a>
+
+        <FooterNavLink text="Forum" url="https://github.com/relaycorp/ddos-report/discussions" />
+        <FooterNavLink text="Issues" url="https://github.com/relaycorp/ddos-report/issues" />
+        <FooterNavLink text="Open questions" url="/open-questions" />
+    </nav>
+
+    <nav>
+        <h4 class="daisy-footer-title">Related Relaycorp projects</h4>
+
+        <FooterNavLink text="Despacito" url="https://despacito.bot" title="DDoS mitigation protocol" />
+        <FooterNavLink text="VeraId" url="https://veraid.net" title="DNS-based authentication, with or without the Internet" />
+        <FooterNavLink text="Awala" url="https://awala.network" title="The computer network on which humankind can truly rely" />
     </nav>
 
     <aside class="daisy-footer-center max-w-80">
@@ -30,13 +40,13 @@ import relaycorpLogoLight from '../assets/relaycorp-logo-light.png';
                     densities={[1.5, 2]}
             />
         </a>
-        <p>Tackling humanity's toughest and most overlooked communication challenges.</p>
+        <p>Tackling the most crucial and neglected communication problems.</p>
         <div class="grid grid-flow-col gap-4">
-            <a href="https://twitter.com/RelaycorpHQ"><Icon name="twitter" size="1.5rem" /></a>
-            <a href="https://www.facebook.com/Relaycorp/"><Icon name="facebook" size="1.5rem" /></a>
-            <a href="https://www.linkedin.com/company/relaycorp"><Icon name="linkedin" size="1.5rem" /></a>
-            <a href="https://github.com/relaycorp"><Icon name="github" size="1.5rem" /></a>
-            <a href="https://www.youtube.com/@relaycorp"><Icon name="youtube" size="1.5rem" /></a>
+            <FooterSocialLink name="twitter" url="https://twitter.com/RelaycorpHQ" />
+            <FooterSocialLink name="facebook" url="https://www.facebook.com/Relaycorp/" />
+            <FooterSocialLink name="linkedin" url="https://www.linkedin.com/company/relaycorp" />
+            <FooterSocialLink name="github" url="https://www.linkedin.com/company/relaycorp" />
+            <FooterSocialLink name="youtube" url="https://www.youtube.com/@relaycorp" />
         </div>
     </aside>
 </footer>
