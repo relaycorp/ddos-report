@@ -28,9 +28,9 @@ Unsurprisingly,
 [**DDoS attacks are on the rise at an alarming rate**](https://www.cybersecuritydive.com/news/ddos-attacks-surge-cloudflare/704011/),
 a trend that may worsen with the increase in Internet connectivity and bandwidth,
 and the proliferation of vulnerable IoT devices.
-Until now, CAPTCHAs have been effective in deterring malicious bots,
+Until now, [CAPTCHAs](./mitigations/captchas.md) have been effective in deterring malicious bots,
 but [proprietary AI systems can already solve them](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/),
-and it might only be a matter of time before open AI models can do the same on a larger scale.
+and it might only be a matter of time before open source AI models can do the same on a larger scale.
 
 These attacks not only infringe on our freedom but also have a significant economic impact.
 In the United States alone,
@@ -39,9 +39,9 @@ due to outages caused by these attacks.
 Furthermore, they pose a threat to the decentralisation of the Internet,
 as only well-resourced companies can afford to operate and protect the [public goods](./systems/public-goods.md) on which we all depend.
 
-**App developers and operators can't _avoid_ DDoS attacks, but they can _minimise_ their impact**.
-[Reverse proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are a good starting point,
-but they must be complimented with other [mitigation techniques](./mitigations) depending on the [type of system](./systems).
+**App developers and operators can't _avoid_ DDoS attacks, but they can _greatly minimise_ their impact**.
+[Proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are a good starting point,
+but they must be complimented with other [mitigation techniques](./mitigations) depending on the [system type](./systems).
 
 ## Help wanted
 
