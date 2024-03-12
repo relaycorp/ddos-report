@@ -4,8 +4,7 @@ template: splash
 hero:
   tagline: Everything app developers and operators need to know about Distributed Denial of Service (DDoS) attacks.
   image:
-    dark: "../../assets/icon-dark.png"
-    light: "../../assets/icon-light.png"
+    file: "../../assets/hero.png"
   actions:
     - text: Learn how DDoS attacks work
       link: /modus-operandi
