@@ -50,7 +50,7 @@ export default defineConfig({
         defer: true
       }
     }],
-    customCss: ['./src/tailwind.css'],
+    customCss: ['./src/tailwind.css', './src/custom.css'],
     components: {
       Footer: './src/components/Footer.astro'
     }
