@@ -46,8 +46,6 @@ it may be more helpful to think about this in terms of the [OSI model](https://e
 
 ### Media layers
 
-![Diagram of a Network Layer attack](../../assets/diagrams/modus-operandi/attack-layers-media.svg)
-
 The bottom three layers (physical, data link, network) are the media layers,
 and they handle the physical transmission of data packets across the network.
 
@@ -56,22 +54,28 @@ only the network (layer 3) is relevant in the context of _Distributed_ DoS attac
 as attacking the other two layers would require physical access to the network.
 Network layer protocols include the Internet Protocol (IP).
 
+The following diagram illustrates a DDoS attack on the network layer:
+
+![Diagram of a Network Layer attack](../../assets/diagrams/modus-operandi/attack-layers-media.svg)
+
 **An attack on the network layer will seek to overwhelm the bandwidth of the victim's network**,
-so only ISPs and hosting providers can protect this layer,
-although some may offer firewalls for operators to block offending IP addresses.
+so only ISPs and hosting providers can protect this layer.
+Some may offer firewalls for operators to block offending IP addresses.
 
 ### Host layers
 
-![Diagram of an attack on the host layers](../../assets/diagrams/modus-operandi/attack-layers-host.svg)
-
 The top four layers (transport, session, presentation, application) are the host layers,
 and they focus on how applications on the host machines interact and exchange data.
+The following diagram illustrates a DDoS attack on a host layer:
 
-Most developers only implement clients and/or servers for the application layer (layer 7)
+![Diagram of an attack on the host layers](../../assets/diagrams/modus-operandi/attack-layers-host.svg)
+
+Two of these layers are particularly relevant:
+
+- Layer 7: Most developers only implement clients and/or servers for the **application layer**
 via high-level libraries that abstract away the underlying protocol (e.g. HTTP).
 **An application layer attack will seek to overwhelm the app with a high volume of messages** (e.g. requests).
-
-Developers can also work on the transport layer (layer 4) by creating TCP servers and clients, for example.
+- Layer 4: Developers can also work on the **transport layer** (layer 4) by creating TCP servers and clients, for example.
 **A transport layer attack will seek to overwhelm the device hosting the app with a high volume of packets**
 (or _datagrams_ in the case of UDP).
 
@@ -79,9 +83,33 @@ App developers and operators share the responsibility of protecting the host lay
 and nearly all the [DDoS mitigations](./mitigations) are implemented at this level.
 For this reason, we're primarily interested in the host layers.
 
-NEED A BETTER SWEGWAY INTO THE NEXT SECTION
+## Attack delivery methods
 
-## How DDoS attacks are launched
+### Reflection
+
+In a reflection attack,
+the attacker sends a request to third-party servers with the source IP address spoofed to match the victim's IP address,
+causing the servers to send their responses to the victim.
+
+![reflection-attack.svg](../../assets/diagrams/modus-operandi/reflection-attack.svg)
+
+These attacks typically target the network and transport layers,
+but [they can also target the application layer](https://geneva.cs.umd.edu/posts/usenix21-weaponizing-censors/).
+
+### Amplification
+
+In an amplification attack,
+the attacker sends a small amount of data,
+and that causes the victim to send or receive a much larger amount of data.
+
+These attacks often leverage reflection as described above.
+For example, DNS amplification attacks involve sending an `ANY` query to an open DNS resolver,
+which with the right domain can cause the server to send a large response to the victim.
+
+### Botnets
+
+Botnet attacks are the most versatile,
+as the attacker can launch any of the attacks above.
 
 The attacker bootstraps the network of devices that will be used to launch the attack,
 which typically involves compromising IoT devices, home routers, and personal computers,
