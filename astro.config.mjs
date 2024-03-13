@@ -20,8 +20,8 @@ export default defineConfig({
       baseUrl: 'https://github.com/relaycorp/ddos-report/tree/main'
     },
     sidebar: [{
-      label: 'Modus operandi',
-      link: '/modus-operandi'
+      label: 'How DDoS Attacks Work',
+      link: '/overview'
     }, {
       label: 'Mitigations by system',
       autogenerate: {

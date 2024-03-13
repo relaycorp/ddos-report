@@ -8,7 +8,7 @@ hero:
     dark: "../../assets/hero-dark.png"
   actions:
     - text: Learn how DDoS attacks work
-      link: /modus-operandi
+      link: /overview
       icon: right-arrow
       variant: primary
     - text: Mitigate DDoS attacks

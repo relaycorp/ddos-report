@@ -127,7 +127,7 @@ with more available on the Dark Web.
 Many accept cryptocurrency payments and won't keep any logs to protect their clients.
 Some offer a free tier, or even a free trial without creating an account.
 
-![Diagram of a Network Layer attack](../../assets/diagrams/modus-operandi/attacks-botnet.webp)
+![Diagram of a botnet-based DDoS attack](../../assets/diagrams/modus-operandi/attacks-botnet.webp)
 
 Botnets are a popular delivery method of DDoS attacks.
 According to the [Nokia Threat Intelligence Report 2023](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/):
