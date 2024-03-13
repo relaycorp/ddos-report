@@ -3,9 +3,9 @@ title: Mitigations
 sidebar:
   label: Overview
   order: 0
-  badge:
-    text: Draft
-    variant: caution
 ---
 
-No single mitigation can stop all abuse, but a combination of mitigations can make it more difficult for abusers to exploit your service. This section describes various mitigations, and their advantages and disadvantages.
+No mitigation will be enough on its own,
+but a combination of mitigations can make it more difficult for abusers to exploit your service.
+This section aims to describe all the possible mitigations against DDoS attacks,
+and their advantages and disadvantages.

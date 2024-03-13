@@ -21,10 +21,6 @@ Examples include:
 - Awala Internet Gateways, like Relaycorp's `belgium.relaycorp.services`.
 - Free geolocation APIs, like `https://ipinfo.io/geo`.
 
-**DDoS attacks not only affect availability but also threaten decentralisation**.
-Typically, it's only the well-resourced organisations with a vested interest in the ecosystem, such as Cloudflare and Google,
-that have the financial and organisational capacity to prepare for and deal with these attacks.
-
 ## Mitigations available to operators
 
 - [Reverse proxy](../mitigations/reverse-proxies.md).
