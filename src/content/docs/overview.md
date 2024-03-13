@@ -56,7 +56,7 @@ Network layer protocols include the Internet Protocol (IP).
 
 The following diagram illustrates a DDoS attack on the network layer:
 
-![Diagram of a Network Layer attack](../../assets/diagrams/modus-operandi/attacks-media-layer.webp)
+![Diagram of a Network Layer attack](../../assets/diagrams/attacks-media-layer.webp)
 
 **An attack on the network layer will seek to overwhelm the bandwidth of the victim's network**,
 so only ISPs and hosting providers can protect this layer.
@@ -68,7 +68,7 @@ The top four layers (transport, session, presentation, application) are the host
 and they focus on how applications on the host machines interact and exchange data.
 The following diagram illustrates a DDoS attack on a host layer:
 
-![Diagram of an attack on the host layers](../../assets/diagrams/modus-operandi/attacks-host-layers.webp)
+![Diagram of an attack on the host layers](../../assets/diagrams/attacks-host-layers.webp)
 
 Two of these layers are particularly relevant:
 
@@ -96,7 +96,7 @@ In a reflection attack,
 the attacker sends requests to third-party servers with the source IP address spoofed to match the victim's IP address,
 causing the servers to send their responses to the victim.
 
-![Diagram of a reflection attack](../../assets/diagrams/modus-operandi/attacks-reflection.webp)
+![Diagram of a reflection attack](../../assets/diagrams/attacks-reflection.webp)
 
 These attacks typically target the network and transport layers,
 but [they can also target the application layer](https://geneva.cs.umd.edu/posts/usenix21-weaponizing-censors/).
@@ -107,7 +107,7 @@ In an amplification attack,
 the attacker sends a small amount of data,
 and that causes the victim to send or receive a much larger amount of data.
 
-![Diagram of an amplification attack](../../assets/diagrams/modus-operandi/attacks-amplification.webp)
+![Diagram of an amplification attack](../../assets/diagrams/attacks-amplification.webp)
 
 These attacks typically leverage [reflection](#reflection).
 For example, DNS amplification attacks involve sending a query to an open DNS resolver,
@@ -128,7 +128,7 @@ including more elusive ones on the Dark Web.
 These services typically accept cryptocurrency and maintain no logs to safeguard their customers.
 Some even provide a free tier or trial, without requiring an account.
 
-![Diagram of a botnet-based DDoS attack](../../assets/diagrams/modus-operandi/attacks-botnet.webp)
+![Diagram of a botnet-based DDoS attack](../../assets/diagrams/attacks-botnet.webp)
 
 Botnets are a popular mechanism for delivering DDoS attacks.
 The [Nokia Threat Intelligence Report 2023](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/) states:
