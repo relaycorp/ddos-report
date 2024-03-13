@@ -3,6 +3,9 @@ title: DDoS mitigations by system type
 sidebar:
   label: Overview
   order: 0
+  badge:
+    text: Draft
+    variant: caution
 ---
 
 Every system should fall into at least one of these categories. For example, an IMAP server would only fall into the [authenticated server](./authenticated) category, but Awala would fall into the [federated](federated.md) and [public goods](public-goods.md) categories.

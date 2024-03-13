@@ -2,6 +2,9 @@
 title: Authentication
 sidebar:
   order: 3
+  badge:
+    text: Draft
+    variant: caution
 ---
 
 - User vs client authentication.

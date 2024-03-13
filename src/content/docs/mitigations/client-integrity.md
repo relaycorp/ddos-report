@@ -2,6 +2,9 @@
 title: Client integrity verification
 sidebar:
   order: 7
+  badge:
+    text: Draft
+    variant: caution
 ---
 
 E.g., Android app integrity.

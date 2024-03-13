@@ -2,6 +2,9 @@
 title: Reverse proxies
 sidebar:
   order: 1
+  badge:
+    text: Draft
+    variant: caution
 ---
 
 - L3/L4 at least. Preferably a Layer 7 proxy if the protocol (e.g., HTTP) is supported.

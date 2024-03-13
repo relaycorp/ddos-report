@@ -2,6 +2,9 @@
 title: Inadvisable mitigations
 sidebar:
   order: 90
+  badge:
+    text: Draft
+    variant: caution
 ---
 
 ## DDoS scrubbing services

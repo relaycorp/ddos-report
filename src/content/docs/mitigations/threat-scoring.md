@@ -2,6 +2,9 @@
 title: Threat scoring
 sidebar:
   order: 10
+  badge:
+    text: Draft
+    variant: caution
 ---
 
 Client-aware behaviour analysis to control other mitigations (e.g., [rate limiting](rate-limiting.md), [crypto challenges](crypto-challenges.md)) per user and/or tenant.

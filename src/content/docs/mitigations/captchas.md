@@ -2,6 +2,9 @@
 title: CAPTCHAs
 sidebar:
   order: 9
+  badge:
+    text: Draft
+    variant: caution
 ---
 
 ## Advantages

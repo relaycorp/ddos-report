@@ -2,6 +2,9 @@
 title: Client-aware rate limiting
 sidebar:
   order: 5
+  badge:
+    text: Draft
+    variant: caution
 ---
 
 Client id, or the user owning the client.
