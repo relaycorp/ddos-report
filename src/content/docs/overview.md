@@ -21,7 +21,8 @@ A _distributed_ DoS attack, on the other hand, can originate from thousands of I
 complicating the process of distinguishing them from legitimate traffic surges and subsequently blocking them.
 
 The ultimate goal of a DDoS attack may not necessarily be to disrupt the target system,
-but to distract the operator from a more sinister attack or to inflict distress.
+but to distract the operator from a more sinister attack (e.g. data extraction)
+or to inflict distress.
 
 In this document we refer to the implementer of a server-side app as the **app developer**,
 and anyone that installs and maintains the app as the **operator**.
@@ -30,9 +31,9 @@ and anyone that installs and maintains the app as the **operator**.
 
 The literature on DDoS attacks typically categorises them by the following _vectors_:
 
-1. **Volumetric attacks**: These involve overwhelming the bandwidth of the targeted server or network with a massive amount of traffic. Examples include [ping floods](https://www.cloudflare.com/en-gb/learning/ddos/ping-icmp-flood-ddos-attack/) and [DNS amplification attacks](https://www.cloudflare.com/en-gb/learning/ddos/dns-amplification-ddos-attack/). The intensity of these attacks is measured in bits per second (bps).
-2. **Protocol attacks**: These aim to exploit a weakness in the underlying protocol (e.g. IP, TCP). Protocol attacks include [SYN floods](https://www.cloudflare.com/en-gb/learning/ddos/syn-flood-ddos-attack/), [UDP floods](https://www.cloudflare.com/en-gb/learning/ddos/udp-flood-ddos-attack/), and more. Their intensity is measured in packets per second (pps).
-3. **Application attacks**: These are the most sophisticated type, targeting the server-side app itself. These attacks are executed by sending seemingly legitimate and innocuous data to the server. The intensity of application layer attacks is measured in requests per second (rps) in the case of HTTP floods.
+1. **Volumetric attacks**: These involve overwhelming the bandwidth of the targeted server or network with a massive amount of traffic. Examples include [ping floods](https://www.cloudflare.com/en-gb/learning/ddos/ping-icmp-flood-ddos-attack/) and [DNS amplification attacks](https://www.cloudflare.com/en-gb/learning/ddos/dns-amplification-ddos-attack/). The intensity of these attacks is measured in _bits per second_.
+2. **Protocol attacks**: These aim to exploit a weakness in the underlying protocol (e.g. IP, TCP). Protocol attacks include [SYN floods](https://www.cloudflare.com/en-gb/learning/ddos/syn-flood-ddos-attack/), [UDP floods](https://www.cloudflare.com/en-gb/learning/ddos/udp-flood-ddos-attack/), and more. Their intensity is measured in _packets per second_.
+3. **Application attacks**: These are the most sophisticated type, targeting the server-side app itself. These attacks are executed by sending seemingly legitimate and innocuous data to the server. The intensity of application layer attacks is measured in _messages per second_, or _requests per second_ in the case of HTTP floods.
 
 A **multi-vector attack** combines two or more of the attacks above, either simultaneously or sequentially,
 to make detection and mitigation more difficult.
@@ -120,8 +121,7 @@ but can also involve virtual machines (VMs) from cloud providers.
 Every botnet is managed through a _Command and Control_ (C&C) system.
 
 Building a botnet requires significant time and effort.
-Consequently, attackers often resort to third-party  _booter_ or _stresser_ service,
-renting botnets for specific durations.
+Consequently, attackers often rent botnets for specific durations from third-party _booter_ or _stresser_ services.
 Interestingly,
 a quick search on [DuckDuckGo](https://duckduckgo.com/?q=best+booter&kp=-2) or [Google](https://www.google.com/search?q=best+booter) can unveil numerous such services,
 including more elusive ones on the Dark Web.
@@ -137,7 +137,7 @@ The [Nokia Threat Intelligence Report 2023](https://www.nokia.com/networks/secur
 > In addition, we are seeing between 500,000 and 1,000,000 globally distributed, remotely controlled IoT hosts or cloud server instances active on a daily basis,
 > generating more than 40% of all DDoS traffic.
 
-IoT devices, often overlooked in security by manufacturers and operators, are prime targets for these attacks.
+Manufacturers and operators often overlook IoT device security, making them prime targets for attacks.
 The [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023) highlights:
 
 > More than 50 percent of devices use firmware versions exposing them to more than 10 CVEs
@@ -162,6 +162,12 @@ According to the [Cloudflare DDoS threat report for 2023 Q4](https://blog.cloudf
 and 2% of network-layer DDoS attacks lasted more than an hour.
 The Microsoft Azure team found that [26% of attacks lasted 1–2 minutes in 2022](https://www.microsoft.com/en-us/security/blog/2023/02/21/2022-in-review-ddos-attack-trends-and-insights/).
 
+Whilst one minute may seem like a short time,
+it can be enough to disrupt a service or cause financial damage,
+especially when the victim relies on metered cloud resources.
+For reference,
+[US organisations lose an average of $6,130/minute of downtime caused by a DDoS attack](https://www.radware.com/multi-cloud-report-2023/).
+
 ## Emerging threats
 
 The landscape of DDoS attacks is constantly evolving.
@@ -170,7 +176,7 @@ The following are the trends that deserve special attention:
 ### Improving Internet infrastructure
 
 As [more people come online](https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx),
-and residential and mobile networks get faster,
+and residential and mobile networks get faster (e.g. 5G, fibre),
 the potential for larger DDoS attacks increases.
 
 ### Increasing device resources
@@ -212,8 +218,8 @@ Developers and operators must work together to fortify all network layers agains
 
 Whilst avoiding or stopping DDoS attacks may not be possible,
 their impact can be greatly minimised.
-Knowing attack vectors, delivery methods and new threats
-helps in implementing preemptive [mitigation techniques](./mitigations) to reduce impact and maintain system resilience.
+Understanding attack vectors, delivery methods and new threats
+helps in implementing preemptive [mitigation techniques](./mitigations) to reduce impact.
 
 ## Further reading
 
