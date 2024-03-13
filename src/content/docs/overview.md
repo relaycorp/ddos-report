@@ -13,7 +13,7 @@ and is intended for developers and operators of apps connected to the Internet.
 
 A DDoS attack is a type of Denial of Service (DoS) attack.
 Essentially, **a DoS attack is an attempt to exhaust the resources of a system, rendering it unavailable to its intended users**.
-These resources can include network bandwidth, CPU cycles, memory, disc space, file descriptors, and even the system's budget.
+These resources can include network bandwidth, CPU cycles, memory, disc space, file descriptors, and even the budget allocated to the system.
 
 A regular DoS attack originates from one or a handful of IP addresses,
 so it's relatively easy to mitigate once detected.
@@ -74,7 +74,7 @@ Two of these layers are particularly relevant:
 
 - Application layer (layer 7):
   Most developers only implement clients and/or servers on this layer via high-level libraries that abstract away the underlying protocol (e.g. HTTP).
-  **An application layer attack will seek to overwhelm the app with a high volume of messages** (e.g. requests).
+  **An application layer attack will seek to overwhelm the app with a high volume of messages** (e.g. requests in the case of HTTP).
 - Transport layer (layer 4):
   Developers can also work on this layer by creating TCP servers and clients, for example.
   **A transport layer attack will seek to overwhelm the device hosting the app with a high volume of packets**
@@ -88,7 +88,7 @@ and nearly all the [DDoS mitigations](./mitigations) are implemented at this lev
 
 ## Delivery methods
 
-Attacks may use one or more of the methods bellow to deliver an attack:
+Attackers may use one or more of the methods bellow to deliver an attack:
 
 ### Reflection
 
@@ -109,8 +109,8 @@ and that causes the victim to send or receive a much larger amount of data.
 
 ![Diagram of an amplification attack](../../assets/diagrams/modus-operandi/attacks-amplification.webp)
 
-These attacks typically leverage reflection.
-For example, DNS amplification attacks involve sending an `ANY` query to an open DNS resolver,
+These attacks typically leverage [reflection](#reflection).
+For example, DNS amplification attacks involve sending a query to an open DNS resolver,
 which with the right domain can cause the server to send a large response to the victim.
 
 ### Botnets
@@ -141,10 +141,10 @@ Manufacturers and operators often overlook IoT device security, making them prim
 The [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023) highlights:
 
 > More than 50 percent of devices use firmware versions exposing them to more than 10 CVEs
-> even though firmware significantly reducing exploitable CVEs has been available for more than 10 years.
+> even though firmware significantly reducing exploitable CVEs has been available for **more than 10 years**.
 
 Meanwhile,
-VM-based botnets have been gaining popularity in recent years,
+VM-based botnets have gained popularity in recent years,
 as they offer superior connectivity compared to devices on residential networks.
 The [Cloudflare DDoS threat report for 2023 Q3](https://blog.cloudflare.com/ddos-threat-report-2023-q3) notes:
 
@@ -176,7 +176,7 @@ The following are the trends that deserve special attention:
 ### Improving Internet infrastructure
 
 As [more people come online](https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx),
-and residential and mobile networks get faster (e.g. 5G, fibre),
+and residential and mobile networks get faster (e.g. fibre, 5G),
 the potential for larger DDoS attacks increases.
 
 ### Increasing device resources
@@ -203,7 +203,7 @@ including measures as stringent as prohibiting default passwords.
 
 AI deserves attention for two reasons:
 
-- Proprietary Large Language Models (LLMs) like GPT-4 have demonstrated the capability to solve CAPTCHAs,
+- [Proprietary Large Language Models (LLMs) like GPT-4 have demonstrated the capability to solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/),
   although this currently requires [jailbreaking](https://learnprompting.org/docs/prompt_hacking/jailbreaking).
   As open-source LLMs advance, attackers might leverage them to bypass CAPTCHAs on a large scale.
 - Generative AI can produce botnet traffic devoid of identifiable patterns,

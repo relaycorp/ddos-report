@@ -49,5 +49,5 @@ but they must be complimented with other [mitigation techniques](./mitigations) 
 
 We'd very much appreciate any feedback from companies with vantage points on DDoS attacks,
 as well as security researchers.
-If we have misrepresented any information, or overlooked details relevant to app developers or operators,
-please share your thoughts on [our forum](https://github.com/relaycorp/ddos-report/discussions).
+If we've misrepresented anything, or overlooked details relevant to app developers or operators,
+please let us know on [our forum](https://github.com/relaycorp/ddos-report/discussions).

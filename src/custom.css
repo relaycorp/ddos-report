@@ -2,6 +2,6 @@
     border-radius: 33%;
 }
 
-footer a:visited {
+footer a:visited, footer a:link {
     color: var(--sl-color-text);
 }
