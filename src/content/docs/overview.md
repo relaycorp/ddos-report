@@ -117,36 +117,36 @@ which with the right domain can cause the server to send a large response to the
 A botnet is a network of devices used to carry out DDoS attacks from a broad range of IP addresses.
 It usually consists of compromised IoT devices, home routers, and personal computers,
 but can also involve virtual machines (VMs) from cloud providers.
-Every botnet is orchestrated via a _Command and Control_ (C&C) system.
+Every botnet is managed through a _Command and Control_ (C&C) system.
 
-Given the time and effort it takes to build a botnet,
-the attacker may use a third-party _booter_ or _stresser_ service to rent a botnet for a period of time.
-Perhaps surprisingly,
-a simple [DuckDuckGo](https://duckduckgo.com/?q=best+booter&kp=-2) or [Google search](https://www.google.com/search?q=best+booter) will reveal many such services,
-with more available on the Dark Web.
-Many accept cryptocurrency payments and won't keep any logs to protect their clients.
-Some offer a free tier, or even a free trial without creating an account.
+Building a botnet requires significant time and effort.
+Consequently, attackers often resort to third-party  _booter_ or _stresser_ service,
+renting botnets for specific durations.
+Interestingly,
+a quick search on [DuckDuckGo](https://duckduckgo.com/?q=best+booter&kp=-2) or [Google](https://www.google.com/search?q=best+booter) can unveil numerous such services,
+including more elusive ones on the Dark Web.
+These services typically accept cryptocurrency and maintain no logs to safeguard their customers.
+Some even provide a free tier or trial, without requiring an account.
 
 ![Diagram of a botnet-based DDoS attack](../../assets/diagrams/modus-operandi/attacks-botnet.webp)
 
-Botnets are a popular delivery method of DDoS attacks.
-According to the [Nokia Threat Intelligence Report 2023](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/):
+Botnets are a popular mechanism for delivering DDoS attacks.
+The [Nokia Threat Intelligence Report 2023](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/) states:
 
 > As of 2023, about 90% of all complex, multi-vector DDoS attacks are now based on botnets.
 > In addition, we are seeing between 500,000 and 1,000,000 globally distributed, remotely controlled IoT hosts or cloud server instances active on a daily basis,
 > generating more than 40% of all DDoS traffic.
 
-IoT devices have been the primary target for booters,
-as manufacturers and operators tend to neglect their security.
-According to the [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023):
+IoT devices, often overlooked in security by manufacturers and operators, are prime targets for these attacks.
+The [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023) highlights:
 
 > More than 50 percent of devices use firmware versions exposing them to more than 10 CVEs
 > even though firmware significantly reducing exploitable CVEs has been available for more than 10 years.
 
-On the other hand,
+Meanwhile,
 VM-based botnets have been gaining popularity in recent years,
-as they offer much better connectivity than devices running on residential networks.
-According to the [Cloudflare DDoS threat report for 2023 Q3](https://blog.cloudflare.com/ddos-threat-report-2023-q3):
+as they offer superior connectivity compared to devices on residential networks.
+The [Cloudflare DDoS threat report for 2023 Q3](https://blog.cloudflare.com/ddos-threat-report-2023-q3) notes:
 
 > As we’ve seen in this campaign and previous ones,
 > botnets that leverage cloud computing platforms and exploit HTTP/2 are able to generate up to **x5,000** more force per botnet node.
@@ -164,31 +164,67 @@ The Microsoft Azure team found that [26% of attacks lasted 1–2 minutes in 2022
 
 ## Emerging threats
 
-### Expanding IoT Botnets
+The landscape of DDoS attacks is constantly evolving.
+The following are the trends that deserve special attention:
 
-More compromised devices than ever
+### Improving Internet infrastructure
 
-### Artificial Intelligence
-
-- LLMs able to solve CAPTCHAS
-- AI-generated strategies to bypass DDoS mitigations, roughly comparable to https://geneva.cs.umd.edu/. For example, DDoS mitigation services often employ _fingerprinting_ to identify patterns in the traffic from botnets, but AI could be used to generate traffic that doesn't follow any pattern.
-
-### Increasing bandwidth
+As [more people come online](https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx),
+and residential and mobile networks get faster,
+the potential for larger DDoS attacks increases.
 
 ### Increasing device resources
 
-CPU, memory, storage, etc.
+As devices, such as smartphones and laptops, get better CPUs and more storage,
+they become more capable of reducing the effectiveness of certain DDoS mitigation mechanisms,
+like [cryptographic challenges](./mitigations/crypto-challenges.md).
 
-### Increasing Internet adoption
+### Expanding IoT botnets
+
+There are an estimated 15 billion IoT devices connected to the Internet in 2024,
+with projections suggesting this number will double by 2030,
+according to [Trending Topics](https://explodingtopics.com/blog/number-of-iot-devices).
+This expansion raises significant security concerns,
+considering the historically lax security of IoT devices.
+
+However, there is cause for optimism.
+Global legislative bodies have been increasingly focusing on IoT security,
+enacting laws like California's SB-327 and the UK's Product Security and Telecommunications Infrastructure (PSTI) Bill.
+These laws aim to hold manufacturers accountable for device security,
+including measures as stringent as prohibiting default passwords.
+
+### Artificial Intelligence
+
+AI deserves attention for two reasons:
+
+- Proprietary Large Language Models (LLMs) like GPT-4 have demonstrated the capability to solve CAPTCHAs,
+  although this currently requires [jailbreaking](https://learnprompting.org/docs/prompt_hacking/jailbreaking).
+  As open-source LLMs advance, attackers might leverage them to bypass CAPTCHAs on a large scale.
+- Generative AI can produce botnet traffic devoid of identifiable patterns,
+  challenging conventional mitigation techniques such as _fingerprinting_.
+  This approach depends on analysing traffic to detect consistent patterns (e.g. HTTP headers, timing).
 
 ## Conclusion
 
-Unfortunately, there's no definitive way to _avoid_ DDoS attacks,
-but there are many ways to [mitigate](mitigationsndex.md) their impact [depending on the nature of the target system](systemsndex.md).
+DDoS attacks consistently threaten online systems, evolving with technology.
+A continuous, layered defence is crucial for protecting applications and infrastructure.
+Developers and operators must work together to fortify all network layers against these threats.
+
+Whilst avoiding or stopping DDoS attacks may not be possible,
+their impact can be greatly minimised.
+Knowing attack vectors, delivery methods and new threats
+helps in implementing preemptive [mitigation techniques](./mitigations) to reduce impact and maintain system resilience.
 
 ## Further reading
 
-- [DDoS threat report for 2023 Q4](https://blog.cloudflare.com/ddos-threat-report-2023-q4) by Cloudflare.
+We recommend the following reports to anyone interested in learning more about DDoS attacks:
+
+- [DDoS Threat Report for 2023 Q4](https://blog.cloudflare.com/ddos-threat-report-2023-q4) by Cloudflare.
 - [DDoS Threat Landscape Report 2023](https://www.imperva.com/resources/resource-library/reports/ddos-threat-landscape-report-2023/) by Imperva.
 - [Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023) by Microsoft.
 - [Threat Intelligence Report 2023](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/) by Nokia.
+
+We also recommend the following dashboards for understanding the current state of DDoS attacks:
+
+- [Security and Attacks](https://radar.cloudflare.com/security-and-attacks) on the Cloudflare Radar.
+- [Reputation Statistics](https://www.spamhaus.org/reputation-statistics/countries/exploit/) by the Spamhaus Project.
