@@ -131,11 +131,11 @@ It usually consists of compromised IoT devices, home routers, and personal compu
 but can also involve virtual machines (VMs) from cloud providers.
 Every botnet is managed through a _Command and Control_ (C&C) system.
 
-Building a botnet requires significant time and effort.
-Consequently, attackers often rent botnets from third-party _booter_ or _stresser_ services.
+Bootstrapping a botnet requires significant time and effort,
+so attackers often rent botnets from third-party _booter_ or _stresser_ services.
 Interestingly,
 a quick search on [DuckDuckGo](https://duckduckgo.com/?q=best+booter&kp=-2) or [Google](https://www.google.com/search?q=best+booter) can unveil numerous such services,
-including more elusive ones on the Dark Web.
+with the more elusive ones available on the Dark Web.
 These services typically accept cryptocurrency and maintain no logs to safeguard their customers.
 Some even provide a free tier or trial, without requiring an account.
 
