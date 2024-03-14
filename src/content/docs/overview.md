@@ -24,8 +24,10 @@ complicating the process of distinguishing them from legitimate traffic surges a
 subsequently blocking them.
 
 The ultimate goal of a DDoS attack may not necessarily be to disrupt the target system,
-but to distract the operator from a more sinister attack (e.g. data extraction)
-or to inflict distress.
+but to extort a ransom,
+cause financial harm,
+inflict distress,
+or create a smokescreen for a more sinister attack (e.g. data theft).
 
 In this document we refer to the implementer of a server-side app as the **app developer**,
 and anyone that installs and maintains the app as the **operator**.
@@ -64,7 +66,8 @@ The following diagram illustrates a DDoS attack on the network layer:
 
 **An attack on the network layer will seek to overwhelm the bandwidth of the victim's network**,
 so only ISPs and hosting providers can protect this layer.
-Some may offer firewalls for operators to block offending IP addresses.
+However, operators may be able to allow or block IP addresses.
+Naturally, app developers can't protect this layer.
 
 ### Host layers
 
@@ -183,9 +186,9 @@ The Microsoft Azure team found that [26% of attacks lasted 1–2 minutes in 2022
 
 Whilst one minute may seem like a short time,
 it can be enough to disrupt a service or cause financial damage,
-especially when the victim relies on metered cloud resources.
+especially if the victim relies on metered cloud resources.
 For reference,
-[US organisations lose an average of $6,130/minute of downtime caused by a DDoS attack](https://www.radware.com/multi-cloud-report-2023/).
+[US organisations lose an average of $6,130 per minute of downtime caused by a DDoS attack](https://www.radware.com/multi-cloud-report-2023/).
 
 ## Emerging threats
 
@@ -208,7 +211,7 @@ like [cryptographic challenges](./mitigations/crypto-challenges.md).
 
 There are an estimated 15 billion IoT devices connected to the Internet in 2024,
 with projections suggesting this number will double by 2030,
-according to [Trending Topics](https://explodingtopics.com/blog/number-of-iot-devices).
+[according to Trending Topics](https://explodingtopics.com/blog/number-of-iot-devices).
 This expansion raises significant security concerns,
 considering the historically lax security of IoT devices.
 
@@ -217,7 +220,7 @@ Global legislative bodies have been increasingly focusing on IoT security,
 enacting laws like California's SB-327 and
 the UK's Product Security and Telecommunications Infrastructure (PSTI) Bill.
 These laws aim to hold manufacturers accountable for device security,
-including measures as stringent as prohibiting default passwords.
+including measures like prohibiting default passwords.
 
 ### Artificial Intelligence
 
