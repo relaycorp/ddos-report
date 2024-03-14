@@ -2,7 +2,7 @@ name: CI and automated releases
 on:
   pull_request:
   push:
-    branches: [ main ]
+    branches: [main]
 jobs:
   ci:
     uses: relaycorp/shared-workflows/.github/workflows/static-site-ci.yml@main
