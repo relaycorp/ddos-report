@@ -29,7 +29,7 @@ which may intensify as Internet connectivity and bandwidth increase,
 and more vulnerable IoT devices come online.
 
 Until now, the best [CAPTCHAs](./mitigations/captchas.md) have been relatively effective in deterring unwanted bots,
-but [proprietary AI systems can already solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/).
+but [proprietary AI systems can already solve them](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/).
 It might only be a matter of time before open source AI models can do the same on a larger scale,
 without the guardrails implemented in their proprietary counterparts.
 

@@ -5,3 +5,7 @@
 footer a:visited, footer a:link {
     color: var(--sl-color-text);
 }
+
+.daisy-footer-title {
+    text-transform: none;
+}
