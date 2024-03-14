@@ -4,8 +4,8 @@ template: splash
 hero:
   tagline: Everything app developers and operators need to know about Distributed Denial of Service (DDoS) attacks.
   image:
-    light: "../../assets/hero-light.png"
-    dark: "../../assets/hero-dark.png"
+    light: ../../assets/hero-light.png
+    dark: ../../assets/hero-dark.png
   actions:
     - text: Learn how DDoS attacks work
       link: /overview
@@ -21,7 +21,8 @@ hero:
 
 **Anyone with a web browser can launch a DDoS attack today**.
 It's not even necessary to go to the _Dark Web_ —
-a Google search will reveal services that allow clients to launch such attacks anonymously for as little as $5,
+a Google search will reveal services that allow clients to launch such attacks anonymously
+for as little as $5,
 with some even offering free trials.
 Unsurprisingly,
 [DDoS attacks are on the rise](https://www.cybersecuritydive.com/news/ddos-attacks-surge-cloudflare/704011/),
@@ -38,12 +39,15 @@ Anyone with an online presence,
 from [hobbyists](https://news.ycombinator.com/item?id=39520776) to [Fortune 500 companies](https://blog.cloudflare.com/ransom-ddos-attacks-target-a-fortune-global-500-company),
 can be a target.
 Furthermore, they pose a threat to the decentralisation of the Internet,
-as only well-resourced companies can afford to operate and protect the [public goods](./systems/public-goods.md) on which we all depend.
+as only well-resourced companies can afford to operate and protect
+the [public goods](./systems/public-goods.md) on which we all depend.
 
 Fortunately,
-**although app developers and operators can't _avoid_ DDoS attacks, they can _greatly minimise_ their impact**.
+**although app developers and operators can't _avoid_ DDoS attacks,
+they can _greatly minimise_ their impact**.
 [Proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are a good starting point,
-but they must be complimented with other [mitigation techniques](./mitigations) depending on the [type of system](./systems).
+but they must be complimented with other [mitigation techniques](./mitigations)
+depending on the [type of system](./systems).
 
 ## Help wanted
 

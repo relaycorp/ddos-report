@@ -1,11 +1,7 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: /
-  schedule:
-    interval: weekly
-  versioning-strategy: increase
-  groups:
-    docusaurus:
-      patterns:
-        - "@docusaurus/*"
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    versioning-strategy: increase

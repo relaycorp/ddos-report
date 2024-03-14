@@ -1,11 +1,12 @@
 .hero img {
-    border-radius: 33%;
+  border-radius: 33%;
 }
 
-footer a:visited, footer a:link {
-    color: var(--sl-color-text);
+footer a:visited,
+footer a:link {
+  color: var(--sl-color-text);
 }
 
 .daisy-footer-title {
-    text-transform: none;
+  text-transform: none;
 }

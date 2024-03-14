@@ -1,6 +1,6 @@
 ---
 title: How DDoS Attacks Work in 2024
-description: "Overview of DDoS attacks and their impact on Internet-connected systems."
+description: Overview of DDoS attacks and their impact on Internet-connected systems.
 next:
   link: /systems
   label: Mitigations by system
@@ -12,13 +12,16 @@ and is intended for developers and operators of apps connected to the Internet.
 ## Introduction
 
 A DDoS attack is a type of Denial of Service (DoS) attack.
-Essentially, **a DoS attack is an attempt to exhaust the resources of a system, rendering it unavailable to its intended users**.
-These resources can include network bandwidth, CPU cycles, memory, disc space, file descriptors, and even the budget allocated to the system.
+Essentially, **a DoS attack is an attempt to exhaust the resources of a system,
+rendering it unavailable to its intended users**.
+These resources can include network bandwidth, CPU cycles, memory, disc space, file descriptors,
+and even the budget allocated to the system.
 
 A regular DoS attack originates from one or a handful of IP addresses,
 so it's relatively easy to mitigate once detected.
 A _distributed_ DoS attack, on the other hand, can originate from thousands of IP addresses,
-complicating the process of distinguishing them from legitimate traffic surges and subsequently blocking them.
+complicating the process of distinguishing them from legitimate traffic surges and
+subsequently blocking them.
 
 The ultimate goal of a DDoS attack may not necessarily be to disrupt the target system,
 but to distract the operator from a more sinister attack (e.g. data extraction)
@@ -73,13 +76,16 @@ The following diagram illustrates a DDoS attack on a host layer:
 Two of these layers are particularly relevant:
 
 - Application layer (layer 7):
-  Most developers only implement clients and/or servers on this layer via high-level libraries that abstract away the underlying protocol (e.g. HTTP).
-  **An application layer attack will seek to overwhelm the app with a high volume of messages** (e.g. requests in the case of HTTP).
+  Most developers only implement clients and/or servers on this layer via high-level libraries
+  that abstract away the underlying protocol (e.g. HTTP).
+  **An application layer attack will seek to overwhelm the app with a high volume of messages**
+  (e.g. HTTP requests).
 - Transport layer (layer 4):
   Developers can also work on this layer by creating TCP servers and clients, for example.
-  **A transport layer attack will seek to overwhelm the device hosting the app with a high volume of packets**
-(or _datagrams_ in the case of UDP).
-  
+  **A transport layer attack will seek to overwhelm the device hosting the app
+  with a high volume of packets**
+  (or _datagrams_ in the case of UDP).
+
   According to the [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023),
   TCP was the dominant attack vector in 59% of all DDoS attacks.
 
@@ -93,7 +99,8 @@ Attackers may use one or more of the methods below to deliver an attack:
 ### Reflection
 
 In a reflection attack,
-the attacker sends requests to third-party servers with the source IP address spoofed to match the victim's IP address,
+the attacker sends requests to third-party servers with the source IP address spoofed
+to match the victim's IP address,
 causing the servers to send their responses to the victim.
 
 ![Diagram of a reflection attack](../../assets/diagrams/attacks-reflection.webp)
@@ -121,7 +128,7 @@ but can also involve virtual machines (VMs) from cloud providers.
 Every botnet is managed through a _Command and Control_ (C&C) system.
 
 Building a botnet requires significant time and effort.
-Consequently, attackers often rent botnets for specific durations from third-party _booter_ or _stresser_ services.
+Consequently, attackers often rent botnets from third-party _booter_ or _stresser_ services.
 Interestingly,
 a quick search on [DuckDuckGo](https://duckduckgo.com/?q=best+booter&kp=-2) or [Google](https://www.google.com/search?q=best+booter) can unveil numerous such services,
 including more elusive ones on the Dark Web.
@@ -134,14 +141,17 @@ Botnets are a popular mechanism for delivering DDoS attacks.
 The [Nokia Threat Intelligence Report 2023](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/) states:
 
 > As of 2023, about 90% of all complex, multi-vector DDoS attacks are now based on botnets.
-> In addition, we are seeing between 500,000 and 1,000,000 globally distributed, remotely controlled IoT hosts or cloud server instances active on a daily basis,
+> In addition, we are seeing between 500,000 and 1,000,000 globally distributed,
+> remotely controlled IoT hosts or cloud server instances active on a daily basis,
 > generating more than 40% of all DDoS traffic.
 
-Manufacturers and operators often overlook IoT device security, making them prime targets for attacks.
+Manufacturers and operators often overlook IoT device security,
+making them prime targets for attacks.
 The [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023) highlights:
 
 > More than 50 percent of devices use firmware versions exposing them to more than 10 CVEs
-> even though firmware significantly reducing exploitable CVEs has been available for **more than 10 years**.
+> even though firmware significantly reducing exploitable CVEs has been available
+> for **more than 10 years**.
 
 Meanwhile,
 VM-based botnets have gained popularity in recent years,
@@ -149,10 +159,13 @@ as they offer superior connectivity compared to devices on residential networks.
 The [Cloudflare DDoS threat report for 2023 Q3](https://blog.cloudflare.com/ddos-threat-report-2023-q3) notes:
 
 > As we’ve seen in this campaign and previous ones,
-> botnets that leverage cloud computing platforms and exploit HTTP/2 are able to generate up to **x5,000** more force per botnet node.
-> This allowed them to launch hyper-volumetric DDoS attacks with a small botnet ranging 5-20 thousand nodes alone.
+> botnets that leverage cloud computing platforms and exploit HTTP/2 are able to generate up to
+> **x5,000** more force per botnet node.
+> This allowed them to launch hyper-volumetric DDoS attacks with a small botnet
+> ranging 5-20 thousand nodes alone.
 > To put that into perspective, in the past,
-> IoT based botnets consisted of fleets of millions of nodes and barely managed to reach a few million requests per second.
+> IoT based botnets consisted of fleets of millions of nodes and barely managed to reach
+> a few million requests per second.
 
 Bots are also able to change their IP address as they get blocked or throttled,
 using _residential proxies_.
@@ -200,7 +213,8 @@ considering the historically lax security of IoT devices.
 
 However, there is cause for optimism.
 Global legislative bodies have been increasingly focusing on IoT security,
-enacting laws like California's SB-327 and the UK's Product Security and Telecommunications Infrastructure (PSTI) Bill.
+enacting laws like California's SB-327 and
+the UK's Product Security and Telecommunications Infrastructure (PSTI) Bill.
 These laws aim to hold manufacturers accountable for device security,
 including measures as stringent as prohibiting default passwords.
 
@@ -209,7 +223,8 @@ including measures as stringent as prohibiting default passwords.
 AI deserves attention for two reasons:
 
 - [Proprietary Large Language Models (LLMs) like GPT-4 have demonstrated the capability to solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/),
-  although this currently requires [jailbreaking](https://learnprompting.org/docs/prompt_hacking/jailbreaking).
+  although this currently requires
+  [jailbreaking](https://learnprompting.org/docs/prompt_hacking/jailbreaking).
   As open-source LLMs advance, attackers might leverage them to bypass CAPTCHAs on a large scale.
 - Generative AI can produce botnet traffic devoid of identifiable patterns,
   challenging conventional mitigation techniques such as _fingerprinting_.
