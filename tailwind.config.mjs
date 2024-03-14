@@ -1,17 +1,16 @@
 import starlightPlugin from '@astrojs/starlight-tailwind';
 import daisyui from 'daisyui';
 
-// Generated color palettes
-const accent = { 200: '#92d1fe', 600: '#0073aa', 900: '#003653', 950: '#00273d' };
+const accent = { 200: '#83d6f2', 600: '#007893', 900: '#003947', 950: '#002934' };
 const gray = {
-  100: '#f3f7f9',
-  200: '#e7eff2',
-  300: '#bac4c8',
-  400: '#7b8f96',
-  500: '#495c62',
-  700: '#2a3b41',
-  800: '#182a2f',
-  900: '#121a1c',
+  100: '#f4f7f8',
+  200: '#e9eff2',
+  300: '#bcc3c7',
+  400: '#818e94',
+  500: '#4e5a60',
+  700: '#2e3a40',
+  800: '#1d292e',
+  900: '#14191b',
 };
 
 /** @type {import('tailwindcss').Config} */

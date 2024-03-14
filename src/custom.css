@@ -2,6 +2,10 @@
   border-radius: 33%;
 }
 
+.sl-markdown-content img {
+  border-radius: 0.5rem;
+}
+
 footer a:visited,
 footer a:link {
   color: var(--sl-color-text);
