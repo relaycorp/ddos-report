@@ -154,6 +154,11 @@ The [Cloudflare DDoS threat report for 2023 Q3](https://blog.cloudflare.com/ddos
 > To put that into perspective, in the past,
 > IoT based botnets consisted of fleets of millions of nodes and barely managed to reach a few million requests per second.
 
+Bots are also able to change their IP address as they get blocked or throttled,
+using _residential proxies_.
+A [Google search](https://www.google.com/search?q=residential+ip+proxy) will reveal many of those services,
+[which often acquire such IP addresses using questionable methods](https://lowendbox.com/blog/how-are-residential-ips-obtained-for-proxies-and-vpns-is-it-legal/).
+
 ## Duration
 
 DDoS attacks can range from a few seconds to several weeks or more.
