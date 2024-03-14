@@ -38,7 +38,8 @@ The literature on DDoS attacks typically categorises them by the following _vect
 2. **Protocol attacks**: These aim to exploit a weakness in the underlying protocol (e.g. IP, TCP). Protocol attacks include [SYN floods](https://www.cloudflare.com/en-gb/learning/ddos/syn-flood-ddos-attack/), [UDP floods](https://www.cloudflare.com/en-gb/learning/ddos/udp-flood-ddos-attack/), and more. Their intensity is measured in _packets per second_.
 3. **Application attacks**: These are the most sophisticated type, targeting the server-side app itself. These attacks are executed by sending seemingly legitimate and innocuous data to the server. The intensity of application layer attacks is measured in _messages per second_, or _requests per second_ in the case of HTTP floods.
 
-A **multi-vector attack** combines two or more of the attacks above, either simultaneously or sequentially,
+A **multi-vector attack** combines two or more of the vectors above,
+either simultaneously or sequentially,
 to make detection and mitigation more difficult.
 
 ## Target layers
