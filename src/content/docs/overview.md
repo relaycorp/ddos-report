@@ -88,7 +88,7 @@ and nearly all the [DDoS mitigations](./mitigations) are implemented at this lev
 
 ## Delivery methods
 
-Attackers may use one or more of the methods bellow to deliver an attack:
+Attackers may use one or more of the methods below to deliver an attack:
 
 ### Reflection
 
@@ -156,7 +156,7 @@ The [Cloudflare DDoS threat report for 2023 Q3](https://blog.cloudflare.com/ddos
 
 ## Duration
 
-DDoS attacks can range from a few seconds to several weeks, or more.
+DDoS attacks can range from a few seconds to several weeks or more.
 According to the [Cloudflare DDoS threat report for 2023 Q4](https://blog.cloudflare.com/ddos-threat-report-2023-q4),
 91% of attacks ended within 10 minutes,
 and 2% of network-layer DDoS attacks lasted more than an hour.
