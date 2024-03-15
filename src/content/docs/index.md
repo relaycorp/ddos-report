@@ -19,18 +19,16 @@ hero:
 
 ## DDoS attacks deserve more attention
 
-**Anyone with a web browser can launch a DDoS attack today**.
-It's not even necessary to go to the _Dark Web_ —
-a Google search will reveal services that allow clients to launch such attacks anonymously
-for as little as $5,
-with some even offering free trials.
+**Anyone with a browser can launch a DDoS attack today**.
+A quick Google search will reveal services that allow anyone to launch such attacks anonymously.
+Small-scale attacks start at around $5, and free trials are often available.
 Unsurprisingly,
 [DDoS attacks are on the rise](https://www.cybersecuritydive.com/news/ddos-attacks-surge-cloudflare/704011/),
 which may intensify as Internet connectivity and bandwidth increase,
 and more vulnerable IoT devices come online.
 
 Until now, the best [CAPTCHAs](./mitigations/captchas.md) have been relatively effective in deterring unwanted bots,
-but [proprietary AI systems can already solve them](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/).
+but [proprietary AI systems can already solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/).
 It might only be a matter of time before open source AI models can do the same on a larger scale,
 without the guardrails implemented in their proprietary counterparts.
 
@@ -46,7 +44,7 @@ Fortunately,
 **although app developers and operators can't _avoid_ DDoS attacks,
 they can _greatly minimise_ their impact**.
 [Proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are a good starting point,
-but they must be complimented with other [mitigation techniques](./mitigations)
+but they must be complemented with other [mitigation techniques](./mitigations)
 depending on the [type of system](./systems).
 
 ## Help wanted
