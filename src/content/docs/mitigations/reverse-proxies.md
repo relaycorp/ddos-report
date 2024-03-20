@@ -9,6 +9,7 @@ sidebar:
 
 - L3/L4 at least. Preferably a Layer 7 proxy if the protocol (e.g., HTTP) is supported.
 - AKA: Load balancers, CDNs.
+- Self-hosted proxies like Nginx can help deter transport and application layer attacks, but not internet layer attacks.
 
 ## Features
 

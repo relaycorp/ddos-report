@@ -9,7 +9,7 @@ export default defineConfig({
     starlight({
       title: 'The DDoS Report',
       description:
-        'Everything app developers and operators need to know about Distributed Denial of Service (DDoS) attacks.',
+        'The complete guide to Distributed Denial of Service (DDoS) attacks for developers and operators.',
       favicon: '/favicon.png',
       logo: {
         dark: './src/assets/icon-dark.png',

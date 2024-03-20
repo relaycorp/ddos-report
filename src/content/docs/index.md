@@ -2,7 +2,7 @@
 title: The DDoS Report
 template: splash
 hero:
-  tagline: Everything developers and operators need to know about Distributed Denial of Service (DDoS) attacks.
+  tagline: The complete guide to Distributed Denial of Service (DDoS) attacks for developers and operators.
   image:
     light: ../../assets/hero-light.png
     dark: ../../assets/hero-dark.png
