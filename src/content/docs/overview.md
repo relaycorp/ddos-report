@@ -6,14 +6,14 @@ next:
   label: Mitigations by system
 ---
 
-This living document provides an overview of Distributed Denial of Service (DDoS) attacks,
-and is intended for developers and operators of apps connected to the Internet.
+This living document provides an overview of Distributed Denial of Service (DDoS) attacks.
+It is intended for developers and operators of apps connected to the Internet.
 
 ## Introduction
 
 A DDoS attack is a type of Denial of Service (DoS) attack.
 Essentially, **a DoS attack is an attempt to exhaust the resources of a system,
-rendering it unavailable to its intended users**.
+rendering it unavailable for its intended users**.
 These resources can include network bandwidth, CPU cycles, memory, disc space, file descriptors,
 and even the budget allocated to the system.
 
@@ -46,55 +46,71 @@ to make detection and mitigation more difficult.
 
 ## Target layers
 
-As an app developer or operator, the attack vectors may not provide the most helpful mental model.
-Instead,
-it may be more helpful to think about this in terms of the [OSI model](https://en.wikipedia.org/wiki/OSI_model) layers:
+As an app developer or operator,
+it may be more helpful to break down DDoS attacks by the four conceptual layers in the Internet Protocol (IP) model:
 
-### Media layers
+![The IP model layers, using HTTP as an example](../../assets/diagrams/attacks-ip-model-layers.svg)
 
-The bottom three layers (physical, data link, network) are the media layers,
-and they handle the physical transmission of data packets across the network.
+### Data link layer
 
-Whilst all three can be attacked,
-only the network (layer 3) is relevant in the context of _Distributed_ DoS attacks,
-as attacking the other two layers would require physical access to the network.
-Network layer protocols include the Internet Protocol (IP).
+The data link layer is responsible for the physical transmission of data packets across the network.
+Ethernet and Wi-Fi are examples of protocols operating at this layer.
 
-The following diagram illustrates a DDoS attack on the network layer:
+Whilst data link layer can be attacked,
+doing so would require physical access to the network,
+so it's not relevant in the context of _Distributed_ DoS attacks.
 
-![Diagram of a Network Layer attack](../../assets/diagrams/attacks-media-layer.webp)
+### Internet layer
 
-**An attack on the network layer will seek to overwhelm the bandwidth of the victim's network**,
-so only ISPs and hosting providers can protect this layer.
-However, operators may be able to allow or block IP addresses.
-Naturally, app developers can't protect this layer.
+The internet layer is responsible for routing data packets across the network.
+The Internet Protocol is the best-known protocol operating at this layer,
+but others include the Internet Control Message Protocol (ICMP) and
+the Internet Group Management Protocol (IGMP).
 
-### Host layers
+**An attack on the internet layer will seek to overwhelm the bandwidth of the victim's network**,
+which can severely impact other devices on the same network as collateral damage.
 
-The top four layers (transport, session, presentation, application) are the host layers,
-and they focus on how applications on the host machines interact and exchange data.
-The following diagram illustrates a DDoS attack on a host layer:
+Protecting this layer primarily involves ensuring that the network has sufficient capacity to
+handle the traffic,
+by over-provisioning bandwidth and
+using techniques such as _[anycast IP routing](https://geekflare.com/anycast-routing-ddos-attacks/)_,
+which can be exceptionally complex and expensive to implement in-house.
 
-![Diagram of an attack on the host layers](../../assets/diagrams/attacks-host-layers.webp)
+Consequently,
+the only practical way to protect this layer is for the operator to place a
+[reverse proxy](./mitigations/reverse-proxies.md) between the serve-side app and the Internet.
+This will work across [all system types](./systems),
+except for [peer-to-peer networks](./systems/p2p.md).
 
-Two of these layers are particularly relevant:
+### Transport layer
 
-- Application layer (layer 7):
-  Most developers only implement clients and/or servers on this layer via high-level libraries
-  that abstract away the underlying protocol (e.g. HTTP).
-  **An application layer attack will seek to overwhelm the app with a high volume of messages**
-  (e.g. HTTP requests).
-- Transport layer (layer 4):
-  Developers can also work on this layer by creating TCP servers and clients, for example.
-  **A transport layer attack will seek to overwhelm the device hosting the app
-  with a high volume of packets**
-  (or _datagrams_ in the case of UDP).
+The transport layer is responsible for the delivery of data between devices.
+The Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP)
+are the most common protocols operating at this layer.
 
-  According to the [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023),
-  TCP was the dominant attack vector in 59% of all DDoS attacks.
+**An attack on the transport layer will seek to overwhelm the device hosting the app
+with a high volume of packets** (or _datagrams_ in the case of UDP).
+According to the [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023),
+TCP was the dominant attack vector in 59% of all DDoS attacks.
+
+Reverse proxies are also the only practical way to protect this layer.
+
+### Application layer
+
+The application layer is responsible for the interaction between applications on the network.
+The Hypertext Transfer Protocol (HTTP) and the Domain Name System (DNS)
+are examples of protocols operating at this layer.
+The Transport Layer Security (TLS) is a special protocol operating at this layer,
+as it encapsulates other application protocols such as HTTP.
+
+**An application layer attack will seek to overwhelm the app with a high volume of messages**
+(e.g. HTTP requests).
 
 App developers and operators share the responsibility of protecting the host layers,
 and nearly all the [DDoS mitigations](./mitigations) are implemented at this level.
+Where it can be used,
+a reverse proxy is the most effective way to protect the application layer,
+especially when the application uses a protocol supported by the proxy (e.g. HTTP).
 
 ## Delivery methods
 
@@ -107,7 +123,7 @@ the attacker sends requests to third-party servers with the source IP address sp
 to match the victim's IP address,
 causing the servers to send their responses to the victim.
 
-![Diagram of a reflection attack](../../assets/diagrams/attacks-reflection.webp)
+![Diagram of a reflection attack](../../assets/diagrams/attacks-reflection.svg)
 
 These attacks typically target the network and transport layers,
 but [they can also target the application layer](https://geneva.cs.umd.edu/posts/usenix21-weaponizing-censors/).
@@ -118,7 +134,7 @@ In an amplification attack,
 the attacker sends a small amount of data,
 and that causes the victim to send or receive a much larger amount of data.
 
-![Diagram of an amplification attack](../../assets/diagrams/attacks-amplification.webp)
+![Diagram of an amplification attack](../../assets/diagrams/attacks-amplification.svg)
 
 These attacks typically leverage [reflection](#reflection).
 For example, DNS amplification attacks involve sending a query to an open DNS resolver,
@@ -139,7 +155,7 @@ with the more elusive ones available on the Dark Web.
 These services typically accept cryptocurrency and maintain no logs to safeguard their customers.
 Some even provide a free tier or trial, without requiring an account.
 
-![Diagram of a botnet-based DDoS attack](../../assets/diagrams/attacks-botnet.webp)
+![Diagram of a botnet-based DDoS attack](../../assets/diagrams/attacks-botnet.svg)
 
 Botnets are a popular mechanism for delivering DDoS attacks.
 The [Nokia Threat Intelligence Report 2023](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/) states:
@@ -150,7 +166,7 @@ The [Nokia Threat Intelligence Report 2023](https://www.nokia.com/networks/secur
 > generating more than 40% of all DDoS traffic.
 
 Manufacturers and operators often overlook IoT device security,
-making them prime targets for attacks.
+making such devices prime targets for attacks.
 The [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023) highlights:
 
 > More than 50 percent of devices use firmware versions exposing them to more than 10 CVEs
