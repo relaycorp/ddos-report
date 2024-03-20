@@ -23,12 +23,16 @@ The [Draw.io](https://www.drawio.com/) file [`attacks.drawio`](./src/assets/diag
 
 The diagram pages should be exported as follows:
 
-- Format: WebP.
-- Zoom: 150%.
+- Format: SVG.
+- Zoom: 100%.
 - Border width: 10.
+- Size: Diagram.
+- Transparent background: No.
 - Appearance: Light.
 - Shadow: No.
-- Grid: No.
+- Include a copy of my diagram: No.
+- Embed images: Yes.
+- Embed fonts: Yes.
 
 The illustrations in the diagrams where generated with Midjourney,
 using prompts such as:
