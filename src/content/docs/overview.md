@@ -6,15 +6,15 @@ next:
   label: Mitigations by system
 ---
 
-This living document provides an overview of Distributed Denial of Service (DDoS) attacks.
-It is intended for developers and operators of server-side apps connected to the Internet.
+This living document provides an overview of Distributed Denial of Service (DDoS) attacks,
+and it's intended for developers and operators of server-side apps connected to the Internet.
 
 ## Introduction
 
 A DDoS attack is a type of Denial of Service (DoS) attack.
 Essentially, **a DoS attack is an attempt to exhaust the resources of a system,
 rendering it unavailable for its intended users**.
-These resources can include network bandwidth, CPU cycles, memory, disc space, file descriptors,
+These resources include network bandwidth, CPU cycles, memory, disc space, file descriptors,
 and even the budget allocated to the system.
 
 A regular DoS attack originates from one or a handful of IP addresses,
@@ -34,75 +34,74 @@ and anyone that installs and maintains the app as the **operator**.
 
 ## Attack vectors
 
-The literature on DDoS attacks typically categorises them by the following _vectors_:
-
-1. **Volumetric attacks**: These involve overwhelming the bandwidth of the targeted server or network with a massive amount of traffic. Examples include [ping floods](https://www.cloudflare.com/en-gb/learning/ddos/ping-icmp-flood-ddos-attack/) and [DNS amplification attacks](https://www.cloudflare.com/en-gb/learning/ddos/dns-amplification-ddos-attack/). The intensity of these attacks is measured in _bits per second_.
-2. **Protocol attacks**: These aim to exploit a weakness in the underlying protocol (e.g. IP, TCP). Protocol attacks include [SYN floods](https://www.cloudflare.com/en-gb/learning/ddos/syn-flood-ddos-attack/), [UDP floods](https://www.cloudflare.com/en-gb/learning/ddos/udp-flood-ddos-attack/), and more. Their intensity is measured in _packets per second_.
-3. **Application attacks**: These are the most sophisticated type, targeting the server-side app itself. These attacks are executed by sending seemingly legitimate and innocuous data to the server. The intensity of application layer attacks is measured in _messages per second_, or _requests per second_ in the case of HTTP floods.
-
-A **multi-vector attack** combines two or more of the vectors above,
-either simultaneously or sequentially,
-to make detection and mitigation more difficult.
-
-## Target layers
-
-As an app developer or operator,
-it may be more helpful to break down DDoS attacks by the four conceptual layers in the Internet Protocol (IP) model:
+DDoS attacks are typically categorised by _vector_,
+with each vector targeting a different layer of the Internet Protocol model,
+as illustrated with the HTTP example below:
 
 ![The IP model layers, using HTTP as an example](../../assets/diagrams/attacks-ip-model-layers.svg)
 
-### Data link layer
-
-The data link layer is responsible for the physical transmission of data packets across the network.
+The **data link layer** is responsible for the physical transmission of data packets across the network.
 Ethernet and Wi-Fi are examples of protocols operating at this layer.
-
-Whilst the data link layer can be attacked,
+Whilst this layer can be attacked,
 doing so would require physical access to the network,
-so it's not relevant in the context of _Distributed_ DoS attacks.
+which would be a DoS attack but not a _distributed_ one.
 
-### Internet layer
+A **multi-vector attack** combines two or more vectors,
+simultaneously or sequentially,
+to make detection and mitigation more difficult.
 
-The internet layer is responsible for routing data packets across the network.
-The Internet Protocol is the best-known protocol operating at this layer,
-but others include the Internet Control Message Protocol (ICMP) and
-the Internet Group Management Protocol (IGMP).
+### Volumetric attacks
 
-**An attack on the internet layer will seek to overwhelm the bandwidth of the victim's network**,
-which can also severely impact other devices on the same network as collateral damage.
+**Volumetric attacks target the _internet layer_ with the goal of overwhelming the network's bandwidth**.
+Their intensity is measured in _bits per second_.
+Examples include [ping floods](https://www.cloudflare.com/en-gb/learning/ddos/ping-icmp-flood-ddos-attack/) and [DNS amplification attacks](https://www.cloudflare.com/en-gb/learning/ddos/dns-amplification-ddos-attack/).
 
-Protecting this layer primarily involves ensuring that the network has sufficient capacity to
-handle the traffic,
-by over-provisioning bandwidth and
-using techniques such as _[anycast IP routing](https://geekflare.com/anycast-routing-ddos-attacks/)_,
+The **internet layer** is responsible for routing data packets across the network.
+The _Internet Protocol_ (IP) is the best-known protocol operating at this layer,
+but others include the _Internet Control Message Protocol_ (ICMP) and
+the _Internet Group Management Protocol_ (IGMP).
+
+Protecting this layer primarily involves ensuring that the network has enough capacity to
+absorb the DDoS traffic,
 which can be exceptionally complex and expensive to implement in-house.
+In most cases,
+the only practical way to protect this layer is to use a
+[reverse proxy](./mitigations/reverse-proxies.md).
 
-Consequently,
-the only practical way to protect this layer is for the operator to place a
-[reverse proxy](./mitigations/reverse-proxies.md) between the serve-side app and the Internet.
+### Protocol attacks
 
-### Transport layer
+**Protocol attacks target the _transport layer_ with the goal of overwhelming the device hosting the app**.
+Their intensity is measured in _packets per second_ (or _datagrams per second_ in the case of UDP).
+Protocol attacks include [SYN floods](https://www.cloudflare.com/en-gb/learning/ddos/syn-flood-ddos-attack/) and [UDP floods](https://www.cloudflare.com/en-gb/learning/ddos/udp-flood-ddos-attack/).
 
-The transport layer is responsible for the delivery of data between devices.
-The Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP)
+The **transport layer** is responsible for the delivery of data between devices.
+The _Transmission Control Protocol_ (TCP) and the _User Datagram Protocol_ (UDP)
 are the most common protocols operating at this layer.
 
-**An attack on the transport layer will seek to overwhelm the device hosting the app
-with a high volume of packets** (or _datagrams_ in the case of UDP).
+Protocol attacks don't always involve a large volume of traffic —
+[**slow and low attacks**](https://www.akamai.com/glossary/what-is-a-low-and-slow-attack)
+like [Sockstress](https://www.webopedia.com/definitions/sockstress/)
+can be effective with minimal bandwidth.
+
 According to the [Microsoft Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023),
 TCP was the dominant attack vector in 59% of all DDoS attacks.
 
 Reverse proxies are also the only practical way to protect this layer.
 
-### Application layer
+### Application attacks
 
-The application layer is responsible for the interaction between applications on the network.
-The Hypertext Transfer Protocol (HTTP) and the Domain Name System (DNS)
+**Application attacks target the _application layer_ with the goal of overwhelming the server-side app with seemingly legitimate and innocuous messages**
+(e.g. HTTP requests).
+Their intensity is measured in _messages per second_, or _requests per second_ in the case of [HTTP floods](https://www.baeldung.com/cs/http-flood-attacks).
+
+The **application layer** is responsible for the interaction between applications on the network.
+The _Hypertext Transfer Protocol_ (HTTP) and the _Domain Name System_ (DNS)
 are examples of protocols operating at this layer.
-The Transport Layer Security (TLS) is a special protocol operating at this layer,
+The _Transport Layer Security_ (TLS) is a special protocol operating at this layer,
 as it encapsulates other application protocols such as HTTP.
 
-**An application layer attack will seek to overwhelm the app with a high volume of messages**
-(e.g. HTTP requests).
+This layer is also susceptible to slow and low attacks,
+such as [Slowloris](https://www.cloudflare.com/en-gb/learning/ddos/ddos-attack-tools/slowloris/) and [RUDY](https://www.imperva.com/learn/ddos/rudy-r-u-dead-yet/).
 
 App developers and operators share the responsibility of protecting this layer,
 and nearly all the [DDoS mitigations](./mitigations) are implemented at this level.
