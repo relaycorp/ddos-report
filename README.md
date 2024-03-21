@@ -1,9 +1,17 @@
 # The DDoS Report
 
+This is the Web site for the DDoS Report,
+a guide to DDoS mitigation for app developers and operators.
+
 ## Tech stack
 
 - Astro with the Starlight theme.
 - Tailwind CSS with the DaisyUI plugin.
+
+## Conventions
+
+- British English, excluding Oxford spelling (e.g. "organize"), for consistency. Oxford comma preferred.
+- "Internet" is capitalised when referring to the global network of networks. Otherwise, it's lowercase (e.g. "the internet layer").
 
 ## AI prompts
 
