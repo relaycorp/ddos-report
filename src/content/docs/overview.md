@@ -7,7 +7,7 @@ next:
 ---
 
 This living document provides an overview of Distributed Denial of Service (DDoS) attacks.
-It is intended for developers and operators of apps connected to the Internet.
+It is intended for developers and operators of server-side apps connected to the Internet.
 
 ## Introduction
 
