@@ -15,6 +15,7 @@ sidebar:
 
 - [Proprietary LLMs can already solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/), but [jailbreaking](https://learnprompting.org/docs/prompt_hacking/jailbreaking) is currently necessary. It's probably a matter of time until open LLMs catch up and attackers remove the guardrails. [AI-resistant CAPTCHAs do not exist](https://twitter.com/gustavonarea/status/1762464826754757008).
 - Accessibility issues.
+- [Poor privacy](https://www.fastcompany.com/90369697/googles-new-recaptcha-has-a-dark-side), depending on the provider.
 
 ## Recommendations
 
