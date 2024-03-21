@@ -56,7 +56,7 @@ it may be more helpful to break down DDoS attacks by the four conceptual layers 
 The data link layer is responsible for the physical transmission of data packets across the network.
 Ethernet and Wi-Fi are examples of protocols operating at this layer.
 
-Whilst data link layer can be attacked,
+Whilst the data link layer can be attacked,
 doing so would require physical access to the network,
 so it's not relevant in the context of _Distributed_ DoS attacks.
 
@@ -68,7 +68,7 @@ but others include the Internet Control Message Protocol (ICMP) and
 the Internet Group Management Protocol (IGMP).
 
 **An attack on the internet layer will seek to overwhelm the bandwidth of the victim's network**,
-which can severely impact other devices on the same network as collateral damage.
+which can also severely impact other devices on the same network as collateral damage.
 
 Protecting this layer primarily involves ensuring that the network has sufficient capacity to
 handle the traffic,
@@ -79,8 +79,6 @@ which can be exceptionally complex and expensive to implement in-house.
 Consequently,
 the only practical way to protect this layer is for the operator to place a
 [reverse proxy](./mitigations/reverse-proxies.md) between the serve-side app and the Internet.
-This will work across [all system types](./systems),
-except for [peer-to-peer networks](./systems/p2p.md).
 
 ### Transport layer
 
@@ -106,7 +104,7 @@ as it encapsulates other application protocols such as HTTP.
 **An application layer attack will seek to overwhelm the app with a high volume of messages**
 (e.g. HTTP requests).
 
-App developers and operators share the responsibility of protecting the host layers,
+App developers and operators share the responsibility of protecting this layer,
 and nearly all the [DDoS mitigations](./mitigations) are implemented at this level.
 Where it can be used,
 a reverse proxy is the most effective way to protect the application layer,
@@ -145,7 +143,7 @@ which with the right domain can cause the server to send a large response to the
 A botnet is a network of devices used to carry out DDoS attacks from a broad range of IP addresses.
 It usually consists of compromised IoT devices, home routers, and personal computers,
 but can also involve virtual machines (VMs) from cloud providers.
-Every botnet is managed through a _Command and Control_ (C&C) system.
+They can be extremely versatile, and can attack the internet, transport and application layers.
 
 Bootstrapping a botnet requires significant time and effort,
 so attackers often rent botnets from third-party _booter_ or _stresser_ services.
