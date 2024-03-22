@@ -1,5 +1,6 @@
 ---
 title: Reverse proxies
+description: How to use reverse proxies, also known as CDNs and load balancers, to mitigate DDoS attacks.
 sidebar:
   order: 1
   badge:
@@ -7,32 +8,91 @@ sidebar:
     variant: caution
 ---
 
-- L3/L4 at least. Preferably a Layer 7 proxy if the protocol (e.g., HTTP) is supported.
-- AKA: Load balancers, CDNs.
-- Self-hosted proxies like Nginx can help deter transport and application layer attacks, but not internet layer attacks.
-- Not feasible for all applications. For example, peer-to-peer applications.
+**A reverse proxy is a server that sits between an _origin server_ (aka _backend_) and its clients**,
+to protect the origin server and improve performance,
+amongst other reasons.
+They're more commonly known as _Content Delivery Networks_ (CDNs) or _Load Balancers_ (LBs).
+However,
+in the context of DDoS mitigation,
+we're only interested in their capacity as reverse proxies.
 
-## Features
+![Diagram of a reverse proxy](../../../assets/diagrams/attacks-reverse-proxy.svg)
+
+Reverse proxies are essential, but not sufficient, to mitigate DDoS attacks.
+All server-side apps,
+except for [peer-to-peer](../systems/p2p.md) ones,
+can benefit from such proxies.
+
+## Types
+
+Reverse proxies are typically classified by the layer at which they operate,
+and therefore protect.
+**The higher the layer,
+the more effective the proxy can be at mitigating DDoS attacks**.
+
+### Internet layer proxy
+
+**These proxies protect the internet layer from [volumetric attacks](../overview.md#volumetric-attacks)**
+by absorbing the attack traffic.
+It achieves this through the over-provisioning of bandwidth and
+techniques such as [anycast IP routing](https://geekflare.com/anycast-routing-ddos-attacks/).
+The malicious traffic never reaches the origin server.
+
+Internet layer proxies are typically called _network layer proxies_,
+_layer 3 proxies_ or _L3 proxies_, in reference to the OSI model.
+
+These proxies are rarely offered as standalone services.
+They're typically bundled with transport layer proxies.
+
+### Transport layer proxy
+
+**These proxies protect the transport layer from [protocol attacks](../overview.md#protocol-attacks)**
+by filtering traffic based on the transport layer protocol and firewall rules.
+Like internet layer proxies,
+they shield the origin server from the attack traffic.
+
+Transport layer proxies are often called _layer 4 proxies_ or _L4 proxies_,
+in reference to the OSI model.
+
+Self-hosted transport layer proxies,
+such as [HAProxy](https://www.haproxy.org) and [IPVS](https://en.wikipedia.org/wiki/IP_Virtual_Server),
+may be viable alternatives to cloud-based solutions,
+but they require substantially more resources to set up and maintain.
+
+These proxies typically offer the following DDoS-related features:
 
 - Unmetered inbound traffic.
-- DDoS protection.
-- Firewalls, including Web Application Firewalls (WAFs). Some support managed rulesets.
-  - Consider Google's BeyondCorp model.
+- Firewalls. Consider Google's BeyondCorp model. Rulesets.
+
+### Application layer proxy
+
+**These proxies protect the application layer from [application attacks](../overview.md#application-attacks)**
+by filtering traffic based on the application layer protocol and firewall rules.
+
+Application layer proxies are often called _layer 7 proxies_ or _L7 proxies_,
+in reference to the OSI model.
+[API gateways](https://www.nginx.com/resources/glossary/api-gateway/) can be considered a sophisticated form of application layer proxy.
+
+Self-hosted application layer proxies,
+such as [Nginx](https://nginx.org) and [Traefik](https://traefik.io/traefik/),
+may be viable alternatives to cloud-based solutions,
+but they too require substantially more resources to set up and maintain.
+
+These proxies typically offer the following DDoS-related features:
+
+- Web Application Firewalls (WAFs). Rulesets.
 - Caching.
 - TSL termination.
 - Behaviour analysis.
-  - Disadvantages: [Poor privacy](https://www.fastcompany.com/90369697/googles-new-recaptcha-has-a-dark-side), depending on the provider.
 - Authentication (e.g. JWKS verification).
 - Programmatic access control (e.g., Cloudflare Pages Functions).
 - Throttling. To avoid overloading the origin server.
 - Rate limiting. Per-IP address, for example.
-- Traffic analysis and fingerprinting.
+- Traffic analysis and fingerprinting. ML.
 
-## Advantages
+## Cloud-based proxies
 
-## Disadvantages
-
-## Turnkey solutions
+The following providers offer internet/transport and application layer proxies:
 
 - [Akamai](https://www.akamai.com/).
 - [Amazon CloudFront](https://aws.amazon.com/cloudfront/).
@@ -40,8 +100,9 @@ sidebar:
 - [Fastly](https://www.fastly.com/).
 - [Google Cloud Load Balancing](https://cloud.google.com/load-balancing/).
 - [Incapsula](https://www.incapsula.com/).
-- [Microsoft Azure Load Balancer](https://learn.microsoft.com/en-us/azure/load-balancer/).
+- [Microsoft Azure Load Balancer](https://azure.microsoft.com/solutions/load-balancing-with-azure/).
 - [Netscout Arbor](https://www.netscout.com/arbor).
 
 Vulnerable groups, such as journalists and human rights organisations,
-can apply for free services from [Google](https://projectshield.withgoogle.com/) and [Cloudflare](https://www.cloudflare.com/galileo/).
+can apply for free services from [Cloudflare](https://www.cloudflare.com/galileo/) and [Google](https://projectshield.withgoogle.com/),
+for example.
