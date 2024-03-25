@@ -3,9 +3,6 @@ title: Reverse proxies
 description: How to use reverse proxies, also known as CDNs and load balancers, to mitigate DDoS attacks.
 sidebar:
   order: 1
-  badge:
-    text: Draft
-    variant: caution
 ---
 
 **A reverse proxy is a server that sits between an _origin server_ (aka _backend_) and its clients**,
@@ -34,15 +31,18 @@ the more effective the proxy can be at mitigating DDoS attacks**.
 
 **These proxies protect the internet layer from [volumetric attacks](../overview.md#volumetric-attacks)**
 by absorbing the attack traffic.
-It achieves this through the over-provisioning of bandwidth and
+They achieve this through the over-provisioning of bandwidth and
 techniques such as [anycast IP routing](https://geekflare.com/anycast-routing-ddos-attacks/).
 The malicious traffic never reaches the origin server.
 
 Internet layer proxies are typically called _network layer proxies_,
 _layer 3 proxies_ or _L3 proxies_, in reference to the OSI model.
 
-These proxies are rarely offered as standalone services.
-They're typically bundled with transport layer proxies.
+When shopping for an internet layer proxy,
+it's important to ensure that it offers unmetered inbound traffic.
+
+These proxies are typically bundled with transport layer proxies,
+rather than being offered as standalone services.
 
 ### Transport layer proxy
 
@@ -54,41 +54,43 @@ they shield the origin server from the attack traffic.
 Transport layer proxies are often called _layer 4 proxies_ or _L4 proxies_,
 in reference to the OSI model.
 
+These proxies typically offer the following DDoS-related features:
+
+- **Firewall** to block traffic based on the client's IP address or other properties derived from it (e.g. its country, whether it's a known Tor node).
+- **[TLS termination](https://en.wikipedia.org/wiki/TLS_termination_proxy)** to shield the origin server from slow and low attacks targeting the TLS handshake.
+
 Self-hosted transport layer proxies,
 such as [HAProxy](https://www.haproxy.org) and [IPVS](https://en.wikipedia.org/wiki/IP_Virtual_Server),
 may be viable alternatives to cloud-based solutions,
 but they require substantially more resources to set up and maintain.
 
-These proxies typically offer the following DDoS-related features:
-
-- Unmetered inbound traffic.
-- Firewalls. Consider Google's BeyondCorp model. Rulesets.
-
 ### Application layer proxy
 
-**These proxies protect the application layer from [application attacks](../overview.md#application-attacks)**
+**These extend transport layer proxies to also protect the application layer
+from [application attacks](../overview.md#application-attacks)**,
 by filtering traffic based on the application layer protocol and firewall rules.
 
 Application layer proxies are often called _layer 7 proxies_ or _L7 proxies_,
 in reference to the OSI model.
 [API gateways](https://www.nginx.com/resources/glossary/api-gateway/) can be considered a sophisticated form of application layer proxy.
 
+Virtually all such proxies are HTTP proxies,
+and they can offer the following DDoS-related features:
+
+- **Web Application Firewall (WAF)** to block malicious traffic based on the content of the HTTP request (e.g. user agent), and/or transport layer information (e.g. IP address).
+
+  WAF policies can also be based on [attack signatures](https://www.red-button.net/ddos-glossary/signatures/),
+  which can come from a database of attack patterns known to the provider,
+  or generated with Machine Learning (ML) based on traffic analysis for each origin server.
+- **[HTTP caching](https://http.dev/caching)** to reduce the load on the origin server.
+- **IP-based rate limiting** to block traffic from IP addresses that exceed a certain threshold.
+- **Authentication** (e.g. JWKS verification) to block anonymous traffic.
+- **Programmatic access control** to implement more sophisticated access control policies, which are typically enforced at the [edge](https://www.cloudflare.com/en-gb/learning/cdn/glossary/edge-server/).
+
 Self-hosted application layer proxies,
 such as [Nginx](https://nginx.org) and [Traefik](https://traefik.io/traefik/),
 may be viable alternatives to cloud-based solutions,
-but they too require substantially more resources to set up and maintain.
-
-These proxies typically offer the following DDoS-related features:
-
-- Web Application Firewalls (WAFs). Rulesets.
-- Caching.
-- TSL termination.
-- Behaviour analysis.
-- Authentication (e.g. JWKS verification).
-- Programmatic access control (e.g., Cloudflare Pages Functions).
-- Throttling. To avoid overloading the origin server.
-- Rate limiting. Per-IP address, for example.
-- Traffic analysis and fingerprinting. ML.
+but they require substantially more resources to set up and maintain.
 
 ## Cloud-based proxies
 
