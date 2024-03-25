@@ -83,7 +83,7 @@ and they can offer the following DDoS-related features:
   or generated with Machine Learning (ML) based on traffic analysis for each origin server.
 - **[HTTP caching](https://http.dev/caching)** to reduce the load on the origin server.
 - **IP-based rate limiting** to block traffic from IP addresses that exceed a certain threshold.
-- **Authentication** (e.g. JWKS verification) to block anonymous traffic.
+- **Authentication** to block anonymous traffic by verifying `Bearer` tokens in the `Authorization` header, for example.
 - **Programmatic access control** to implement more sophisticated access control policies, which are typically enforced at the [edge](https://www.cloudflare.com/en-gb/learning/cdn/glossary/edge-server/).
 
 Self-hosted application layer proxies,
