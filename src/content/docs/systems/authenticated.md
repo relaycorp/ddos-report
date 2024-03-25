@@ -5,7 +5,7 @@ sidebar:
   order: 2
 ---
 
-For the purposes of this document, an _authenticated system_ is one where the server requires users (humans and/or bots) to [authenticate](../mitigations/authentication);
+For the purposes of this document, an _authenticated system_ is one where the server requires users (humans and/or bots) to [authenticate](../mitigations/authentication.md);
 examples include APIs and VPN servers.
 We consider [server-to-server interfaces in federated systems](federated.md) and [public goods](public-goods.md) separately.
 
