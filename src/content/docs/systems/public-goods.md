@@ -35,6 +35,6 @@ Unfortunately, these mitigations alone may not be enough to protect against well
 - [Authentication](../mitigations/authentication). Use long-term identity keys to achieve pseudonymity and thus enforce other mitigations more effectively.
 - [Cryptographic challenges](../mitigations/crypto-challenges.md).
 - [Client-aware rate limiting](../mitigations/rate-limiting.md).
-- [Client integrity verification](../mitigations/client-integrity.md), when the client is a trusted app.
+- [App attestation](../mitigations/app-attestation.md), when the client should be a trusted app.
 - [CAPTCHAs](../mitigations/captchas.md), if the user must be human.
 - [Threat scoring](../mitigations/threat-scoring.md).
