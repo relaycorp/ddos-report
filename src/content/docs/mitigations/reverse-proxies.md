@@ -78,7 +78,6 @@ Virtually all such proxies are HTTP proxies,
 and they can offer the following DDoS-related features:
 
 - **Web Application Firewall (WAF)** to block malicious traffic based on the content of the HTTP request (e.g. user agent), and/or transport layer information (e.g. IP address).
-
   WAF policies can also be based on [attack signatures](https://www.red-button.net/ddos-glossary/signatures/),
   which can come from a database of attack patterns known to the provider,
   or generated with Machine Learning (ML) based on traffic analysis for each origin server.
