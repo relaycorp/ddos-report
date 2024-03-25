@@ -24,7 +24,7 @@
   "devDependencies": {
     "@relaycorp/shared-config": "^1.14.1",
     "astro-rehype-relative-markdown-links": "^0.7.0",
-    "daisyui": "^4.7.3",
+    "daisyui": "^4.8.0",
     "prettier": "^3.2.5"
   },
   "prettier": "@relaycorp/shared-config/.prettierrc.json"
