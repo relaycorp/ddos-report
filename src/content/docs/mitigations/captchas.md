@@ -2,26 +2,27 @@
 title: CAPTCHAs
 sidebar:
   order: 9
-  badge:
-    text: Draft
-    variant: caution
 ---
 
-## Advantages
+**A CAPTCHA is a challenge-response test to determine whether a user is human**.
+Although not as effective as they once were at mitigating [application layer attacks](../overview.md#application-attacks) by [botnets](../overview.md#botnets),
+CAPTCHAs can still make such attacks more challenging and expensive to the attacker.
 
-- Expensive for attackers to abuse at scale.
+Attackers can build the capability to solve CAPTCHAs in-house or use [third-party services](https://www.google.com/search?q=CAPTCHA+solving+service).
+Either way,
+this is possible with the use of Machine Learning and/or low-paid workers.
+[Large Language Models (LLMs)](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/) can solve CAPTCHAs too,
+but not at scale yet.
 
-## Disadvantages
-
-- [Proprietary LLMs can already solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/), but [jailbreaking](https://learnprompting.org/docs/prompt_hacking/jailbreaking) is currently necessary. It's probably a matter of time until open LLMs catch up and attackers remove the guardrails. [AI-resistant CAPTCHAs do not exist](https://twitter.com/gustavonarea/status/1762464826754757008).
-- Accessibility issues.
-- [Poor privacy](https://www.fastcompany.com/90369697/googles-new-recaptcha-has-a-dark-side), depending on the provider.
-
-## Recommendations
-
-- Only force clients to solve CAPTCHAs when their [threat score](threat-scoring.md) is high.
+Because they still pose a barrier to attackers,
+CAPTCHAs may still be worth using when the [threat score](./threat-scoring.md) of a client is deemed high.
+[Cloudflare Turnstile uses this approach](https://developers.cloudflare.com/turnstile/).
 
 ## Turnkey solutions
 
-- [reCAPTCHA](https://www.google.com/recaptcha/about/)
-- [hCaptcha](https://www.hcaptcha.com/)
+- [hCaptcha](https://www.hcaptcha.com/).
+- [reCAPTCHA](https://www.google.com/recaptcha/about/).
+
+## See also
+
+- [Cryptographic challenges](./crypto-challenges.md).
