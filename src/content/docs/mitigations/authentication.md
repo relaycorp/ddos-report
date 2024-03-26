@@ -62,9 +62,9 @@ explicitly allow their use on the client side when issuing certificates.
 
 To deter abuse,
 servers could be blocked by their domain name.
-Additionally, in decentralised systems,
+Additionally,
 offending domain names could be reported to [Spamhaus](https://www.spamhaus.org/domain-reputation/)
-or a dedicated registry.
+or a dedicated registry to alert other services.
 
 ## See also
 
