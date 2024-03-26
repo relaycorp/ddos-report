@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@relaycorp/shared-config": "^1.14.1",
-    "astro-rehype-relative-markdown-links": "^0.7.0",
+    "astro-rehype-relative-markdown-links": "^0.8.0",
     "daisyui": "^4.7.3",
     "prettier": "^3.2.5"
   },
