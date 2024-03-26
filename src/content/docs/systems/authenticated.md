@@ -19,7 +19,7 @@ We consider [server-to-server interfaces in federated systems](federated.md) and
 ## Protocol-level mitigations
 
 - [Cryptographic challenges](../mitigations/crypto-challenges.md).
-- [Client-aware rate limiting](../mitigations/rate-limiting.md).
+- [Client-based rate limiting](../mitigations/rate-limiting.md).
 - [App attestation](../mitigations/app-attestation.md), if the client should be a trusted app.
-- [CAPTCHAs](../mitigations/captchas.md), if the user must be human.
+- [CAPTCHAs](../mitigations/captchas.md), if the user should be human.
 - [Threat scoring](../mitigations/threat-scoring.md).

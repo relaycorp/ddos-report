@@ -237,15 +237,18 @@ including measures like prohibiting default passwords.
 
 ### Artificial Intelligence
 
-AI deserves attention for two reasons:
+Generative AI can produce botnet traffic devoid of identifiable patterns,
+challenging conventional mitigation techniques such as _fingerprinting_.
+This approach depends on analysing traffic to detect consistent patterns
+(e.g. HTTP headers, timing).
 
-- [Proprietary Large Language Models (LLMs) like GPT-4 have demonstrated the capability to solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/),
-  although this currently requires
-  [jailbreaking](https://learnprompting.org/docs/prompt_hacking/jailbreaking).
-  As open-source LLMs advance, attackers might leverage them to bypass CAPTCHAs on a large scale.
-- Generative AI can produce botnet traffic devoid of identifiable patterns,
-  challenging conventional mitigation techniques such as _fingerprinting_.
-  This approach depends on analysing traffic to detect consistent patterns (e.g. HTTP headers, timing).
+On the other hand,
+[proprietary Large Language Models (LLMs) have demonstrated the ability to solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/),
+although this currently requires
+[jailbreaking](https://learnprompting.org/docs/prompt_hacking/jailbreaking).
+As open-source LLMs advance, attackers might leverage them to bypass CAPTCHAs without jailbreaking.
+Having said this,
+CAPTCHAs can already be solved automatically with [CAPTCHA solving services](https://www.google.com/search?q=CAPTCHA+solving+service).
 
 ## Conclusion
 

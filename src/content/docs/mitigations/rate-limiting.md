@@ -5,7 +5,7 @@ sidebar:
 ---
 
 Rate limiting is a strategy to control the number of messages (e.g. HTTP requests) that a client can send to a server in a given time period.
-For example, you could specify that a client can only send 100 messages per minute.
+For example, you could specify that a client can send up to 100 messages per minute.
 
 [Application layer reverse proxies](./reverse-proxies.md#application-layer-proxy)
 often support this based solely on the client's IP address.
