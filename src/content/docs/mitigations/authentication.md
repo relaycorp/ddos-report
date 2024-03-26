@@ -58,7 +58,7 @@ could be used as part of a broader protocol,
 such as [that of ActivityPub](https://www.w3.org/wiki/SocialCG/ActivityPub/Authentication_Authorization#Server_to_Server).
 [TLS client certificates](https://techcommunity.microsoft.com/t5/iis-support-blog/client-certificate-authentication-part-1/ba-p/324623)
 wouldn't work because [certificate authorities](https://en.wikipedia.org/wiki/Certificate_authority) would have to
-explicitly allow their use on the client side when issuing certificates.
+explicitly allow their use on the client side when issuing server certificates.
 
 To deter abuse,
 servers could be blocked by their domain name.
