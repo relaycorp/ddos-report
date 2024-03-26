@@ -21,16 +21,14 @@ hero:
 
 **Anyone with a browser can launch a DDoS attack today**.
 A quick Google search will reveal services that allow anyone to launch such attacks anonymously.
-Small-scale attacks start at around $5, and free trials are often available.
-Unsurprisingly,
-[DDoS attacks are on the rise](https://www.cybersecuritydive.com/news/ddos-attacks-surge-cloudflare/704011/),
-which may intensify as Internet connectivity and bandwidth increase,
-and more vulnerable IoT devices come online.
+Small-scale attacks start from $5, and free trials are often available.
 
-Until now, the best [CAPTCHAs](./mitigations/captchas.md) have been relatively effective in deterring unwanted bots,
-but [proprietary AI systems can already solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/).
-It might only be a matter of time before open source AI models can do the same on a larger scale,
-without the guardrails implemented in their proprietary counterparts.
+Unsurprisingly,
+[DDoS attacks are on the rise](https://www.cybersecuritydive.com/news/ddos-attacks-surge-cloudflare/704011/).
+This may intensify as Internet connectivity improves worldwide,
+more vulnerable IoT devices come online,
+and open source AI models advance to the point of solving CAPTCHAs
+([without the guardrails of their proprietary counterparts](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/)).
 
 These attacks not only infringe on our freedom but also have a significant financial impact.
 Anyone with an online presence,
