@@ -5,13 +5,12 @@ sidebar:
   order: 1
 ---
 
-**A reverse proxy is a server that sits between an _origin server_ (aka _backend_) and its clients**,
+**A reverse proxy is a server that sits between an _origin server_ and its clients**,
 to protect the origin server and improve performance,
 amongst other reasons.
-They're more commonly known as _Content Delivery Networks_ (CDNs) or _Load Balancers_ (LBs).
-However,
+They're more commonly known as _Content Delivery Networks_ (CDNs) or _Load Balancers_ (LBs) but,
 in the context of DDoS mitigation,
-we're only interested in their capacity as reverse proxies.
+we're specifically interested in their capacity as reverse proxies.
 
 ![Diagram of a reverse proxy](../../../assets/diagrams/attacks-reverse-proxy.svg)
 
@@ -22,10 +21,14 @@ can benefit from such proxies.
 
 ## Types
 
-Reverse proxies are typically classified by the layer at which they operate,
-and therefore protect.
-**The higher the layer,
+Reverse proxies are mainly classified by the highest layer that they protect.
+**The more layers it covers,
 the more effective the proxy can be at mitigating DDoS attacks**.
+
+As a reminder,
+the following diagram shows the different layers of the Internet Protocol (IP) model using HTTP as an example:
+
+![The IP model layers, using HTTP as an example](../../../assets/diagrams/attacks-ip-model-layers.svg)
 
 ### Internet layer proxy
 
@@ -41,8 +44,11 @@ _layer 3 proxies_ or _L3 proxies_, in reference to the OSI model.
 When shopping for an internet layer proxy,
 it's important to ensure that it offers unmetered inbound traffic.
 
-These proxies are typically bundled with transport layer proxies,
-rather than being offered as standalone services.
+**We strongly recommend cloud-based internet layer proxies**,
+as they're specifically designed to absorb large DDoS attacks,
+unlike a comparable service from ISPs
+(typically called [_clean pipe_](https://www.radware.com/security/ddos-knowledge-center/ddospedia/clean-pipe/)).
+Cloud-based proxies tend to be bundled with transport layer proxies.
 
 ### Transport layer proxy
 
@@ -80,9 +86,9 @@ and they can offer the following DDoS-related features:
 - **Web Application Firewall (WAF)** to block malicious traffic based on the content of the HTTP request (e.g. user agent), and/or transport layer information (e.g. IP address).
   WAF policies can also be based on [attack signatures](https://www.red-button.net/ddos-glossary/signatures/),
   which can come from a database of attack patterns known to the provider,
-  or generated with Machine Learning (ML) based on traffic analysis for each origin server.
-- **[HTTP caching](https://http.dev/caching)** to reduce the load on the origin server.
+  or identified with Machine Learning (ML) based on traffic analysis for each origin server.
 - **IP-based rate limiting** to block traffic from IP addresses that exceed a certain threshold. See also [client-based rate limiting](./rate-limiting.md).
+- **[HTTP caching](https://http.dev/caching)** to reduce the load on the origin server.
 - **Authentication** to block anonymous traffic by verifying `Bearer` tokens in the `Authorization` header, for example. This feature is more commonly offered by API gateways.
 - **Programmatic access control** to implement more sophisticated access control policies, which are typically enforced at the [edge](https://www.cloudflare.com/en-gb/learning/cdn/glossary/edge-server/).
 
@@ -93,7 +99,9 @@ but they require substantially more resources to set up and maintain.
 
 ## Cloud-based proxies
 
-The following providers offer internet/transport and application layer proxies:
+As mentioned above,
+cloud-based proxies are the most effective at mitigating DDoS attacks.
+The following are the most popular providers of internet/transport and application layer proxies:
 
 - [Akamai](https://www.akamai.com/).
 - [Amazon CloudFront](https://aws.amazon.com/cloudfront/).

@@ -9,7 +9,7 @@ It's particularly useful when we get the first ever message from a client,
 as we can't anticipate how it's going to behave.
 
 Unfortunately,
-app attestation is only offered by most, but not all,
+app attestation is supported by many, but not all,
 [Android](https://developer.android.com/google/play/integrity/overview)
 and [Apple](https://developer.apple.com/documentation/devicecheck/establishing-your-app-s-integrity) devices.
 Nevertheless,
