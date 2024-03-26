@@ -11,4 +11,5 @@ The following mitigations should prove very effective against DDoS attacks on pu
 - [Unmetered DNS lookups](../mitigations/unmetered-dns.md).
 - [Cloud resource limits](../mitigations/resource-limits.md). [Static websites are very much susceptible to DoW attacks](https://news.ycombinator.com/item?id=39520776).
 
-To protect any dynamic or sensitive content, such as APIs, consider the mitigations in [authenticated systems](ted.md).
+To protect any dynamic or sensitive content, such as APIs,
+consider the mitigations in [authenticated systems](authenticated.md).

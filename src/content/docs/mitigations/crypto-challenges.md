@@ -38,10 +38,10 @@ Undoubtedly a major and [potentially unpopular](https://github.com/mastodon/mast
 If you know the answer to any of these questions,
 please let us know on [our forum](https://github.com/relaycorp/ddos-report/discussions).
 
-- What percentage of bots is compromised IoT devices? Presumably, this will vary over time and by country.
+- What percentage of bots (in botnets) are compromised IoT devices? Presumably, this will vary over time and by country.
 - What are the different types of IoT devices that are used in DDoS attacks, and their respective share? Presumably, this will vary over time and by country.
 
-Knowing the answers to the following questions would help us understand how to configure these challenges.
+Knowing the answers to the questions above would help us understand how to configure these challenges.
 For example, we know that IoT devices are resource-constrained,
 so we could leverage a Proof of Space protocol,
 requiring an amount of storage that is feasible for a smartphone but not for an IoT device.

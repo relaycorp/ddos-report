@@ -1,5 +1,5 @@
 ---
-title: Client-aware rate limiting
+title: Client-based rate limiting
 sidebar:
   order: 5
   badge:
