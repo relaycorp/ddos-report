@@ -2,6 +2,9 @@
 title: CAPTCHAs
 sidebar:
   order: 9
+  badge:
+    text: Draft
+    variant: caution
 ---
 
 **A CAPTCHA is a challenge-response test to determine whether a user is human**.
