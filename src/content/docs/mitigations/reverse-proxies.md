@@ -48,22 +48,22 @@ it's important to ensure that it offers unmetered inbound traffic.
 as they're specifically designed to absorb large DDoS attacks,
 unlike a comparable service from ISPs
 (typically called [_clean pipe_](https://www.radware.com/security/ddos-knowledge-center/ddospedia/clean-pipe/)).
-Cloud-based proxies tend to be bundled with transport layer proxies.
+Cloud-based internet layer proxies tend to be bundled with transport layer proxies.
 
 ### Transport layer proxy
 
 **These proxies protect the transport layer from [protocol attacks](../overview.md#protocol-attacks)**
-by filtering traffic based on the transport layer protocol and firewall rules.
+by filtering traffic based on the transport layer protocol.
 Like internet layer proxies,
 they shield the origin server from the attack traffic.
 
 Transport layer proxies are often called _layer 4 proxies_ or _L4 proxies_,
 in reference to the OSI model.
 
-These proxies typically offer the following DDoS-related features:
+These proxies can offer the following DDoS-related features:
 
 - **Firewall** to block traffic based on the client's IP address or other properties derived from it (e.g. its country, whether it's a known Tor node).
-- **[TLS termination](https://en.wikipedia.org/wiki/TLS_termination_proxy)** to shield the origin server from [TLS exhaustion attacks](https://www.akamai.com/glossary/what-is-an-ssl-tls-exhaustion-attack), such as [D(HE)at](https://dheatattack.gitlab.io/summary/).
+- **[TLS termination](https://en.wikipedia.org/wiki/TLS_termination_proxy)** to shield the origin server from [exhaustion attacks](https://www.akamai.com/glossary/what-is-an-ssl-tls-exhaustion-attack), such as [D(HE)at](https://dheatattack.gitlab.io/summary/).
 
 Self-hosted transport layer proxies,
 such as [HAProxy](https://www.haproxy.org) and [IPVS](https://en.wikipedia.org/wiki/IP_Virtual_Server),
@@ -74,7 +74,7 @@ but they require substantially more resources to set up and maintain.
 
 **These extend transport layer proxies to also protect the application layer
 from [application attacks](../overview.md#application-attacks)**,
-by filtering traffic based on the application layer protocol and firewall rules.
+by filtering traffic based on the application layer protocol.
 
 Application layer proxies are often called _layer 7 proxies_ or _L7 proxies_,
 in reference to the OSI model.
@@ -105,11 +105,11 @@ The following are the most popular providers of internet/transport and applicati
 
 - [Akamai](https://www.akamai.com/).
 - [Amazon CloudFront](https://aws.amazon.com/cloudfront/).
+- [Azure Load Balancer](https://azure.microsoft.com/solutions/load-balancing-with-azure/).
 - [Cloudflare](https://www.cloudflare.com/).
 - [Fastly](https://www.fastly.com/).
 - [Google Cloud Load Balancing](https://cloud.google.com/load-balancing/).
 - [Incapsula](https://www.incapsula.com/).
-- [Microsoft Azure Load Balancer](https://azure.microsoft.com/solutions/load-balancing-with-azure/).
 - [Netscout Arbor](https://www.netscout.com/arbor).
 
 Vulnerable groups, such as journalists and human rights organisations,
