@@ -17,6 +17,7 @@ export default defineConfig({
       },
       social: {
         github: 'https://github.com/relaycorp/ddos-report',
+        twitter: 'https://twitter.com/ddos_report',
       },
       editLink: {
         baseUrl: 'https://github.com/relaycorp/ddos-report/tree/main',
