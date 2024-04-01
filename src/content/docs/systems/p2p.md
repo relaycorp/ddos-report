@@ -14,7 +14,7 @@ As the developer of a P2P protocol, you should consider the following mitigation
 - [Authentication](../mitigations/authentication.md). Consider using long-term identity keys if pseudonymity is needed, or [VeraId](https://veraid.net) when the identity of the user is relevant.
 - [Cryptographic challenges](../mitigations/crypto-challenges.md). Proof of Space(time) in particular is worth considering, as IoT devices (a large source of DDoS attacks) tend to have limited storage capacity.
 - [Client-based rate limiting](../mitigations/rate-limiting.md).
-- [Threat scoring](../mitigations/threat-scoring.md).
+- [Client reputation scoring](../mitigations/client-reputation.md).
 
 The mitigations above work on the application layer,
 but since you can't place [proxies](../mitigations/reverse-proxies.md) between peers,

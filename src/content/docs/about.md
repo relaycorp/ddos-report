@@ -3,7 +3,7 @@ title: About The DDoS Report
 ---
 
 The DDoS Report is a living resource that aims
-to provide app developers and operators with an [overview of the DDoS threat landscape](./overview.md) and [the state of the art in DDoS defence](./systems).
+to provide app developers and operators with an [overview of the DDoS threat landscape](./overview.md) and [the state of the art in DDoS defence](./systems/index.md).
 
 ## Motivation
 

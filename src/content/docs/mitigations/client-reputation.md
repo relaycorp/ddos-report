@@ -1,5 +1,5 @@
 ---
-title: Threat scoring
+title: Client reputation scoring
 sidebar:
   order: 10
   badge:
@@ -22,3 +22,10 @@ Client-aware behaviour analysis to control other mitigations (e.g., [rate limiti
 To account for the Slashdot effect,
 read the HTTP `Referer` header and check if the client is coming from a high-traffic website.
 If so, check that the landing page is indeed linked to from that high-traffic website.
+
+## Private State Tokens
+
+- It's about the reputation of the user.
+- https://developers.google.com/privacy-sandbox/protections/private-state-tokens
+- Based on Privacy Pass.
+- Web only.

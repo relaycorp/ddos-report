@@ -32,9 +32,9 @@ Unfortunately, these mitigations alone may not be enough to protect against well
 
 ## Protocol-level mitigations
 
-- [Authentication](../mitigations/authentication.md). Use long-term identity keys to achieve pseudonymity and thus enforce other mitigations more effectively.
+- [Pseudonymous authentication](../mitigations/authentication.md#pseudonymous-authentication).
 - [Cryptographic challenges](../mitigations/crypto-challenges.md).
 - [Client-based rate limiting](../mitigations/rate-limiting.md).
-- [App attestation](../mitigations/app-attestation.md), when the client should be a trusted app.
-- [CAPTCHAs](../mitigations/captchas.md), if the user must be human.
-- [Threat scoring](../mitigations/threat-scoring.md).
+- [App attestation](../mitigations/app-attestation.md).
+- [Humanity verification](../mitigations/humanity-verification.md).
+- [Client reputation scoring](../mitigations/client-reputation.md).

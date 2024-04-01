@@ -11,7 +11,7 @@ We consider [server-to-server interfaces in federated systems](federated.md) and
 
 ## Mitigations available to operators
 
-- [Reverse proxy](../mitigations/reverse-proxies.md). If the system is web-based and aimed at humans, consider a proxy that enforces [cryptographic challenges](../mitigations/crypto-challenges.md) and [CAPTCHAs](../mitigations/captchas.md) for the most suspicious clients; for example, [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/).
+- [Reverse proxy](../mitigations/reverse-proxies.md). If the system is web-based and aimed at humans, consider a proxy that enforces [cryptographic challenges](../mitigations/crypto-challenges.md) and [CAPTCHAs](../mitigations/humanity-verification.md) for the most suspicious clients; for example, [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/).
 - [Unmetered DNS lookups](../mitigations/unmetered-dns.md), if the protocol uses DNS.
 - [Cloud resource limits](../mitigations/resource-limits.md).
 - [Abuse reporting](../mitigations/abuse-reporting.md).
@@ -20,6 +20,6 @@ We consider [server-to-server interfaces in federated systems](federated.md) and
 
 - [Cryptographic challenges](../mitigations/crypto-challenges.md).
 - [Client-based rate limiting](../mitigations/rate-limiting.md).
-- [App attestation](../mitigations/app-attestation.md), if the client should be a trusted app.
-- [CAPTCHAs](../mitigations/captchas.md), if the user should be human.
-- [Threat scoring](../mitigations/threat-scoring.md).
+- [App attestation](../mitigations/app-attestation.md).
+- [Humanity verification](../mitigations/humanity-verification.md).
+- [Client reputation scoring](../mitigations/client-reputation.md).

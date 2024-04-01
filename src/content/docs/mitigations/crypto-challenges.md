@@ -17,6 +17,8 @@ Undoubtedly a major and [potentially unpopular](https://github.com/mastodon/mast
 ### Proof of Work
 
 - [Equi-X](https://github.com/tevador/equix).
+- https://mcaptcha.org/
+- https://altcha.org/
 
 ## Experimental protocols
 
@@ -45,3 +47,7 @@ Knowing the answers to the questions above would help us understand how to confi
 For example, we know that IoT devices are resource-constrained,
 so we could leverage a Proof of Space protocol,
 requiring an amount of storage that is feasible for a smartphone but not for an IoT device.
+
+## See also
+
+- [Client-based rate limiting](rate-limiting.md).
