@@ -4,14 +4,20 @@ sidebar:
   order: 7
 ---
 
-App attestation is a technique to verify that a client app is genuine and hasn't been tampered with.
-It's particularly useful when you get the first ever message from a client,
-as you can't anticipate how it's going to behave.
+**App attestation is used to verify that a client app is genuine and hasn't been tampered with**.
+For example,
+Google can certify that a user is running an unmodified version of an Android app installed
+from the Google Play Store.
 
-Unfortunately,
-app attestation is only supported by many, but not all,
-[Android](https://developer.android.com/google/play/integrity/overview)
-and [Apple](https://developer.apple.com/documentation/devicecheck/establishing-your-app-s-integrity) devices.
-Nevertheless,
-when available,
-it could be used as one of the factors in [threat scoring](./threat-scoring.md).
+This form of attestation can be a signal in [client reputation scoring](client-reputation.md).
+In particular, it can be used to tell whether a new client,
+for which there is no reputation data,
+is likely to comply with rate limits.
+
+App attestation is only supported on [Android](https://developer.android.com/google/play/integrity/overview) and [Apple](https://developer.apple.com/documentation/devicecheck/establishing-your-app-s-integrity) devices,
+but not all devices support it.
+
+## See also
+
+- [Device attestation](./humanity-verification.md#device-attestation).
+- [Privacy Access Tokens](./humanity-verification.md#private-access-tokens-pats).
