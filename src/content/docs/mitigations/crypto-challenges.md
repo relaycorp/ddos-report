@@ -7,6 +7,8 @@ sidebar:
     variant: caution
 ---
 
+Cryptographic challenges can be used to make DDoS attacks more expensive and slow them down.
+
 - PoW or PoS alone might not be enough if the adversary has devices that are more powerful than the average user's.
 - CPU-, memory-, and storage-bound protocols are more resistant to ASICs and FPGAs.
 
