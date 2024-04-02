@@ -103,7 +103,6 @@ OK for use in smart contracts.
 
 No need for Blockchain, no need for token. Alternatives: PKI with certificate transparency, or at least solve the DDoS problem with low-tech solutions like better KYC from ISPs and cybersecurity regulations.
 
-
 ## Other considerations
 
 - Risks of attestation
