@@ -88,6 +88,22 @@ https://betterappsec.com/building-a-webauthn-click-farm-are-captchas-obsolete-bf
 - https://developers.cloudflare.com/fundamentals/reference/cryptographic-personhood/
 - https://blog.cloudflare.com/cap-expands-support/
 
+## Proof of Personhood
+
+The emerging field of **Proof of Personhood** aims to improve
+accuracy whilst introducing unacceptable compromises.
+
+The field is promising, but plagued by dodgy Blockchain projects.
+OK for use in smart contracts.
+
+- [BrightID](https://www.brightid.org/).
+- [Civic Pass](https://www.civic.com/).
+- [Proof of Humanity](https://www.proofofhumanity.id/).
+- [World Id](https://worldcoin.org/world-id) (Worldcoin).
+
+No need for Blockchain, no need for token. Alternatives: PKI with certificate transparency, or at least solve the DDoS problem with low-tech solutions like better KYC from ISPs and cybersecurity regulations.
+
+
 ## Other considerations
 
 - Risks of attestation
