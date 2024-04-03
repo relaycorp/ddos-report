@@ -53,7 +53,7 @@ The output of the test is a score that indicates the likelihood of the user bein
 
 Turnkey solutions include:
 
-- [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/), which only works in browsers and uses [cryptographic challenges](./crypto-challenges.md).
+- [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/), which requires the [application layer proxy](./reverse-proxies.md#application-layer-proxy) from Cloudflare and therefore only works in Web browsers. It also uses [Private Access Tokens](#private-access-tokens) and [cryptographic challenges](./crypto-challenges.md).
 - [GeeTest OneTap](https://www.geetest.com/en/geetest-onetap), which also uses [cryptographic challenges](./crypto-challenges.md).
 - [Google reCAPTCHA v3](https://www.google.com/recaptcha/about/), which poses [significant privacy concerns](https://www.fastcompany.com/90369697/googles-new-recaptcha-has-a-dark-side).
 
@@ -69,31 +69,36 @@ to a remote verifier.
 it can be used to verify that the client is running on a legitimate device designed for humans** (e.g. laptop, smartphone),
 as opposed to a headless computer (e.g. server, router, IoT device).
 
-This process leverages embedded Hardware Security Modules (HSMs) like
+This process leverages embedded Hardware Security Modules (HSMs) like the
 [Trusted Platform Module (TPM)](https://trustedcomputinggroup.org/resource/trusted-platform-module-tpm-summary/) or
 [Apple's Secure Enclave](https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web).
-The availability of these technologies varies by system:
+The availability of this technology varies by system:
 
 - Apple devices offer the [DeviceCheck interface](https://developer.apple.com/documentation/devicecheck).
-- Android devices offer device attestation through the [Play Integrity API](https://developer.android.com/google/play/integrity/overview).
+- Android devices offer the [Play Integrity API](https://developer.android.com/google/play/integrity/overview).
 - No other mainstream system offers a turnkey solution, but partial solutions could potentially be built using [TPM attestation](https://community.infineon.com/t5/Blogs/TPM-remote-attestation-How-can-I-trust-you/ba-p/452729) directly.
 
 It should be noted that
 [the use of remote attestation is controversial](https://gabrielsieben.tech/2022/07/29/remote-assertion-is-coming-back-how-much-freedom-will-it-take/),
-as it's incompatible with open systems like Linux distributions.
+as it has the potential to degrade the user experience of those using incompatible systems
+(e.g. Linux).
 
 ### Private Access Tokens
 
-### Private Access Tokens (PATs)
+**Private Access Tokens (PATs) is a privacy-preserving protocol for device attestation on the Web**.
+It's based on Privacy Pass,
+a more generic protocol for replacing CAPTCHAs on the Internet (not just the Web).
 
-HTTP only.
+PATs are only [supported by recent Apple devices](https://developer.apple.com/news/?id=huqjyh7k);
+neither Google nor Microsoft have publicly expressed any interest in the protocol as of this writing.
+They're also supported by [reverse proxies](./reverse-proxies.md)
+(i.e. [Cloudflare](https://blog.cloudflare.com/eliminating-captchas-on-iphones-and-macs-using-new-standard) and
+[Fastly](https://www.fastly.com/blog/private-access-tokens-stepping-into-the-privacy-respecting-captcha-less)),
+and [hCaptcha](https://www.hcaptcha.com/post/announcing-support-for-private-access-tokens).
 
-- https://developer.apple.com/news/?id=huqjyh7k
-- https://developer.apple.com/videos/play/wwdc2022/10077/
-- https://www.hcaptcha.com/post/announcing-support-for-private-access-tokens
-- https://www.hcaptcha.com/post/announcing-support-for-private-access-tokens
-- Concerns:
-  - https://educatedguesswork.org/posts/private-access-tokens/
+Like remote attestation in general,
+[PATs has been criticised for its potential to degrade the user experience of those
+using incompatible systems](https://educatedguesswork.org/posts/private-access-tokens/).
 
 ## User presence tests
 
@@ -120,13 +125,6 @@ OK for use in smart contracts.
 - [World Id](https://worldcoin.org/world-id) (Worldcoin).
 
 No need for Blockchain, no need for token. Alternatives: PKI with certificate transparency, or at least solve the DDoS problem with low-tech solutions like better KYC from ISPs and cybersecurity regulations.
-
-## Other considerations
-
-- Risks of attestation
-  - https://httptoolkit.com/blog/apple-private-access-tokens-attestation/
-  - https://gabrielsieben.tech/2022/07/29/remote-assertion-is-coming-back-how-much-freedom-will-it-take/
-  - https://arstechnica.com/gadgets/2023/07/googles-web-integrity-api-sounds-like-drm-for-the-web/
 
 ## See also
 
