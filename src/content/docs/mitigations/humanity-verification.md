@@ -2,9 +2,6 @@
 title: Humanity verification
 sidebar:
   order: 9
-  badge:
-    text: Draft
-    variant: caution
 ---
 
 **Apps designed for human users can protect against [application attacks](../overview.md#application-attacks)
@@ -93,7 +90,7 @@ It's based on Privacy Pass,
 a more generic protocol for replacing CAPTCHAs on the Internet (not just the Web).
 
 PATs are only [supported by recent Apple devices](https://developer.apple.com/news/?id=huqjyh7k);
-neither Google nor Microsoft have publicly expressed any interest in the protocol as of this writing.
+neither Google nor Microsoft have publicly expressed any interest in the protocol as of early 2024.
 They're also supported by [reverse proxies](./reverse-proxies.md)
 (i.e. [Cloudflare](https://blog.cloudflare.com/eliminating-captchas-on-iphones-and-macs-using-new-standard) and
 [Fastly](https://www.fastly.com/blog/private-access-tokens-stepping-into-the-privacy-respecting-captcha-less)),
@@ -145,18 +142,17 @@ that doesn't use WebAuthn.
 
 ## Proof of Personhood
 
-The emerging field of **Proof of Personhood** aims to improve
-accuracy whilst introducing unacceptable compromises.
+Proof of Personhood (PoP) is, in theory, the ultimate form of humanity verification.
+In practice,
+the reliability of each solution is determined by the quality of the signals used
+(e.g. biometrics, government-issued id documents, social connections).
 
-The field is promising, but plagued by dodgy Blockchain projects.
-OK for use in smart contracts.
-
-- [BrightID](https://www.brightid.org/).
-- [Civic Pass](https://www.civic.com/).
-- [Proof of Humanity](https://www.proofofhumanity.id/).
-- [World Id](https://worldcoin.org/world-id) (Worldcoin).
-
-No need for Blockchain, no need for token. Alternatives: PKI with certificate transparency, or at least solve the DDoS problem with low-tech solutions like better KYC from ISPs and cybersecurity regulations.
+PoP is simply mentioned here for completeness,
+but **we strongly advise against using any PoP solution to mitigate DDoS attacks**.
+Whilst promising,
+this field isn't mature enough,
+lacks any meaningful adoption,
+and [its flagship solution poses significant privacy concerns](https://techcrunch.com/2024/03/11/worldcoin-fails-to-get-injunction-against-spains-privacy-suspension/).
 
 ## See also
 
