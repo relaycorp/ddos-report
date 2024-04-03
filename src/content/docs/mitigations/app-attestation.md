@@ -19,5 +19,5 @@ but not all devices support it.
 
 ## See also
 
-- [Device attestation](./humanity-verification.md#device-attestation).
+- [Remote attestation](./humanity-verification.md#remote-attestation).
 - [Privacy Access Tokens](./humanity-verification.md#private-access-tokens).

@@ -60,32 +60,35 @@ Turnkey solutions include:
 Like CAPTCHAs,
 these too can be defeated by CAPTCHA solving services.
 
-## Device attestation
+## Remote attestation
 
-Device attestation is a process by which a device cryptographically
+This is a process by which a device cryptographically
 proves its identity, hardware configuration, software integrity, and security posture,
 to a remote verifier.
-**In DDoS mitigation,
-it can be used to verify that the client is running on a legitimate device designed for humans** (e.g. laptop, smartphone),
-as opposed to a headless computer (e.g. server, router, IoT device).
-
-This process leverages embedded Hardware Security Modules (HSMs) like the
+Remote attestation leverages embedded Hardware Security Modules (HSMs) like the
 [Trusted Platform Module (TPM)](https://trustedcomputinggroup.org/resource/trusted-platform-module-tpm-summary/) or
-[Apple's Secure Enclave](https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web).
-The availability of this technology varies by system:
+[Apple's Secure Enclave](https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web),
+and its availability varies by system:
 
-- Apple devices offer the [DeviceCheck interface](https://developer.apple.com/documentation/devicecheck).
-- Android devices offer the [Play Integrity API](https://developer.android.com/google/play/integrity/overview).
+- Android: [Play Integrity API](https://developer.android.com/google/play/integrity/overview).
+- Apple: [DeviceCheck services](https://developer.apple.com/documentation/devicecheck).
 - No other mainstream system offers a turnkey solution, but partial solutions could potentially be built using [TPM attestation](https://community.infineon.com/t5/Blogs/TPM-remote-attestation-How-can-I-trust-you/ba-p/452729) directly.
+
+**Remote attestation can be used to verify that the client is running on a genuine device designed for humans**
+(e.g. laptop, smartphone),
+as opposed to a headless computer (e.g. server, router),
+which can be a proxy for the user being human.
 
 It should be noted that
 [the use of remote attestation is controversial](https://gabrielsieben.tech/2022/07/29/remote-assertion-is-coming-back-how-much-freedom-will-it-take/),
-as it has the potential to degrade the user experience of those using incompatible systems
-(e.g. Linux).
+as it has the potential to limit competition and innovation,
+and degrade the user experience of those using incompatible systems (e.g. Linux).
+
+See also [app attestation](./app-attestation.md).
 
 ### Private Access Tokens
 
-**Private Access Tokens (PATs) is a privacy-preserving protocol for device attestation on the Web**.
+**Private Access Tokens (PATs) is a privacy-preserving protocol for remote attestation on the Web**.
 It's based on Privacy Pass,
 a more generic protocol for replacing CAPTCHAs on the Internet (not just the Web).
 
@@ -97,19 +100,48 @@ They're also supported by [reverse proxies](./reverse-proxies.md)
 and [hCaptcha](https://www.hcaptcha.com/post/announcing-support-for-private-access-tokens).
 
 Like remote attestation in general,
-[PATs has been criticised for its potential to degrade the user experience of those
-using incompatible systems](https://educatedguesswork.org/posts/private-access-tokens/).
+[PATs has been criticised](https://educatedguesswork.org/posts/private-access-tokens/)
+for its potential to limit competition and innovation,
+and degrade the user experience of those using incompatible systems.
 
 ## User presence tests
 
-Also, something custom with app attestation, device attestation and biometrics APIs (e.g. on Android)
+**User presence tests are challenges that require the user to demonstrate their presence**
+by physically interacting with a secure hardware device,
+such as a Yubikey or the fingerprint reader on a smartphone.
+This may be as close as we can get to verifying that a human is performing a particular action.
 
-https://betterappsec.com/building-a-webauthn-click-farm-are-captchas-obsolete-bfab07bb798c
+To defeat these tests,
+an attacker would need to operate a
+[click farm](https://edition.cnn.com/style/vietnam-farms-jack-latham-beggars-honey/index.html)
+with many such devices,
+and automate their use through low-paid workers or robots.
+This is expensive and difficult to scale;
+especially when the number of operations performed in a given time frame is limited.
 
-### Cryptographic Attestation of Personhood (CAP)
+### Cryptographic Attestation of Personhood
 
-- https://developers.cloudflare.com/fundamentals/reference/cryptographic-personhood/
-- https://blog.cloudflare.com/cap-expands-support/
+The [Cryptographic Attestation of Personhood (CAP)](https://research.cloudflare.com/projects/application-privacy/cap/)
+is a novel, privacy-preserving, user presence test,
+and the only such protocol to be operational as of this writing.
+It leverages the [WebAuthn standard](https://webauthn.guide/),
+so it's only available in Web browsers.
+
+CAP is currently only supported by [Cloudflare](https://blog.cloudflare.com/cap-expands-support/),
+but they've made the core of the protocol available as
+[an open source library](https://github.com/cloudflare/zkp-ecdsa).
+
+A proof of concept of
+[a click farm to defeat CAP](https://betterappsec.com/building-a-webauthn-click-farm-are-captchas-obsolete-bfab07bb798c)
+has been documented,
+highlighting the difficulty of scaling such an operation.
+
+### User presence tests in native apps
+
+There's currently no turnkey solution for user presence tests in native apps.
+However,
+it should be possible to create a version of [CAP](#cryptographic-attestation-of-personhood)
+that doesn't use WebAuthn.
 
 ## Proof of Personhood
 
