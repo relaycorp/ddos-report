@@ -29,15 +29,15 @@ this is possible with the use of Machine Learning and/or low-paid workers.
 [Large Language Models (LLMs) can solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/) too,
 but not at scale yet.
 
-Turnkey solutions include:
+Turnkey CAPTCHA products include:
 
 - [Arkose MatchKey](https://www.arkoselabs.com/arkose-matchkey/).
 - [Google reCAPTCHA v2](https://developers.google.com/recaptcha/docs/display).
 - [GeeTest Adaptive CAPTCHA](https://www.geetest.com/en/adaptive-captcha).
 - [hCaptcha](https://www.hcaptcha.com/).
 
-Pricing provided by CAPTCHA solving services is a reliable indicator of the solution's efficacy;
-the more costly the solution, the more effective the CAPTCHA.
+Pricing provided by CAPTCHA solving services is a reliable indicator of the CAPTCHA's efficacy;
+the more it costs to solve, the more effective the CAPTCHA is likely to be.
 
 ## Environment and behaviour analysis
 
