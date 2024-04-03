@@ -20,4 +20,4 @@ but not all devices support it.
 ## See also
 
 - [Device attestation](./humanity-verification.md#device-attestation).
-- [Privacy Access Tokens](./humanity-verification.md#private-access-tokens-pats).
+- [Privacy Access Tokens](./humanity-verification.md#private-access-tokens).

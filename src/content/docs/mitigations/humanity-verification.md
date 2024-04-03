@@ -7,29 +7,29 @@ sidebar:
     variant: caution
 ---
 
-**Apps for human users should mitigate [application layer attacks](../overview.md#application-attacks)
-by verifying whether a user is likely to be human**.
-Such tests can be run early on in the user journey,
-or deferred until the user performs an action that would be expensive or risky to process.
+**Apps designed for human users can protect against [application attacks](../overview.md#application-attacks)
+by verifying the likelihood of a user being human**.
+This verification can occur early in the user journey or be delayed
+until the user attempts an action that is costly to process or sensitive in nature.
 
-Telling humans and bots apart is a difficult problem that involves trade-offs
-between security, privacy, usability, and accessibility,
-so no method is 100% accurate as a result.
-Nonetheless,
-tests such as the ones below are challenging and costly to defeat at scale,
-and can therefore serve as proxies for how likely a user is to be human.
+Telling humans and bots apart is a difficult problem that requires balancing security, privacy, usability, and accessibility.
+No method is 100% accurate, but,
+**depending on your threat model,
+the following tests can be sufficiently difficult and expensive
+to be effective indicators of a user's likelihood of being human**.
 
 ## CAPTCHAs
 
 **A CAPTCHA is a challenge-response test to determine whether a user is human**.
 Although not as effective as they once were,
 and despite the accessibility and usability issues they pose,
-CAPTCHAs still make such attacks more challenging and expensive to the attacker.
+CAPTCHAs still make such attacks more challenging and expensive for the attacker.
 
-Attackers can build the capability to solve CAPTCHAs in-house or use [third-party services](https://www.google.com/search?q=CAPTCHA+solving+service).
+Attackers can build the capability to solve CAPTCHAs in-house
+or use a [CAPTCHA solving service](https://www.google.com/search?q=CAPTCHA+solving+service).
 Either way,
 this is possible with the use of Machine Learning and/or low-paid workers.
-[Large Language Models (LLMs)](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/) can solve CAPTCHAs too,
+[Large Language Models (LLMs) can solve CAPTCHAs](https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/) too,
 but not at scale yet.
 
 Turnkey solutions include:
@@ -39,8 +39,8 @@ Turnkey solutions include:
 - [GeeTest Adaptive CAPTCHA](https://www.geetest.com/en/adaptive-captcha).
 - [hCaptcha](https://www.hcaptcha.com/).
 
-A good indicator of the effectiveness of solution is the pricing quoted by CAPTCHA solving services --
-the more expensive it is, the more effective the CAPTCHA is.
+Pricing provided by CAPTCHA solving services is a reliable indicator of the solution's efficacy;
+the more costly the solution, the more effective the CAPTCHA.
 
 ## Environment and behaviour analysis
 
@@ -53,7 +53,7 @@ The output of the test is a score that indicates the likelihood of the user bein
 
 Turnkey solutions include:
 
-- [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/), which only works on the Web and also uses [cryptographic challenges](./crypto-challenges.md).
+- [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/), which only works in browsers and uses [cryptographic challenges](./crypto-challenges.md).
 - [GeeTest OneTap](https://www.geetest.com/en/geetest-onetap), which also uses [cryptographic challenges](./crypto-challenges.md).
 - [Google reCAPTCHA v3](https://www.google.com/recaptcha/about/), which poses [significant privacy concerns](https://www.fastcompany.com/90369697/googles-new-recaptcha-has-a-dark-side).
 
@@ -62,9 +62,27 @@ these too can be defeated by CAPTCHA solving services.
 
 ## Device attestation
 
-TPM attestation theoretically possible, but very challenging to do in practice.
+Device attestation is a process by which a device cryptographically
+proves its identity, hardware configuration, software integrity, and security posture,
+to a remote verifier.
+**In DDoS mitigation,
+it can be used to verify that the client is running on a legitimate device designed for humans** (e.g. laptop, smartphone),
+as opposed to a headless computer (e.g. server, router, IoT device).
 
-https://developer.apple.com/documentation/devicecheck
+This process leverages embedded Hardware Security Modules (HSMs) like
+[Trusted Platform Module (TPM)](https://trustedcomputinggroup.org/resource/trusted-platform-module-tpm-summary/) or
+[Apple's Secure Enclave](https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web).
+The availability of these technologies varies by system:
+
+- Apple devices offer the [DeviceCheck interface](https://developer.apple.com/documentation/devicecheck).
+- Android devices offer device attestation through the [Play Integrity API](https://developer.android.com/google/play/integrity/overview).
+- No other mainstream system offers a turnkey solution, but partial solutions could potentially be built using [TPM attestation](https://community.infineon.com/t5/Blogs/TPM-remote-attestation-How-can-I-trust-you/ba-p/452729) directly.
+
+It should be noted that
+[the use of remote attestation is controversial](https://gabrielsieben.tech/2022/07/29/remote-assertion-is-coming-back-how-much-freedom-will-it-take/),
+as it's incompatible with open systems like Linux distributions.
+
+### Private Access Tokens
 
 ### Private Access Tokens (PATs)
 
