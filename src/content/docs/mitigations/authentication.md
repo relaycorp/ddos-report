@@ -68,4 +68,4 @@ or a dedicated registry to alert other services.
 
 ## See also
 
-- [Rate limiting](./rate-limiting.md)
+- [Rate limiting](./rate-limiting.md).
