@@ -60,7 +60,7 @@ which only works with Web browsers and whose implementation details are not publ
 ## Other considerations
 
 - Cryptographic challenges have environmental costs, so they should be used judiciously.
-- There can be [opposition to challenges like PoW](https://github.com/mastodon/mastodon/issues/29273#issuecomment-1954202970) due to their association with Blockchain technologies.
+- There can be opposition to challenges like PoW [due to their association with Blockchain technologies](https://github.com/mastodon/mastodon/issues/29273#issuecomment-1954202970).
 
 ## See also
 
