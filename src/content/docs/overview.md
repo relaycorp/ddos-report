@@ -104,7 +104,7 @@ This layer is also susceptible to slow and low attacks,
 such as [Slowloris](https://www.cloudflare.com/en-gb/learning/ddos/ddos-attack-tools/slowloris/) and [RUDY](https://www.imperva.com/learn/ddos/rudy-r-u-dead-yet/).
 
 App developers and operators share the responsibility of protecting this layer,
-and nearly all the [DDoS mitigations](./mitigations) are implemented at this level.
+and nearly all the [DDoS mitigations](./mitigations/index.md) are implemented at this level.
 Where it can be used,
 a reverse proxy is the most effective way to protect the application layer,
 especially when the application uses a protocol supported by the proxy (e.g. HTTP).
