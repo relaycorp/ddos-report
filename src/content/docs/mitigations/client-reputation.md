@@ -2,30 +2,25 @@
 title: Client reputation scoring
 sidebar:
   order: 10
-  badge:
-    text: Draft
-    variant: caution
 ---
 
-Client-aware behaviour analysis to control other mitigations (e.g., [rate limiting](rate-limiting.md), [crypto challenges](crypto-challenges.md)) per user and/or tenant.
+**Servers can use signals such as historic activity about an [authenticated client](./authentication.md)
+to calculate the client's reputation score**,
+which estimates how likely it is to be malicious.
+This can determine which other [mitigations](./index.md) to apply
+(e.g. [cryptographic challenges](./crypto-challenges.md)) and how.
 
-- Global: the load of the overall system and/or how likely it is to be under attack.
-- Reputation system: how likely the client is to be malicious.
-  - Factors (examples):
-    - Rate of requests from the same client, if authenticated.
-    - Rate of requests from the same IP address, regardless of clients.
-    - Rate of invalid requests from the same client and/or IP address.
-    - The reputation of the client's IP address: https://www.spamhaus.org/ip-reputation/
-    - The reputation of the client's ASN: https://www.spamhaus.org/reputation-statistics/networks/exploit/
-    - The type of ISP the client is using (e.g., residential, cloud provider).
+Client reputation scoring can complement IP-based reputation systems used in
+[reverse proxies](./reverse-proxies.md)
+like [Akamai](https://techdocs.akamai.com/identity-cloud/docs/client-reputation-1) and [Cloudflare](https://developers.cloudflare.com/waf/custom-rules/use-cases/block-ip-reputation/),
+by considering signals about the client across devices and IP addresses.
+The signals that can be used to calculate the score include:
 
-To account for the Slashdot effect,
-read the HTTP `Referer` header and check if the client is coming from a high-traffic website.
-If so, check that the landing page is indeed linked to from that high-traffic website.
+- The age of the account.
+- Usage patterns.
+- Whether the client runs on a [trusted app](./app-attestation.md).
+- Whether the client has passed any [humanity verification test](./humanity-verification.md), if applicable.
 
-## Private State Tokens
+## See also
 
-- It's about the reputation of the user.
-- https://developers.google.com/privacy-sandbox/protections/private-state-tokens
-- Based on Privacy Pass.
-- Web only.
+- [Client-based rate limiting](rate-limiting.md).
