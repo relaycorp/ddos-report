@@ -1,10 +1,10 @@
 ---
-title: Authentication
+title: Client authentication
 sidebar:
   order: 3
 ---
 
-Authentication is the process of verifying the identity of a client or its user.
+Authentication is the process of verifying the identity of a client.
 In the context of DDoS mitigation,
 authentication plays a crucial role in ensuring that users comply with policies such as [rate limits](./rate-limiting.md),
 regardless of the network from which they are connecting.
@@ -72,4 +72,4 @@ or a dedicated registry to alert other services.
 
 - [Abuse reporting](./abuse-reporting.md).
 - [Client-based rate limiting](./rate-limiting.md).
-- [Client reputation scoring](./client-reputation.md), which could use authentication data amongst its signals.
+- [Client reputation scoring](./client-reputation.md), which could use the user's historic activity across devices and IP addresses amongst its signals.
