@@ -23,8 +23,8 @@ hero:
 A quick Google search will reveal services that allow anyone to launch such attacks anonymously.
 Small-scale attacks start from $5, and free trials are often available.
 Unsurprisingly,
-[DDoS attacks are on the rise](https://www.cybersecuritydive.com/news/ddos-attacks-surge-cloudflare/704011/).
-This may intensify as Internet connectivity improves worldwide,
+[DDoS attacks are on the rise](https://www.cybersecuritydive.com/news/ddos-attacks-surge-cloudflare/704011/),
+which may intensify as Internet connectivity improves worldwide,
 and more vulnerable IoT devices come online.
 
 These attacks not only infringe on our freedom but also have a significant financial impact.
@@ -36,11 +36,11 @@ as only well-resourced companies can afford to operate and protect
 the [public goods](./systems/public-goods.md) on which we all depend.
 
 Fortunately,
-**although app developers and operators can't _avoid_ DDoS attacks,
-they can _greatly minimise_ their impact**.
-[Proxies](./mitigations/reverse-proxies.md) from the likes of Akamai and Cloudflare are a good starting point,
-but they must be complemented with other [mitigation techniques](./mitigations)
-depending on the [type of system](./systems).
+**although developers and operators can't _avoid_ DDoS attacks,
+they can _greatly minimise_ the impact of such attacks**.
+[Reverse proxies](./mitigations/reverse-proxies.md) (aka _CDNs_) are a great starting point,
+but they must be complemented with other [mitigations](./mitigations/index.md)
+depending on the [system type](./systems/index.md).
 
 ## Help wanted
 

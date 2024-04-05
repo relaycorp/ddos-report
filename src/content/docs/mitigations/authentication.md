@@ -29,16 +29,18 @@ Upon successful authentication,
 the incoming message (e.g. HTTP request) is associated with the user's email address or username.
 Abusive users could be blocked by their identifiers.
 
-### Pseudonymous authentication
+### Cryptographic pseudonymous authentication
 
-**Pseudonymous authentication allows a user to maintain a consistent digital identity across sessions,
-using a pseudonym independent of their real-world identity**.
+Privacy-preserving,
+decentralised systems can assign cryptographically generated pseudonyms to users,
+allowing them to maintain a consistent digital identity across sessions.
+This strikes a balance between privacy and accountability.
 
-This is typically implemented with long-term signing key pairs.
+This is typically implemented with long-term key pairs.
 The user signs messages with their private key,
 and the server/peer verifies the signature with the corresponding public key.
 [Awala](https://awala.network/tech-overview#authentication-and-access-control) and [Ethereum](https://info.etherscan.com/what-is-an-ethereum-address/) are examples of systems
-that use pseudonymous authentication.
+that use this type of authentication.
 
 The user's identifier, or pseudonym, is derived from the public key (e.g. its SHA-256 digest).
 Abusive users could be blocked by their pseudonyms.
@@ -68,4 +70,6 @@ or a dedicated registry to alert other services.
 
 ## See also
 
-- [Rate limiting](./rate-limiting.md).
+- [Abuse reporting](./abuse-reporting.md).
+- [Client-based rate limiting](./rate-limiting.md).
+- [Client reputation scoring](./client-reputation.md), which could use authentication data amongst its signals.

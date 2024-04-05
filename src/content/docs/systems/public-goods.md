@@ -32,7 +32,7 @@ Unfortunately, these mitigations alone may not be enough to protect against well
 
 ## Protocol-level mitigations
 
-- [Pseudonymous authentication](../mitigations/authentication.md#pseudonymous-authentication).
+- [Cryptographic pseudonymous authentication](../mitigations/authentication.md#cryptographic-pseudonymous-authentication).
 - [Cryptographic challenges](../mitigations/crypto-challenges.md).
 - [Client-based rate limiting](../mitigations/rate-limiting.md).
 - [App attestation](../mitigations/app-attestation.md).
