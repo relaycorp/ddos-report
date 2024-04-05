@@ -16,9 +16,6 @@ We strongly recommend developers and operators to take a holistic approach to DD
 and consider the mitigations recommended here in the context of their specific
 [DDoS Resiliency Score](https://www.ddosresiliencyscore.org/).
 
-Operators should also have the appropriate monitoring and alerting in place to detect surges in resource utilisation, error rates and hosting costs.
-These can also help identify legitimate traffic blocked by the mitigations.
-
 Because we're only interested in DDoS attacks over the Internet,
 systems like intranet servers (running behind a firewall or VPC)
 and mesh networks are outside the scope of this document.
