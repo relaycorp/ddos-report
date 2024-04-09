@@ -12,7 +12,7 @@ hero:
       icon: right-arrow
       variant: primary
     - text: Mitigate DDoS attacks
-      link: /systems
+      link: /mitigation
       icon: right-arrow
       variant: secondary
 ---
@@ -39,8 +39,7 @@ Fortunately,
 **although developers and operators can't _avoid_ DDoS attacks,
 they can _greatly minimise_ the impact of such attacks**.
 [Reverse proxies](./mitigations/reverse-proxies.md) (aka _CDNs_) are a great starting point,
-but they must be complemented with other [mitigations](./mitigations/index.md)
-depending on the [system type](./systems/index.md).
+but they should be part of a [broader strategy](mitigation.md).
 
 ## Help wanted
 

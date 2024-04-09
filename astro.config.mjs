@@ -28,11 +28,8 @@ export default defineConfig({
           link: '/overview',
         },
         {
-          label: 'Mitigations by system',
-          autogenerate: {
-            directory: 'systems',
-          },
-          collapsed: true,
+          label: 'Mitigate DDoS Attacks',
+          link: '/mitigation',
         },
         {
           label: 'All mitigations',
