@@ -68,7 +68,7 @@ Remote attestation leverages embedded Hardware Security Modules (HSMs) like the
 and its availability varies by system:
 
 - Android: [Play Integrity API](https://developer.android.com/google/play/integrity/overview).
-- Apple: [DeviceCheck services](https://developer.apple.com/documentation/devicecheck).
+- Apple devices: [DeviceCheck services](https://developer.apple.com/documentation/devicecheck).
 - No other mainstream system offers a turnkey solution, but partial solutions could potentially be built using [TPM attestation](https://community.infineon.com/t5/Blogs/TPM-remote-attestation-How-can-I-trust-you/ba-p/452729) directly.
 
 **Remote attestation can be used to verify that the client is running on a genuine device designed for humans**

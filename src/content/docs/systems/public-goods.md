@@ -2,11 +2,10 @@
 title: Protect public goods from DDoS attacks
 sidebar:
   label: Public goods
-  order: 5
-next: false
+  order: 3
 ---
 
-We refer to _public goods_ as servers accessible to any device on the Internet without requiring users to log in.
+We refer to _public goods_ as servers accessible to any device on the Internet without requiring users to create an account.
 These servers are essential in virtually all decentralised systems,
 ensuring that users aren't priced out or forced to provide personally identifiable information (e.g. email address, phone number).
 Examples include:
@@ -18,20 +17,11 @@ Examples include:
 - BitTorrent trackers, like `tracker.opentrackr.org`.
 - PGP key servers, like `pgp.mit.edu`.
 - Guard relays in Tor.
-- Awala Internet Gateways, like Relaycorp's `belgium.relaycorp.services`.
 - Free geolocation APIs, like `https://ipinfo.io/geo`.
 
-## Mitigations available to operators
-
-- [Reverse proxy](../mitigations/reverse-proxies.md).
-- [Unmetered DNS lookups](../mitigations/unmetered-dns.md), if the protocol uses DNS.
-- [Cloud resource limits](../mitigations/resource-limits.md).
-- [Attack detection](../mitigations/detection.md).
-- [Abuse reporting](../mitigations/abuse-reporting.md).
-
-Unfortunately, these mitigations alone may not be enough to protect against well-resourced attackers without further changes to the protocol itself.
-
 ## Protocol-level mitigations
+
+Adoption of the following mitigations will typically involve breaking changes to the protocol:
 
 - [Cryptographic pseudonymous authentication](../mitigations/authentication.md#cryptographic-pseudonymous-authentication).
 - [Cryptographic challenges](../mitigations/crypto-challenges.md).
@@ -39,3 +29,17 @@ Unfortunately, these mitigations alone may not be enough to protect against well
 - [App attestation](../mitigations/app-attestation.md).
 - [Humanity verification](../mitigations/humanity-verification.md).
 - [Client reputation scoring](../mitigations/client-reputation.md).
+
+## Mitigations available to operators
+
+The following can be adopted without breaking changes to the protocol:
+
+- [Reverse proxy](../mitigations/reverse-proxies.md).
+- [Unmetered DNS lookups](../mitigations/unmetered-dns.md), if the protocol uses DNS.
+- [Cloud resource limits](../mitigations/resource-limits.md).
+- [Attack detection](../mitigations/detection.md).
+- [Abuse reporting](../mitigations/abuse-reporting.md).
+
+## See also
+
+- [API servers](apis.md), for servers that require users to log in.
