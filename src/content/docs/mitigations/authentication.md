@@ -9,7 +9,7 @@ In the context of DDoS mitigation,
 authentication plays a crucial role in ensuring that users comply with policies such as [rate limits](./rate-limiting.md),
 regardless of the network from which they are connecting.
 
-Some [application layer proxies](./reverse-proxies.md#application-layer-proxy) offer the ability to authenticate users,
+Some [application proxies](./reverse-proxies.md#application-layer-proxy) offer the ability to authenticate users,
 blocking anonymous traffic.
 
 ## Types
