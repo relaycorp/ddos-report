@@ -29,12 +29,12 @@ systems like intranet servers and mesh networks are outside the scope of this do
 
 ### Static websites
 
-The following mitigations should prove very effective against DDoS attacks on static websites that don't require [authentication](./mitigations/authentication.md):
+The following mitigations should prove very effective against DDoS attacks on static websites that don't require [authentication](tactics/authentication.md):
 
-- [Reverse proxy](./mitigations/reverse-proxies.md). Make sure to host the static content on a service like Amazon S3 or GitHub Pages, and enable caching in your reverse proxy.
-- [Unmetered DNS lookups](./mitigations/unmetered-dns.md).
-- [Cloud resource limits](./mitigations/resource-limits.md). [Static websites are very much susceptible to DoW attacks](https://news.ycombinator.com/item?id=39520776).
-- [Attack detection](./mitigations/detection.md).
+- [Reverse proxy](tactics/reverse-proxies.md). Make sure to host the static content on a service like Amazon S3 or GitHub Pages, and enable caching in your reverse proxy.
+- [Unmetered DNS lookups](tactics/unmetered-dns.md).
+- [Cloud resource limits](tactics/resource-limits.md). [Static websites are very much susceptible to DoW attacks](https://news.ycombinator.com/item?id=39520776).
+- [Attack detection](tactics/detection.md).
 
 ### API servers
 
@@ -46,22 +46,22 @@ It includes, but isn't limited to, Web-based APIs.
 
 Adoption of the following mitigations will typically involve breaking changes to the protocol:
 
-- [Client authentication](./mitigations/authentication.md).
-- [Cryptographic challenges](./mitigations/crypto-challenges.md).
-- [Client-based rate limiting](./mitigations/rate-limiting.md).
-- [App attestation](./mitigations/app-attestation.md).
-- [Humanity verification](./mitigations/humanity-verification.md).
-- [Client reputation scoring](./mitigations/client-reputation.md).
+- [Client authentication](tactics/authentication.md).
+- [Cryptographic challenges](tactics/crypto-challenges.md).
+- [Client-based rate limiting](tactics/rate-limiting.md).
+- [App attestation](tactics/app-attestation.md).
+- [Humanity verification](tactics/humanity-verification.md).
+- [Client reputation scoring](tactics/client-reputation.md).
 
 #### Mitigations available to operators
 
 The following can be adopted without breaking changes to the protocol:
 
-- [Reverse proxy](./mitigations/reverse-proxies.md). If the system is Web-based and aimed at humans, consider a proxy that enforces [cryptographic challenges](./mitigations/crypto-challenges.md) and [CAPTCHAs](./mitigations/humanity-verification.md) for the most suspicious clients; for example, [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/).
-- [Unmetered DNS lookups](./mitigations/unmetered-dns.md), if the protocol uses DNS.
-- [Cloud resource limits](./mitigations/resource-limits.md).
-- [Attack detection](./mitigations/detection.md).
-- [Abuse reporting](./mitigations/abuse-reporting.md).
+- [Reverse proxy](tactics/reverse-proxies.md). If the system is Web-based and aimed at humans, consider a proxy that enforces [cryptographic challenges](tactics/crypto-challenges.md) and [CAPTCHAs](tactics/humanity-verification.md) for the most suspicious clients; for example, [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/).
+- [Unmetered DNS lookups](tactics/unmetered-dns.md), if the protocol uses DNS.
+- [Cloud resource limits](tactics/resource-limits.md).
+- [Attack detection](tactics/detection.md).
+- [Abuse reporting](tactics/abuse-reporting.md).
 
 ### Public goods
 
@@ -83,22 +83,22 @@ Examples include:
 
 Adoption of the following mitigations will typically involve breaking changes to the protocol:
 
-- [Cryptographic pseudonymous authentication](./mitigations/authentication.md#cryptographic-pseudonymous-authentication).
-- [Cryptographic challenges](./mitigations/crypto-challenges.md).
-- [Client-based rate limiting](./mitigations/rate-limiting.md).
-- [App attestation](./mitigations/app-attestation.md).
-- [Humanity verification](./mitigations/humanity-verification.md).
-- [Client reputation scoring](./mitigations/client-reputation.md).
+- [Cryptographic pseudonymous authentication](tactics/authentication.md#cryptographic-pseudonymous-authentication).
+- [Cryptographic challenges](tactics/crypto-challenges.md).
+- [Client-based rate limiting](tactics/rate-limiting.md).
+- [App attestation](tactics/app-attestation.md).
+- [Humanity verification](tactics/humanity-verification.md).
+- [Client reputation scoring](tactics/client-reputation.md).
 
 #### Mitigations available to operators
 
 The following can be adopted without breaking changes to the protocol:
 
-- [Reverse proxy](./mitigations/reverse-proxies.md).
-- [Unmetered DNS lookups](./mitigations/unmetered-dns.md), if the protocol uses DNS.
-- [Cloud resource limits](./mitigations/resource-limits.md).
-- [Attack detection](./mitigations/detection.md).
-- [Abuse reporting](./mitigations/abuse-reporting.md).
+- [Reverse proxy](tactics/reverse-proxies.md).
+- [Unmetered DNS lookups](tactics/unmetered-dns.md), if the protocol uses DNS.
+- [Cloud resource limits](tactics/resource-limits.md).
+- [Attack detection](tactics/detection.md).
+- [Abuse reporting](tactics/abuse-reporting.md).
 
 ### Peer-to-peer networks
 
@@ -108,13 +108,13 @@ Examples include BitTorrent and (P2P)SIP.
 
 As the developer of a P2P protocol, you should consider the following mitigations:
 
-- [Authentication](./mitigations/authentication.md). Consider using long-term identity keys if pseudonymity is needed, or [VeraId](https://veraid.net) when the identity of the user is relevant.
-- [Cryptographic challenges](./mitigations/crypto-challenges.md).
-- [Client-based rate limiting](./mitigations/rate-limiting.md).
-- [Client reputation scoring](./mitigations/client-reputation.md).
+- [Authentication](tactics/authentication.md). Consider using long-term identity keys if pseudonymity is needed, or [VeraId](https://veraid.net) when the identity of the user is relevant.
+- [Cryptographic challenges](tactics/crypto-challenges.md).
+- [Client-based rate limiting](tactics/rate-limiting.md).
+- [Client reputation scoring](tactics/client-reputation.md).
 
 The mitigations above work on the application layer,
-but since you can't place [proxies](./mitigations/reverse-proxies.md) between peers,
+but since you can't place [proxies](tactics/reverse-proxies.md) between peers,
 the P2P application itself should also be able to mitigate attacks on the [transport layer](https://en.wikipedia.org/wiki/Transport_layer) (e.g. TCP),
 such as [SYN floods](https://en.wikipedia.org/wiki/SYN_flood).
 In lieu of a reverse proxy, you should consider using a P2P library that offers some DDoS defence, like [libp2p](https://docs.libp2p.io/concepts/security/dos-mitigation/).

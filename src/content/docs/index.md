@@ -33,12 +33,12 @@ from [hobbyists](https://news.ycombinator.com/item?id=39520776) to [Fortune 500 
 can be a target.
 Furthermore, they pose a threat to the decentralisation of the Internet,
 as only well-resourced companies can afford to operate and protect
-the [public goods](./systems/public-goods.md) on which we all depend.
+the [public goods](./mitigation.md#public-goods) on which we all depend.
 
 Fortunately,
 **although developers and operators can't _avoid_ DDoS attacks,
 they can _greatly minimise_ the impact of such attacks**.
-[Reverse proxies](./mitigations/reverse-proxies.md) (aka _CDNs_) are a great starting point,
+[Reverse proxies](tactics/reverse-proxies.md) (aka _CDNs_) are a great starting point,
 but they should be part of a [broader strategy](mitigation.md).
 
 ## Help wanted

@@ -66,7 +66,7 @@ absorb the DDoS traffic,
 which can be exceptionally complex and expensive to implement in-house.
 In most cases,
 the only practical way to protect this layer is to use a
-[reverse proxy](./mitigations/reverse-proxies.md).
+[reverse proxy](tactics/reverse-proxies.md).
 
 ### Protocol attacks
 
@@ -104,7 +104,7 @@ This layer is also susceptible to slow and low attacks,
 such as [Slowloris](https://www.cloudflare.com/en-gb/learning/ddos/ddos-attack-tools/slowloris/) and [RUDY](https://www.imperva.com/learn/ddos/rudy-r-u-dead-yet/).
 
 App developers and operators share the responsibility of protecting this layer,
-and nearly all the [DDoS mitigations](./mitigations/index.md) are implemented at this level.
+and nearly all the [DDoS mitigations](tactics/index.md) are implemented at this level.
 Where it can be used,
 a reverse proxy is the most effective way to protect the application layer,
 especially when the application uses a protocol supported by the proxy (e.g. HTTP).
@@ -218,7 +218,7 @@ the potential for larger DDoS attacks increases.
 
 As devices, such as smartphones and laptops, get better CPUs and more storage,
 they become more capable of reducing the effectiveness of certain DDoS mitigation mechanisms,
-like [cryptographic challenges](./mitigations/crypto-challenges.md).
+like [cryptographic challenges](tactics/crypto-challenges.md).
 
 ### Expanding IoT botnets
 
@@ -259,7 +259,7 @@ Developers and operators must work together to fortify all network layers agains
 Whilst avoiding or stopping DDoS attacks may not be possible,
 their impact can be greatly minimised.
 Understanding attack vectors, delivery methods and new threats
-helps in implementing preemptive [mitigation techniques](./mitigations) to reduce impact.
+helps in implementing preemptive [mitigation tactics](./tactics) to reduce impact.
 
 ## Further reading
 
