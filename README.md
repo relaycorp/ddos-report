@@ -48,3 +48,13 @@ using prompts such as:
 ```
 Child's crayon drawing of a single server, Ethernet cables, LEDs, plain background, minimalist --no photo, photorealistic, human --style raw --stylize 0
 ```
+
+## Note to vendors
+
+Vendors of DDoS mitigation products are welcome to propose that their products be included in the guide.
+However,
+as a vendor-neutral guide,
+we only mention products that are widely used and have a good reputation in the industry.
+Where vendors are mentioned,
+we do so for illustration purposes only.
+We don't intend to list all the vendors in the market.
