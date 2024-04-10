@@ -62,14 +62,17 @@ these too can be defeated by CAPTCHA solving services.
 This is a process by which a device cryptographically
 proves its identity, hardware configuration, software integrity, and security posture,
 to a remote verifier.
-Remote attestation leverages embedded Hardware Security Modules (HSMs) like the
-[Trusted Platform Module (TPM)](https://trustedcomputinggroup.org/resource/trusted-platform-module-tpm-summary/) or
-[Apple's Secure Enclave](https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web),
+Remote attestation leverages secure, embedded hardware components
+like [Apple's Secure Enclave](https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web),
 and its availability varies by system:
 
 - Android offers the [Play Integrity API](https://developer.android.com/google/play/integrity/overview).
 - Apple offers the [DeviceCheck services](https://developer.apple.com/documentation/devicecheck).
-- No other mainstream platform offers a turnkey solution, but partial solutions could potentially be built using [TPM attestation](https://community.infineon.com/t5/Blogs/TPM-remote-attestation-How-can-I-trust-you/ba-p/452729) directly.
+- No other mainstream platform provides a turnkey solution,
+  but partial solutions could be built directly using the hardware's attestation functionality.
+  However, we wouldn't recommend this approach as it can be a complicated exercise,
+  and Intel SGX, one of the most widely available implementations,
+  [is riddled with flaws](https://sgx.fail).
 
 **Remote attestation can be used to verify that the client is running on a genuine device designed for humans**
 (e.g. laptop, smartphone),

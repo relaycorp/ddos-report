@@ -32,7 +32,7 @@ export default defineConfig({
           link: '/mitigation',
         },
         {
-          label: 'Mitigation tactics',
+          label: 'All mitigation tactics',
           autogenerate: {
             directory: 'tactics',
           },
