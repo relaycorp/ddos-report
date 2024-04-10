@@ -1,7 +1,7 @@
 ---
 title: Mitigate DDoS attacks
 description: How to protect static websites, APIs, peer-to-peer systems and other servers from DDoS attacks.
-next: "All mitigation tactics"
+next: 'All mitigation tactics'
 ---
 
 The specifics of successfully mitigating DDoS attacks vary greatly depending on your resources,
