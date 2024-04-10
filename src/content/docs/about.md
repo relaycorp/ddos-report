@@ -1,5 +1,6 @@
 ---
 title: About The DDoS Report
+prev: false
 ---
 
 The DDoS Report is a living resource that aims
