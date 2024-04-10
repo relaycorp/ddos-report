@@ -87,7 +87,7 @@ and they can offer the following DDoS-related features:
   WAF policies can also be based on [attack signatures](https://www.red-button.net/ddos-glossary/signatures/),
   which can come from a database of attack patterns known to the provider,
   or identified with Machine Learning (ML) based on traffic analysis for each origin server.
-- **IP reputation** to block traffic from known bad IP addresses, or to [verify that the user is human](./humanity-verification.md). See also [client reputation scoring](./client-reputation.md).
+- **IP reputation** to block traffic from known bad IP addresses, or to [verify that a suspicious user is human](./humanity-verification.md). See also [client reputation scoring](./client-reputation.md).
 - **IP-based rate limiting** to block traffic from IP addresses that exceed a certain threshold. See also [client-based rate limiting](./rate-limiting.md).
 - **[HTTP caching](https://http.dev/caching)** to reduce the load on the origin server.
 - **Authentication** to block anonymous traffic by verifying `Bearer` tokens in the `Authorization` header, for example. This feature is more commonly offered by API gateways.

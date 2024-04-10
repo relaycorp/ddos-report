@@ -9,7 +9,7 @@ This can cause a significant increase in the number of DNS lookups,
 which can lead to increased costs.
 
 To mitigate this, you should use a DNS provider that offers unmetered DNS lookups.
-Many cloud-based [reverse proxy](./reverse-proxies.md) services offer this feature.
+Some [cloud-based reverse proxy services](./reverse-proxies.md#cloud-based-proxies) offer this feature.
 
 ## See also
 

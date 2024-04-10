@@ -69,8 +69,8 @@ and its availability varies by system:
 - Android offers the [Play Integrity API](https://developer.android.com/google/play/integrity/overview).
 - Apple offers the [DeviceCheck services](https://developer.apple.com/documentation/devicecheck).
 - No other mainstream platform provides a turnkey solution,
-  but partial solutions could be built directly using the hardware's attestation functionality.
-  However, we wouldn't recommend this approach as it can be a complicated exercise,
+  but partial solutions could be built using the hardware's attestation functionality directly.
+  However, we wouldn't recommend this as it can be a complicated exercise,
   and Intel SGX, one of the most widely available implementations,
   [is riddled with flaws](https://sgx.fail).
 
