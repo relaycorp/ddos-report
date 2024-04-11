@@ -44,10 +44,10 @@ consider the threat model of the individuals and organisations that you're targe
 Operators should assess their organisation's preparedness against their own threat model
 using the [DDoS Resiliency Score (DRS)](https://www.ddosresiliencyscore.org/securitymanagers/).
 
-Note that elements of the DRS appear to assume that the server is a website accessed from a browser,
+Note that elements of the DRS assume that the server is a website accessed from a browser,
 but the underlying principles are more broadly applicable.
 For example,
-it defines "HTTP Flood JavaScript Support" as an attack vector that can circumvent
+it defines "HTTP Flood JavaScript Support" as an attack vector where headless browsers can circumvent
 [cryptographic challenges](./tactics/crypto-challenges.md),
 but the principle applies to any malicious client that supports the challenge.
 
