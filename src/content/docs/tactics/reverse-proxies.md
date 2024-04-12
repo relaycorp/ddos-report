@@ -16,7 +16,7 @@ we're specifically interested in their capacity as reverse proxies.
 
 Reverse proxies are essential, but not sufficient, to mitigate DDoS attacks.
 All server-side apps,
-except for [peer-to-peer](../systems/p2p.md) ones,
+except for [peer-to-peer](../mitigation.md#peer-to-peer-networks) ones,
 can benefit from such proxies.
 
 ## Types

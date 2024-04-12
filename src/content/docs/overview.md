@@ -1,9 +1,6 @@
 ---
 title: How DDoS Attacks Work in 2024
 description: Overview of DDoS attacks and their impact on Internet-connected systems.
-next:
-  link: /systems
-  label: Mitigations by system
 ---
 
 This living document provides an overview of Distributed Denial of Service (DDoS) attacks,
