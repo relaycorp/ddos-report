@@ -19,6 +19,10 @@ All server-side apps,
 except for [peer-to-peer](../mitigation.md#peer-to-peer-networks) ones,
 can benefit from such proxies.
 
+It's crucial to make the origin server inaccessible from the Internet to prevent attackers from bypassing the proxy.
+In case this isn't possible,
+protect the origin server with a firewall that only allows proxy traffic and set the origin server's URL to be difficult to guess.
+
 ## Types
 
 Reverse proxies are mainly classified by the highest layer that they protect.
