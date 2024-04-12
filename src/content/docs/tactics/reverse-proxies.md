@@ -32,10 +32,11 @@ the following diagram shows the different layers of the Internet Protocol (IP) m
 
 ### Internet layer proxy
 
-**These proxies protect the internet layer from [volumetric attacks](../overview.md#volumetric-attacks)**
-by absorbing the attack traffic.
-They achieve this through the over-provisioning of bandwidth and
-techniques such as [anycast IP routing](https://geekflare.com/anycast-routing-ddos-attacks/).
+**These proxies protect the internet layer from [volumetric attacks](../overview.md#volumetric-attacks)**,
+primarily by absorbing the attack traffic.
+They achieve this by overprovisioning bandwidth and employing
+[anycast IP routing](https://geekflare.com/anycast-routing-ddos-attacks/) and [BGP Flowspec](https://www.noction.com/blog/ddos-scrubbing),
+amongst other techniques and technologies.
 The malicious traffic never reaches the origin server.
 
 Internet layer proxies are typically called _network layer proxies_,
