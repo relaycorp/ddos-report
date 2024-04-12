@@ -110,7 +110,7 @@ cloud-based proxies are the most effective at mitigating DDoS attacks.
 The following are the most popular providers of internet/transport and application layer proxies:
 
 - [Akamai](https://www.akamai.com/).
-- [Amazon CloudFront](https://aws.amazon.com/cloudfront/).
+- AWS: [API Gateway](https://aws.amazon.com/api-gateway/), [CloudFront](https://aws.amazon.com/cloudfront/) (HTTP proxy), and [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/).
 - [Azure Load Balancer](https://azure.microsoft.com/solutions/load-balancing-with-azure/).
 - [Cloudflare](https://www.cloudflare.com/).
 - [Fastly](https://www.fastly.com/).
