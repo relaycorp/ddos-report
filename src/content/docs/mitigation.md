@@ -49,7 +49,7 @@ but the underlying principles are more broadly applicable.
 For example,
 it defines "HTTP Flood JavaScript Support" as an attack vector where headless browsers can circumvent
 [cryptographic challenges](./tactics/crypto-challenges.md),
-but the principle applies to any malicious client that supports the challenge.
+but the principle applies to any malicious client that supports such challenges.
 
 As part of this exercise,
 operators should stress-test their systems to ensure that they can handle the expected load.
