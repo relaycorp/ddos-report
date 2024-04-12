@@ -7,7 +7,7 @@ sidebar:
 Attack detection is a critical part of DDoS mitigation,
 as it allows you to identify and respond to attacks before they cause significant damage.
 This process depends on developers to [instrument their applications](#instrumentation),
-and operators to [monitor and respond to alerts](#monitoring-and-alerting).
+and operators to [monitor the system and respond to alerts](#monitoring-and-alerting).
 
 ## Instrumentation
 
