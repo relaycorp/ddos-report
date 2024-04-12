@@ -52,7 +52,7 @@ it defines "HTTP Flood JavaScript Support" as an attack vector where headless br
 but the principle applies to any malicious client that supports such challenges.
 
 As part of this exercise,
-operators should stress-test their systems to ensure that they can handle the expected load.
+operators should also stress-test their systems to ensure that they can handle the expected load.
 
 ## Adopt the appropriate mitigation tactics
 
