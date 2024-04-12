@@ -41,7 +41,7 @@ they can _greatly minimise_ the impact of such attacks**.
 [Reverse proxies](tactics/reverse-proxies.md) (aka _CDNs_) are a great starting point,
 but they should be part of a [broader strategy](mitigation.md).
 
-## Help wanted
+## Help needed
 
 We'd very much appreciate any feedback from companies with vantage points on DDoS attacks,
 as well as security researchers.

@@ -61,7 +61,7 @@ We group the tactics below by system type because they differ widely depending o
 Each system should fit within one or more categories, such as:
 
 - An open DNS resolver (e.g. Google's `8.8.8.8`) would just be classified as a [public good](#public-goods).
-- A CMS like WordPress comprises [static assets](#static-websites) (e.g. CSS, JS) and an [API](#api-servers-and-dynamic-websites) (e.g. website rendering, admin portal).
+- A CMS like WordPress comprises a [dynamic website](#api-servers-and-dynamic-websites) with [static assets](#static-websites) (e.g. CSS, JS).
 - BitTorrent comprises components that fall under [public goods](#public-goods) (i.e. trackers) and [peer-to-peer](#peer-to-peer-networks) (i.e. clients).
 
 We aim to provide a comprehensive list of tactics,
