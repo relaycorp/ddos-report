@@ -16,7 +16,7 @@ complete a series of cryptographic operations to perform a task.
 including those that change IP addresses as they get blocked,
 with minimal or no impact on legitimate users in most cases.
 
-Turnkey PoW solutions include [ALTCHA](https://altcha.org) and [mCaptcha](https://mcaptcha.org)—both of which offer widgets for websites.
+Turnkey PoW solutions include [ALTCHA](https://altcha.org), [mCaptcha](https://mcaptcha.org), and [Procaptcha](https://prosopo.io/)—all of which offer widgets for websites.
 Some [humanity verification services](./humanity-verification.md) integrate PoW challenges as well.
 
 In advanced scenarios where more control over the PoW protocol is needed,
