@@ -97,6 +97,11 @@ are examples of protocols operating at this layer.
 The _Transport Layer Security_ (TLS) is a special protocol operating at this layer,
 as it encapsulates other application protocols such as HTTP.
 
+HTTP attacks,
+a common type of application attack,
+accounted for 37% of all DDoS attacks in 2024 Q1,
+[according to Cloudflare](https://blog.cloudflare.com/ddos-threat-report-for-2024-q1).
+
 This layer is also susceptible to slow and low attacks,
 such as [Slowloris](https://www.cloudflare.com/en-gb/learning/ddos/ddos-attack-tools/slowloris/) and [RUDY](https://www.imperva.com/learn/ddos/rudy-r-u-dead-yet/).
 
@@ -262,7 +267,7 @@ helps in implementing preemptive [mitigation tactics](./tactics) to reduce impac
 
 We recommend the following reports to anyone interested in learning more about DDoS attacks:
 
-- [DDoS Threat Report for 2023 Q4](https://blog.cloudflare.com/ddos-threat-report-2023-q4) by Cloudflare.
+- [DDoS Threat Report for 2024 Q1](https://blog.cloudflare.com/ddos-threat-report-for-2024-q1) by Cloudflare.
 - [DDoS Threat Landscape Report 2023](https://www.imperva.com/resources/resource-library/reports/ddos-threat-landscape-report-2023/) by Imperva.
 - [DDoS Threat Intelligence Report](https://www.netscout.com/threatreport/) by NETSCOUT.
 - [Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023) by Microsoft.
