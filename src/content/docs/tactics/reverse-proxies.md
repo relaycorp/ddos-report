@@ -113,11 +113,15 @@ The following are the most popular providers of internet/transport and applicati
 - AWS: [API Gateway](https://aws.amazon.com/api-gateway/), [CloudFront](https://aws.amazon.com/cloudfront/) (HTTP proxy), and [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/). See also their best practices for [DDoS mitigation](https://docs.aws.amazon.com/whitepapers/latest/aws-best-practices-ddos-resiliency/best-practices-for-ddos-mitigation.html) and [load balancing](https://aws.github.io/aws-elb-best-practices/security/infrastructure_protection/).
 - [Azure Load Balancer](https://azure.microsoft.com/solutions/load-balancing-with-azure/). See also [Azure DDoS Protection documentation](https://learn.microsoft.com/en-us/azure/ddos-protection/).
 - [Cloudflare](https://www.cloudflare.com/).
+- [Deflect](https://deflect.ca/).
 - [Fastly](https://www.fastly.com/).
 - [Google Cloud Load Balancing](https://cloud.google.com/load-balancing/). See also [Google Cloud Armor](https://cloud.google.com/security/products/armor), and [its best practices](https://cloud.google.com/armor/docs/best-practices).
 - [Incapsula](https://www.incapsula.com/).
 - [Netscout Arbor](https://www.netscout.com/arbor).
 
 Vulnerable groups, such as journalists and human rights organisations,
-can apply for free services from [Cloudflare](https://www.cloudflare.com/galileo/) and [Google](https://projectshield.withgoogle.com/),
+can apply for free services from
+[Cloudflare](https://www.cloudflare.com/galileo/),
+[eQualitie](https://deflect.ca/non-profits/) and
+[Google](https://projectshield.withgoogle.com/),
 for example.
