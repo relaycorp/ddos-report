@@ -267,10 +267,10 @@ helps in implementing preemptive [mitigation tactics](./tactics) to reduce impac
 
 We recommend the following reports to anyone interested in learning more about DDoS attacks:
 
-- [DDoS Threat Report for 2024 Q1](https://blog.cloudflare.com/ddos-threat-report-for-2024-q1) by Cloudflare.
-- [DDoS Threat Landscape Report 2023](https://www.imperva.com/resources/resource-library/reports/ddos-threat-landscape-report-2023/) by Imperva.
+- [DDoS Threat Report for 2024 Q3](https://blog.cloudflare.com/ddos-threat-report-for-2024-q3/) by Cloudflare.
+- [DDoS Threat Landscape Report 2024](https://www.imperva.com/resources/resource-library/reports/2024-imperva-ddos-threat-landscape-report/) by Imperva.
 - [DDoS Threat Intelligence Report](https://www.netscout.com/threatreport/) by NETSCOUT.
-- [Digital Defense Report 2023](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023) by Microsoft.
+- [Digital Defense Report 2024](https://www.microsoft.com/en-us/security/security-insider/intelligence-reports/microsoft-digital-defense-report-2024) by Microsoft.
 - [Threat Intelligence Report 2023](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/) by Nokia.
 
 We also recommend the following dashboards for understanding the current state of DDoS attacks:
