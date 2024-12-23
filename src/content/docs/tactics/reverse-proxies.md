@@ -72,11 +72,6 @@ These proxies can offer the following DDoS-related features:
 - **IP-based rate limiting** to throttle TCP connections or UDP datagrams from IP addresses that exceed a certain threshold. See also [client-based rate limiting](./rate-limiting.md).
 - **[TLS termination](https://en.wikipedia.org/wiki/TLS_termination_proxy)** to shield the origin server from [exhaustion attacks](https://www.akamai.com/glossary/what-is-an-ssl-tls-exhaustion-attack), such as [D(HE)at](https://dheatattack.gitlab.io/summary/).
 
-Self-hosted transport layer proxies,
-such as [HAProxy](https://www.haproxy.org) and [IPVS](https://en.wikipedia.org/wiki/IP_Virtual_Server),
-may be viable alternatives to cloud-based solutions,
-but they require substantially more resources to set up and maintain.
-
 ### Application layer proxy
 
 **These extend transport layer proxies to also protect the application layer
@@ -99,10 +94,22 @@ and they can offer the following DDoS-related features:
 - **Authentication** to block anonymous traffic by verifying `Bearer` tokens in the `Authorization` header, for example. This feature is more commonly offered by API gateways.
 - **Programmatic access control** to implement more sophisticated access control policies, which are typically enforced at the [edge](https://www.cloudflare.com/en-gb/learning/cdn/glossary/edge-server/).
 
-Self-hosted application layer proxies,
-such as [Nginx](https://nginx.org) and [Traefik](https://traefik.io/traefik/),
-may be viable alternatives to cloud-based solutions,
-but they require substantially more resources to set up and maintain.
+## Self-hosted proxies
+
+Self-hosted proxies can be viable alternatives to cloud-based solutions, but they require substantially more resources to set up and maintain.
+
+Self-hosted transport layer proxies include:
+
+- [HAProxy](https://www.haproxy.org).
+- [IPVS](https://en.wikipedia.org/wiki/IP_Virtual_Server).
+
+Self-hosted application layer proxies include:
+
+- [Caddy](https://caddyserver.com/).
+- [Nginx](https://nginx.org).
+- [Traefik](https://traefik.io/traefik/).
+
+When implementing self-hosted proxies, it's crucial to implement distributed rate limiting mechanisms, to coordinate across multiple proxy instances.
 
 ## Cloud-based proxies
 
