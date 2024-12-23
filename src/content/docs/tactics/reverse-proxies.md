@@ -68,6 +68,8 @@ in reference to the OSI model.
 These proxies can offer the following DDoS-related features:
 
 - **Firewall** to block traffic based on the client's IP address or other properties derived from it (e.g. its country, whether it's a known Tor node).
+- **IP reputation** to block traffic from known bad IP addresses, or to [verify that a suspicious user is human](./humanity-verification.md). See also [client reputation scoring](./client-reputation.md).
+- **IP-based rate limiting** to throttle TCP connections or UDP datagrams from IP addresses that exceed a certain threshold. See also [client-based rate limiting](./rate-limiting.md).
 - **[TLS termination](https://en.wikipedia.org/wiki/TLS_termination_proxy)** to shield the origin server from [exhaustion attacks](https://www.akamai.com/glossary/what-is-an-ssl-tls-exhaustion-attack), such as [D(HE)at](https://dheatattack.gitlab.io/summary/).
 
 Self-hosted transport layer proxies,
@@ -92,8 +94,7 @@ and they can offer the following DDoS-related features:
   WAF policies can also be based on [attack signatures](https://www.red-button.net/ddos-glossary/signatures/),
   which can come from a database of attack patterns known to the provider,
   or identified with Machine Learning (ML) based on traffic analysis for each origin server.
-- **IP reputation** to block traffic from known bad IP addresses, or to [verify that a suspicious user is human](./humanity-verification.md). See also [client reputation scoring](./client-reputation.md).
-- **IP-based rate limiting** to block traffic from IP addresses that exceed a certain threshold. See also [client-based rate limiting](./rate-limiting.md).
+- **IP-based rate limiting** to throttle HTTP requests or WebSockets messages from IP addresses that exceed a certain threshold. See also [client-based rate limiting](./rate-limiting.md).
 - **[HTTP caching](https://http.dev/caching)** to reduce the load on the origin server.
 - **Authentication** to block anonymous traffic by verifying `Bearer` tokens in the `Authorization` header, for example. This feature is more commonly offered by API gateways.
 - **Programmatic access control** to implement more sophisticated access control policies, which are typically enforced at the [edge](https://www.cloudflare.com/en-gb/learning/cdn/glossary/edge-server/).
